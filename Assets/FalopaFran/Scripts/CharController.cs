@@ -1,38 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharController : MonoBehaviour
+namespace Frano
 {
+    public class CharController : MonoBehaviour
+    {
 
-    [SerializeField] private float moveSpeed = 4f;
+        [SerializeField] private float moveSpeed = 4f;
 
-    private Vector3 forward, right;
+        private Vector3 forward, right;
+        private Rigidbody _rb;
+
+        private bool moving;
     
-    void Start()
-    {
-        forward = Camera.main.transform.forward;
-        forward.y = 0;
-        forward = Vector3.Normalize(forward);
-        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
-    }
+        void Start()
+        {
+            _rb = GetComponent<Rigidbody>();
+        
+            forward = Camera.main.transform.forward;
+            forward.y = 0;
+            forward = Vector3.Normalize(forward);
+            right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+        }
 
-    void Update()
-    {
-        if (Input.anyKey)
-            Move();
-    }
+        void Update()
+        {
+            moving = false;
+        
+            if (Input.anyKey)
+                moving = true;
+        }
 
-    private void Move()
-    {
-        Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis(("VerticalKey")));
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+        private void FixedUpdate()
+        {
+            if(moving)
+                Move();
+        }
 
-        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+        private void Move()
+        {
+            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis(("VerticalKey")));
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
 
-        transform.forward = heading;
-        transform.position += rightMovement;
-        transform.position += upMovement;
+            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+
+            _rb.velocity = heading  * moveSpeed;
+        
+            transform.forward = heading;
+        }
     }
 }
+
