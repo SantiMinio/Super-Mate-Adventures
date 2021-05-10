@@ -2168,15 +2168,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
-  - {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
+  - {fileID: 11400000, guid: 48cc241fc13bf9f499dd72414dc97b61, type: 2}
+  - {fileID: 11400000, guid: 7f073db4a92ad3c4ba613013d6d73395, type: 2}
+  - {fileID: 11400000, guid: e54ab81dda52710449c4340da1854695, type: 2}
+  - {fileID: 11400000, guid: e54ab81dda52710449c4340da1854695, type: 2}
+  - {fileID: 11400000, guid: 48cc241fc13bf9f499dd72414dc97b61, type: 2}
+  - {fileID: 11400000, guid: 48cc241fc13bf9f499dd72414dc97b61, type: 2}
+  - {fileID: 11400000, guid: e54ab81dda52710449c4340da1854695, type: 2}
+  - {fileID: 11400000, guid: 7f073db4a92ad3c4ba613013d6d73395, type: 2}
   numberOfMaxCards: 5
+  cardModel: {fileID: 3015643025148164836, guid: f81abb5682bbd5049aa302689fa5bc20, type: 3}
   firstPos: {fileID: 1121386877}
   lastPos: {fileID: 1600507212}
   posToSpawn: {fileID: 0}

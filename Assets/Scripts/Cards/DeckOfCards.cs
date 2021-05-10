@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DeckOfCards : MonoBehaviour
 {
-    [SerializeField] Card[] deck = new Card[9];
+    [SerializeField] List<CardSettings> deck = new List<CardSettings>();
     [SerializeField] int numberOfMaxCards = 5;
+    [SerializeField] Card cardModel;
 
     List<Card> currentDeck = new List<Card>();
     List<Card> currentCards = new List<Card>();
@@ -37,9 +38,9 @@ public class DeckOfCards : MonoBehaviour
 
     void SpawnCards()
     {
-        for (int i = 0; i < deck.Length; i++)
+        for (int i = 0; i < numberOfMaxCards + 1; i++)
         {
-            var card = Instantiate(deck[i], transform).GetComponent<Card>();
+            var card = Instantiate(cardModel, transform).GetComponent<Card>();
             currentDeck.Add(card);
             card.gameObject.SetActive(false);
         }
@@ -47,11 +48,31 @@ public class DeckOfCards : MonoBehaviour
 
     void SelectRandomCard()
     {
-        Card randomCard = currentDeck[Random.Range(0, currentDeck.Count)];
-        currentDeck.Remove(randomCard);
-        randomCard.gameObject.SetActive(true);
-        currentCards.Add(randomCard);
-        randomCard.transform.position = positions[currentCards.Count - 1];
-        randomCard.Initialize(randomCard.transform.position, this);
+        CardSettings randomCard = deck[Random.Range(0, deck.Count)];
+        deck.Remove(randomCard);
+        Card nextCard = currentDeck[0];
+        nextCard.gameObject.SetActive(true);
+        currentDeck.Remove(nextCard);
+        currentCards.Add(nextCard);
+        nextCard.transform.position = positions[currentCards.Count - 1];
+        nextCard.Initialize(nextCard.transform.position, this, randomCard);
+    }
+
+    public void OnUseCard(Card card, CardSettings settings)
+    {
+        MoveCards(currentCards.IndexOf(card));
+        currentCards.Remove(card);
+        SelectRandomCard();
+        card.gameObject.SetActive(false);
+        currentDeck.Add(card);
+        deck.Add(settings);
+    }
+
+    void MoveCards(int index)
+    {
+        for (int i = index + 1; i < currentCards.Count; i++)
+        {
+            currentCards[i].SetPosition(positions[i - 1]);
+        }
     }
 }

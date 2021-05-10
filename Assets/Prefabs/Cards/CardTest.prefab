@@ -88,3 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb648f12aa003ca46bc75474c5013067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgSprite: {fileID: 7715010964772729946}
+  permissiveLimit: 10

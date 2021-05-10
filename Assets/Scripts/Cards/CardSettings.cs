@@ -8,7 +8,5 @@ public class CardSettings : ScriptableObject
     public Sprite img;
     public string title;
     public string desc;
-    public List<CardRequirement> requirement = new List<CardRequirement>();
+    public CardModel model;
 }
-
-public enum CardRequirement { Mana, Life, UsedCard }

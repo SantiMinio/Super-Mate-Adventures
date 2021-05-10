@@ -2,25 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System;
 
 public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterHandler
 {
     Canvas canvas;
     RectTransform rectTransform;
+    [Header("Basic Things")]
+    [SerializeField] Image imgSprite = null;
+
     [SerializeField] float permissiveLimit = 10;
 
     Vector3 currentPos;
     DeckOfCards currentDeck;
+    CardSettings settings;
+
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>();
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void Initialize(Vector3 position, DeckOfCards deck)
+    public void Initialize(Vector3 position, DeckOfCards deck, CardSettings _settings)
     {
         currentPos = position;
         currentDeck = deck;
+        settings = _settings;
+        imgSprite.sprite = settings.img;
+    }
+
+    public void SetPosition(Vector3 pos)
+    {
+        currentPos = pos;
+        rectTransform.position = currentPos;
     }
 
     #region Events
@@ -35,22 +50,11 @@ public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterH
         if (!CheckPosition())
             rectTransform.position = currentPos;
         else
-            Debug.Log("No hay problema con esta posición");
+            currentDeck.OnUseCard(this, settings);
 }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-    }
-
-    bool visible;
-    private void OnBecameInvisible()
-    {
-        visible = false;
-    }
-
-    private void OnBecameVisible()
-    {
-        visible = true;
     }
     #endregion
 
