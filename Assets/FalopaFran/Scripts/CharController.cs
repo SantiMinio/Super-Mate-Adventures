@@ -14,23 +14,35 @@ namespace Frano
         private Rigidbody _rb;
 
         private bool moving;
-    
+        private CharacterHead _characterHead;
+
+        public bool Moving => moving;
+        
+            
+
         void Start()
         {
             _rb = GetComponent<Rigidbody>();
-        
+            _characterHead = GetComponent<CharacterHead>();
+            
+            
             forward = Camera.main.transform.forward;
             forward.y = 0;
             forward = Vector3.Normalize(forward);
             right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+
+            
         }
 
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+                _characterHead.BaseAttack();
+            
+            
+            //Moving
             moving = false;
-        
-            if (Input.anyKey)
-                moving = true;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) moving = true;
         }
 
         private void FixedUpdate()
@@ -42,14 +54,16 @@ namespace Frano
         private void Move()
         {
             Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis(("VerticalKey")));
-            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxisRaw("HorizontalKey");
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxisRaw("VerticalKey");
 
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
             _rb.velocity = heading  * moveSpeed;
         
-            transform.forward = heading;
+            
+            if(!(heading == Vector3.zero))
+                transform.forward = heading;
         }
     }
 }
