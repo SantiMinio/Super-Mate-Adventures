@@ -10,8 +10,8 @@ public class DeckOfCards : MonoBehaviour
     List<Card> currentDeck = new List<Card>();
     List<Card> currentCards = new List<Card>();
 
-    [SerializeField] RectTransform firstPos = null;
-    [SerializeField] RectTransform lastPos = null;
+    public RectTransform firstPos = null;
+    public RectTransform lastPos = null;
     [SerializeField] RectTransform posToSpawn = null;
 
     Vector3[] positions = new Vector3[0];
@@ -52,5 +52,6 @@ public class DeckOfCards : MonoBehaviour
         randomCard.gameObject.SetActive(true);
         currentCards.Add(randomCard);
         randomCard.transform.position = positions[currentCards.Count - 1];
+        randomCard.Initialize(randomCard.transform.position, this);
     }
 }
