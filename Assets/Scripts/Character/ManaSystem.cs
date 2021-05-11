@@ -17,7 +17,6 @@ public class ManaSystem
     public void ModifyMana(int manaAmmount)
     {
         currentMana += manaAmmount;
-        Debug.Log(currentMana);
 
         if (currentMana < 0) currentMana = 0;
         else if (currentMana > maxMana) currentMana = maxMana;

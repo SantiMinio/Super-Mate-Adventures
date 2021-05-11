@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TestSettings 2
   m_EditorClassIdentifier: 
   img: {fileID: 21300000, guid: 3c812a7f5d5538d4cabcc5addf8b686f, type: 3}
-  title: 
-  desc: 
-  model: {fileID: 5851942958749611047, guid: decbd3a93c5ba38449b3ad6e48ecb703, type: 3}
+  title: Rayo makuin
+  desc: "Te hace r\xE1pido"
+  model: {fileID: 5635009007743093042, guid: 5699912939969ff4dbe42d3e0fb94693, type: 3}
