@@ -8,19 +8,21 @@ using UnityEngine;
 public class EnemyDummy : MonoBehaviour, IHiteable
 {
     [SerializeField] ParticleSystem hittedFeedback;
-
     private Rigidbody _rb;
     [SerializeField]private MovementHandler _movementHandler;
-
     [SerializeField] private FieldOfView _fieldOfView;
 
-    public MovementHandler GetMovementHandler => _movementHandler;
     
-    public FieldOfView GetFoV => _fieldOfView;
-    
+    private Animator _animator;
+    private AnimEvent _animEvent;
     private StateManager _fsm;
-    
     private LifeHandler _lifeHandler;
+    
+    
+    public float meleeDistance { get; private set; }
+    public MovementHandler GetMovementHandler => _movementHandler;
+    public Animator GetAnimator => _animator;
+    public FieldOfView GetFoV => _fieldOfView;
     void Awake()
     {
         _lifeHandler = GetComponent<LifeHandler>();
@@ -33,19 +35,25 @@ public class EnemyDummy : MonoBehaviour, IHiteable
         _rb = GetComponent<Rigidbody>();
         _movementHandler = new MovementHandler();
         _movementHandler.Init(FindObjectOfType<Pathfinding>(), this, _rb);
-        
 
+        _animator = GetComponentInChildren<Animator>();
+        _animEvent = GetComponentInChildren<AnimEvent>();
 
     }
+
+    private void Start()
+    {
+        _animEvent.Add_Callback("attack", DoAttack);
+
+        meleeDistance = 12f;
+    }
+
+    
+
     private void Update()
     {
+        _animator.SetBool("moving", _movementHandler.moving);
         _fsm.OnUpdate();
-        
-        // if (_fieldOfView.GetVisibleTargets.Any())
-        // {
-        //     Debug.Log(_fieldOfView.GetVisibleTargets[0].position);
-        //     _movementHandler.GoTo(_fieldOfView.GetVisibleTargets[0].position);
-        // }
     }
 
     private void FixedUpdate()
@@ -54,6 +62,11 @@ public class EnemyDummy : MonoBehaviour, IHiteable
         _movementHandler.OnFixedUpdate();
     }
 
+    private void DoAttack()
+    {
+        Debug.Log("ataque bizcocho");
+    }
+    
     public void Hit(IAttacker atttacker)
     {
         Debug.Log("Recibo daño");
