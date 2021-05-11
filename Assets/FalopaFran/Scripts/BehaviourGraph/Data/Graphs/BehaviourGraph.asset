@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930b66460e18a148b77ecf9e1369f6e, type: 3}
+  m_Name: BehaviourGraph
+  m_EditorClassIdentifier: 
+  windows:
+  - id: 0
+    drawNode: {fileID: 11400000, guid: 22838935d441af64ba7d65f54d823acb, type: 2}
+    windowRect:
+      serializedVersion: 2
+      x: 117
+      y: 114
+      width: 200
+      height: 500
+    windowTitle: State
+    enterNode: 0
+    targetNode: 0
+    isDuplicate: 0
+    comment: 
+    isAssigned: 1
+    collapse: 0
+    previousCollapse: 0
+    stateRef:
+      currentState: {fileID: 11400000, guid: 176c3aac82fd3a24cb0556912938fd91, type: 2}
+      previousState: {fileID: 11400000, guid: 176c3aac82fd3a24cb0556912938fd91, type: 2}
+    transRef:
+      previousCondition: {fileID: 0}
+      transitionId: 0
+  - id: 1
+    drawNode: {fileID: 11400000, guid: 22838935d441af64ba7d65f54d823acb, type: 2}
+    windowRect:
+      serializedVersion: 2
+      x: 775
+      y: 111
+      width: 200
+      height: 500
+    windowTitle: State
+    enterNode: 0
+    targetNode: 0
+    isDuplicate: 0
+    comment: 
+    isAssigned: 1
+    collapse: 0
+    previousCollapse: 0
+    stateRef:
+      currentState: {fileID: 11400000, guid: 2c778694a1631df459da90017de7c5e8, type: 2}
+      previousState: {fileID: 11400000, guid: 2c778694a1631df459da90017de7c5e8, type: 2}
+    transRef:
+      previousCondition: {fileID: 0}
+      transitionId: 0
+  - id: 2
+    drawNode: {fileID: 11400000, guid: bfc886a6d1f076149b9227ed799221e0, type: 2}
+    windowRect:
+      serializedVersion: 2
+      x: 436
+      y: 169
+      width: 200
+      height: 100
+    windowTitle: Condition
+    enterNode: 0
+    targetNode: 0
+    isDuplicate: 0
+    comment: 
+    isAssigned: 0
+    collapse: 0
+    previousCollapse: 0
+    stateRef:
+      currentState: {fileID: 0}
+      previousState: {fileID: 0}
+    transRef:
+      previousCondition: {fileID: 0}
+      transitionId: 0
+  idCount: 3

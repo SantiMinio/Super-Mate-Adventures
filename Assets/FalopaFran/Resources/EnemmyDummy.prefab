@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 5963928888608481680}
   - component: {fileID: -3811395992596308188}
   - component: {fileID: -7938393660398610179}
+  - component: {fileID: 1381344450607894541}
   m_Layer: 7
   m_Name: EnemmyDummy
   m_TagString: Untagged
@@ -209,6 +210,7 @@ MonoBehaviour:
     turnSpeed: 10
     speed: 30
     minDistToChangeNode: 1
+    minDistToReachPos: 12
     path: []
     currentWaypoint: {x: 0, y: 0, z: 0}
     targetIndex: 0
@@ -261,6 +263,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &1381344450607894541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963928888608481679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e027400609f74f4faf2e1bc6273ad74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultState: {fileID: 11400000, guid: 176c3aac82fd3a24cb0556912938fd91, type: 2}
+  currentState: {fileID: 0}
 --- !u!1 &5963928888847913633
 GameObject:
   m_ObjectHideFlags: 0
