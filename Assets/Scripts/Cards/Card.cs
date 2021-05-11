@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler
+public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     Canvas canvas;
     RectTransform rectTransform;
@@ -14,6 +14,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
 
     [SerializeField] float permissiveLimit = 10;
     [SerializeField] LayerMask mask = 1 << 8;
+    [SerializeField] Animator anim = null;
 
     Vector3 currentPos;
     DeckOfCards currentDeck;
@@ -67,10 +68,34 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
             currentModel.UseCard();
             currentDeck.OnUseCard(this, settings);
         }
-}
+    }
+    bool onCard;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        onCard = true;
+        anim.Play("ScaleOnEnter");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (onCard)
+        {
+            onCard = false;
+            anim.Play("ScaleOnExit");
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        //onCard = false;
+        //anim.Play("Idle");
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        currentModel.RangeFeedback();
+        rectTransform.SetAsLastSibling();
     }
     #endregion
 
@@ -87,11 +112,6 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
             return false;
 
         return true;
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        currentModel.RangeFeedback();
     }
 
     #endregion
