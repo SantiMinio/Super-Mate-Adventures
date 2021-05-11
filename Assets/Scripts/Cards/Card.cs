@@ -13,6 +13,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     [SerializeField] Image imgSprite = null;
 
     [SerializeField] float permissiveLimit = 10;
+    [SerializeField] LayerMask mask = 1 << 8;
 
     Vector3 currentPos;
     DeckOfCards currentDeck;
@@ -39,19 +40,30 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         currentPos = pos;
         rectTransform.position = currentPos;
     }
-
+    Ray lastRay;
     #region Events
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 
         Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        lastRay = ray;
 
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, 10000, 1 << 8, QueryTriggerInteraction.Ignore))
+        if(Physics.Raycast(ray.origin, ray.direction, out hit, 8000000, mask, QueryTriggerInteraction.Ignore))
         {
             currentModel.transform.position = hit.point;
         }
+        else
+        {
+            Debug.Log("No le di a nada" + ray.origin);
+        }
+    }
+
+    private void Update()
+    {
+       
+        Debug.DrawLine(lastRay.origin, lastRay.origin + lastRay.direction * 8000000, Color.red);
     }
 
     public void OnEndDrag(PointerEventData eventData)

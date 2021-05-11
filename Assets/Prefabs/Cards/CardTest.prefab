@@ -90,3 +90,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imgSprite: {fileID: 7715010964772729946}
   permissiveLimit: 10
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
