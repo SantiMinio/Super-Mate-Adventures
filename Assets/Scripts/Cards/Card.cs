@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterHandler
+public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler
 {
     Canvas canvas;
     RectTransform rectTransform;
@@ -18,6 +18,7 @@ public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterH
     DeckOfCards currentDeck;
     CardSettings settings;
 
+    CardModel currentModel;
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>();
@@ -30,6 +31,7 @@ public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterH
         currentDeck = deck;
         settings = _settings;
         imgSprite.sprite = settings.img;
+        currentModel = Instantiate(settings.model);
     }
 
     public void SetPosition(Vector3 pos)
@@ -39,18 +41,31 @@ public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterH
     }
 
     #region Events
-
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, 10000, 1 << 8, QueryTriggerInteraction.Ignore))
+        {
+            currentModel.transform.position = hit.point;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!CheckPosition())
+        if (!CheckPosition() || !currentModel.CanUse())
+        {
             rectTransform.position = currentPos;
+            currentModel.ResetCard();
+        }
         else
+        {
+            currentModel.UseCard();
             currentDeck.OnUseCard(this, settings);
+        }
 }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -71,6 +86,11 @@ public class Card : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterH
             return false;
 
         return true;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        currentModel.RangeFeedback();
     }
 
     #endregion

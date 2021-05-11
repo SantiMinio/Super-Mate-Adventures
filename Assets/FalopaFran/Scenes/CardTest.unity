@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 353939878}
   - component: {fileID: 353939880}
   - component: {fileID: 353939879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(100.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 479023811}
   - component: {fileID: 479023813}
   - component: {fileID: 479023812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(0.0, 0.0, 50.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 801288843}
   - component: {fileID: 801288845}
   - component: {fileID: 801288844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(50.0, 0.0, -50.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 1006097933}
   - component: {fileID: 1006097935}
   - component: {fileID: 1006097934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(50.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,6 +812,17 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!114 &1031218889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7296414654246437442, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
+  m_PrefabInstance: {fileID: 85836500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e20a4a9ed6a6249b37851cb97cd75b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1037268265
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +834,7 @@ GameObject:
   - component: {fileID: 1037268268}
   - component: {fileID: 1037268267}
   - component: {fileID: 1037268266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1063813153
 Transform:
   m_ObjectHideFlags: 0
@@ -974,7 +985,7 @@ GameObject:
   - component: {fileID: 1089285927}
   - component: {fileID: 1089285929}
   - component: {fileID: 1089285928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(0.0, 0.0, -50.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,6 +1055,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5963928888608481683, guid: e677a5e17e508e345a1de9e931d078a6, type: 3}
   m_PrefabInstance: {fileID: 1735661926}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1120822619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120822621}
+  - component: {fileID: 1120822620}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1120822620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120822619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5831ea7e83f03654ba44bc019a1ec22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterHead: {fileID: 1031218889}
+--- !u!4 &1120822621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120822619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121386876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1893,7 @@ GameObject:
   - component: {fileID: 1690413572}
   - component: {fileID: 1690413574}
   - component: {fileID: 1690413573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(50.0, 0.0, 50.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2595,7 +2650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2115754155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrains
   m_TagString: Untagged
   m_Icon: {fileID: 0}

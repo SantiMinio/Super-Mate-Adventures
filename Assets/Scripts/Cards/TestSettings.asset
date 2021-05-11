@@ -15,4 +15,4 @@ MonoBehaviour:
   img: {fileID: 21300000, guid: cb7706e9fe2886b408c7859016cb5d7e, type: 3}
   title: 
   desc: 
-  model: {fileID: 0}
+  model: {fileID: 5851942958749611047, guid: decbd3a93c5ba38449b3ad6e48ecb703, type: 3}
