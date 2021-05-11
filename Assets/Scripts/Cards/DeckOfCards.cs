@@ -54,8 +54,9 @@ public class DeckOfCards : MonoBehaviour
         nextCard.gameObject.SetActive(true);
         currentDeck.Remove(nextCard);
         currentCards.Add(nextCard);
-        nextCard.transform.position = positions[currentCards.Count - 1];
-        nextCard.Initialize(nextCard.transform.position, this, randomCard);
+        nextCard.transform.position = posToSpawn.position;
+        nextCard.Initialize(this, randomCard);
+        nextCard.GoToPos(positions[currentCards.Count - 1]);
     }
 
     public void OnUseCard(Card card, CardSettings settings)
@@ -63,7 +64,10 @@ public class DeckOfCards : MonoBehaviour
         MoveCards(currentCards.IndexOf(card));
         currentCards.Remove(card);
         SelectRandomCard();
-        card.gameObject.SetActive(false);
+        card.GoToPos(posToSpawn.position, ()=>
+        {
+            card.gameObject.SetActive(false);
+        });
         currentDeck.Add(card);
         deck.Add(settings);
     }
@@ -72,7 +76,7 @@ public class DeckOfCards : MonoBehaviour
     {
         for (int i = index + 1; i < currentCards.Count; i++)
         {
-            currentCards[i].SetPosition(positions[i - 1]);
+            currentCards[i].GoToPos(positions[i - 1]);
         }
     }
 }
