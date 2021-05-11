@@ -1,5 +1,4 @@
 [Ll]ibrary/
-[Ll]ogs/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -22,7 +21,7 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
-*.pdb
+*.pdba
 *.log
 *.opendb
 *.VC.db
@@ -39,3 +38,8 @@ sysinfo.txt
 *.unitypackage
 *.log
 *.log
+Logs/shadercompiler-AssetImportWorker0.log
+Logs/AssetImportWorker0.log
+Logs/ApiUpdaterCheck.txt
+Logs/AssetImportWorker0-prev.log
+Logs/Packages-Update.log
