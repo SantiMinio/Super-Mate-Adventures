@@ -13,6 +13,8 @@ namespace Frano
         private FieldOfView _fieldOfView;
         private LifeHandler _lifeHandler;
 
+
+        public ManaSystem manaSystem = new ManaSystem();
         [SerializeField] private ParticleSystem takeDamageFeedback;
         
         [SerializeField] private float attackDamage;
@@ -25,13 +27,13 @@ namespace Frano
             _fieldOfView = GetComponentInChildren<FieldOfView>();
             
             _lifeHandler = GetComponent<LifeHandler>();
-            
         }
 
         private void Start()
         {
             //_lifeHandler.OnDead += () => Destroy(gameObject); no hace falta todavia esto
             _animEvent.Add_Callback("Attack", HitCloseEnemiesWithBaseAttack);
+            manaSystem.Initialize();
         }
 
         private void HitCloseEnemiesWithBaseAttack()

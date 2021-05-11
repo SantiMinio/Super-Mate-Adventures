@@ -54,18 +54,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         {
             currentModel.transform.position = hit.point;
         }
-        else
-        {
-            Debug.Log("No le di a nada" + ray.origin);
-        }
     }
-
-    private void Update()
-    {
-       
-        Debug.DrawLine(lastRay.origin, lastRay.origin + lastRay.direction * 8000000, Color.red);
-    }
-
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!CheckPosition() || !currentModel.CanUse())
