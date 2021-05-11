@@ -13,7 +13,7 @@ public class MovementHandler
     public Transform target;
     [SerializeField]float turnSpeed;
     [SerializeField]float speed;
-    [SerializeField] float minDistToChangeNode = 1.1f;
+    [SerializeField] float minDistToChangeNode = .5f;
     [SerializeField] float minDistToReachPos = 12f;
     public Vector3[] path;
     public Vector3 currentWaypoint;
@@ -173,7 +173,6 @@ public class MovementHandler
 
     public void Stop()
     {
-        Debug.Log("paro");
         moving = false;
         currentWaypoint = Vector3.zero;
         path = null;
@@ -256,8 +255,7 @@ public class MovementHandler
         if (Vector3.Distance(myTransform.position, currentPosToGo) < minDistToReachPos)
         {
             moving = false;
-                
-            Debug.Log("llegue");
+            
             Stop();
             OnReachDestination?.Invoke();
             return true;
@@ -271,7 +269,6 @@ public class MovementHandler
             {
                 moving = false;
                 
-                Debug.Log("llegue");
                 Stop();
                 OnReachDestination?.Invoke();
                 return true;
