@@ -110,7 +110,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862961883248601175}
-  - {fileID: 3965723858158171617}
+  - {fileID: 5349708755519768442}
   m_Father: {fileID: 5963928888608481683}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -140,14 +140,26 @@ MonoBehaviour:
   edgeResolveInteration: 4
   edgeDistanceTreshhold: 0.5
   showFieldOfView: 0
---- !u!95 &269261452264243400
+--- !u!114 &7778246377213984339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717005387310423488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86999878b9658ae488d4d9e317c1f187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &53937467590510133
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4342249022904299355}
+  m_GameObject: {fileID: 4717005387310423488}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b1d2a78d509345843a740416a1ab0fd5, type: 2}
@@ -159,18 +171,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6873853414106346924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4342249022904299355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86999878b9658ae488d4d9e317c1f187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5963928888608481679
 GameObject:
   m_ObjectHideFlags: 0
@@ -5169,7 +5169,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1001 &3495828685929468426
+--- !u!1001 &5600018026514669713
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5198,7 +5198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f281297fbac64b34da881835a36ac7e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.854
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f281297fbac64b34da881835a36ac7e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5234,17 +5234,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f281297fbac64b34da881835a36ac7e9, type: 3}
       propertyPath: m_Name
-      value: Biscochito golden nine
+      value: Biscochito golden nine (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f281297fbac64b34da881835a36ac7e9, type: 3}
---- !u!1 &4342249022904299355 stripped
+--- !u!1 &4717005387310423488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f281297fbac64b34da881835a36ac7e9, type: 3}
-  m_PrefabInstance: {fileID: 3495828685929468426}
+  m_PrefabInstance: {fileID: 5600018026514669713}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3965723858158171617 stripped
+--- !u!4 &5349708755519768442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f281297fbac64b34da881835a36ac7e9, type: 3}
-  m_PrefabInstance: {fileID: 3495828685929468426}
+  m_PrefabInstance: {fileID: 5600018026514669713}
   m_PrefabAsset: {fileID: 0}

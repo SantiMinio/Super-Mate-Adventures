@@ -5,7 +5,7 @@ using System.Linq;
 using Frano;
 using UnityEngine;
 
-public class EnemyDummy : MonoBehaviour, IHiteable
+public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 {
     [SerializeField] ParticleSystem hittedFeedback;
     private Rigidbody _rb;
@@ -17,6 +17,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable
     private AnimEvent _animEvent;
     private StateManager _fsm;
     private LifeHandler _lifeHandler;
+
+    [SerializeField] private float attackDamage;
     
     
     public float meleeDistance { get; private set; }
@@ -43,9 +45,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable
 
     private void Start()
     {
-        _animEvent.Add_Callback("attack", DoAttack);
+        _animEvent.Add_Callback("doDamage", DoAttack);
 
         meleeDistance = 12f;
+        attackDamage = 1f;
     }
 
     
@@ -65,8 +68,16 @@ public class EnemyDummy : MonoBehaviour, IHiteable
     private void DoAttack()
     {
         Debug.Log("ataque bizcocho");
+        List<Transform> targets = _fieldOfView.GetVisibleTargets;
+
+        for (int i = 0; i < targets.Count; i++)
+        {
+            IHiteable hiteable = GetHiteableFromTransform(targets[i]);
+                
+            if(hiteable != null) hiteable.Hit(this);
+        }
     }
-    
+
     public void Hit(IAttacker atttacker)
     {
         Debug.Log("Recibo daño");
@@ -77,4 +88,25 @@ public class EnemyDummy : MonoBehaviour, IHiteable
         hittedFeedback.transform.forward = (transform.position - atttacker.GetPosition()).normalized;
         hittedFeedback.Play();
     }
+    
+    
+    #region AuxMethods
+
+    IHiteable GetHiteableFromTransform(Transform transform)
+    {
+        foreach (var component in transform.GetComponents<MonoBehaviour>())
+        {
+            if (component is IHiteable)
+            {
+                return component as IHiteable;
+            }
+        }
+        return null;
+    }
+
+    #endregion
+
+    public Vector3 GetPosition() {return transform.position; }
+
+    public float GetDamage(){return attackDamage;}
 }

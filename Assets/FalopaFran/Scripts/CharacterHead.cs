@@ -5,13 +5,16 @@ using UnityEngine;
 
 namespace Frano
 {
-    public class CharacterHead : MonoBehaviour, IAttacker
+    public class CharacterHead : MonoBehaviour, IAttacker, IHiteable
     {
         private CharController _characterController;
         private AnimEvent _animEvent;
         private Animator _animator;
         private FieldOfView _fieldOfView;
+        private LifeHandler _lifeHandler;
 
+        [SerializeField] private ParticleSystem takeDamageFeedback;
+        
         [SerializeField] private float attackDamage;
 
         private void Awake()
@@ -20,10 +23,14 @@ namespace Frano
             _animEvent = GetComponentInChildren<AnimEvent>();
             _animator = GetComponentInChildren<Animator>();
             _fieldOfView = GetComponentInChildren<FieldOfView>();
+            
+            _lifeHandler = GetComponent<LifeHandler>();
+            
         }
 
         private void Start()
         {
+            //_lifeHandler.OnDead += () => Destroy(gameObject); no hace falta todavia esto
             _animEvent.Add_Callback("Attack", HitCloseEnemiesWithBaseAttack);
         }
 
@@ -68,7 +75,15 @@ namespace Frano
         }
 
         #endregion
-        
+
+        public void Hit(IAttacker attacker)
+        {
+            // _lifeHandler.TakeDamage(atttacker.GetDamage());
+            //
+            //
+            // hittedFeedback.transform.forward = (transform.position - atttacker.GetPosition()).normalized;
+            // hittedFeedback.Play();
+        }
     }
     
     
