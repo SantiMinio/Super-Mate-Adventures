@@ -1,1705 +1,189 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.6f1 (338bb68529b2) revision 3378102'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 8.1  (6.3.0) 64bit' Language: 'es' Physical Memory: 16299 MB
+OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'es' Physical Memory: 6075 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\Unity.exe
+F:\2020.3.6f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-P:/Carrera de VideoJuegos/CositasHaciendose/Super-Mate-Adventures
+F:/Proyectos Github/Super Mate Adventure
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64431
-Successfully changed project path to: P:/Carrera de VideoJuegos/CositasHaciendose/Super-Mate-Adventures
-P:/Carrera de VideoJuegos/CositasHaciendose/Super-Mate-Adventures
+50137
+Successfully changed project path to: F:/Proyectos Github/Super Mate Adventure
+F:/Proyectos Github/Super Mate Adventure
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 26.62 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 28.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.6f1 (338bb68529b2)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path P:/Carrera de VideoJuegos/CositasHaciendose/Super-Mate-Adventures/Assets
+[Subsystems] Discovering subsystems at path F:/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Proyectos Github/Super Mate Adventure/Assets
 GfxDevice: creating device client; threaded=0
-d3d11: QueryInterface(IDXGIFactory5) failed (80004002).
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Renderer: AMD Radeon(TM) RX Vega 11 Graphics (ID=0x15d8)
     Vendor:   
-    VRAM:     3992 MB
-    Driver:   27.21.14.6172
+    VRAM:     3037 MB
+    Driver:   27.20.1020.1
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
+Mono path[0] = 'F:/2020.3.6f1/Editor/Data/Managed'
+Mono path[1] = 'F:/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'F:/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56956
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001437 seconds.
+Register platform support module: F:/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: F:/2020.3.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001381 seconds.
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 27.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 41.08 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.882 seconds
+- Completed reload, in  2.019 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000630 seconds.
+Registered in 0.001051 seconds.
 Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.999 seconds
+- Completed reload, in  1.305 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 70.6 MB.
+Unloading 1172 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.5 MB.
 System memory in use after: 70.6 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1614.
-Total: 1.686139 ms (FindLiveObjects: 0.149494 ms CreateObjectMapping: 0.059669 ms MarkObjects: 1.402228 ms  DeleteObjects: 0.073143 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1629.
+Total: 2.031400 ms (FindLiveObjects: 0.204400 ms CreateObjectMapping: 0.043800 ms MarkObjects: 1.681200 ms  DeleteObjects: 0.100300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Cards/TestSettings.asset
-  artifactKey: Guid(e54ab81dda52710449c4340da1854695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Cards/TestSettings.asset using Guid(e54ab81dda52710449c4340da1854695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a851eebfd5396573ad0ee14d8e915e7') in 0.036777 seconds
-  Import took 0.038746 seconds .
+  path: Assets/Prefabs/CardModel/Bullet.prefab
+  artifactKey: Guid(e841c6ecfa5510245904e2fbf15a9de9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/CardModel/Bullet.prefab using Guid(e841c6ecfa5510245904e2fbf15a9de9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d975d48f710600794609892125c9aeb') in 0.941939 seconds
+  Import took 0.976698 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Scripts/Cards/TestCard.png
-  artifactKey: Guid(d84214d3d77b30f43a181aa729dcfe6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Cards/TestCard.png using Guid(d84214d3d77b30f43a181aa729dcfe6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85fb98c5170e4a8e626d411a899396b') in 0.087162 seconds
-  Import took 0.276133 seconds .
+  Time since last request: 0.035790 seconds.
+  path: Assets/Prefabs/Cards/CardTest.prefab
+  artifactKey: Guid(f81abb5682bbd5049aa302689fa5bc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cards/CardTest.prefab using Guid(f81abb5682bbd5049aa302689fa5bc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '802ddd6ef25fed7a55e7fd211039b515') in 0.027154 seconds
+  Import took 0.031060 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Scripts/Cards/TestSettings 2.asset
-  artifactKey: Guid(7f073db4a92ad3c4ba613013d6d73395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Cards/TestSettings 2.asset using Guid(7f073db4a92ad3c4ba613013d6d73395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74f0286ec597343f3a10612c59ac6db') in 0.007878 seconds
-  Import took 0.120887 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Scripts/Cards/TestCard 2.png
-  artifactKey: Guid(cb7706e9fe2886b408c7859016cb5d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Cards/TestCard 2.png using Guid(cb7706e9fe2886b408c7859016cb5d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a54cfd45fad71ce41ac376ea60327f89') in 0.030524 seconds
-  Import took 0.032561 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001382 seconds.
-  path: Assets/Scripts/Cards/TestCard 3.png
-  artifactKey: Guid(3c812a7f5d5538d4cabcc5addf8b686f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Cards/TestCard 3.png using Guid(3c812a7f5d5538d4cabcc5addf8b686f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2731f084398e7e459141e89eb4d8cf04') in 0.023064 seconds
-  Import took 0.025704 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000105 seconds.
-  path: Assets/Scripts/Cards/TestSettings 1.asset
-  artifactKey: Guid(48cc241fc13bf9f499dd72414dc97b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Cards/TestSettings 1.asset using Guid(48cc241fc13bf9f499dd72414dc97b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6798686e1dbc958a5746b9c502aafb43') in 0.008218 seconds
-  Import took 0.084724 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000664 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.110 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1146 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.5 MB.
-System memory in use after: 73.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1625.
-Total: 1.739071 ms (FindLiveObjects: 0.174196 ms CreateObjectMapping: 0.046196 ms MarkObjects: 1.500715 ms  DeleteObjects: 0.016040 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.610131 seconds.
-  path: Assets/FalopaFran/Scenes/CardTest.unity
-  artifactKey: Guid(68c37c603976bb04ea0b8e70256561a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scenes/CardTest.unity using Guid(68c37c603976bb04ea0b8e70256561a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f9b96bd8f625b60834439930684f505') in 0.017961 seconds
-  Import took 0.021148 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000496 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.970 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1146 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.5 MB.
-System memory in use after: 73.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1628.
-Total: 1.778851 ms (FindLiveObjects: 0.136983 ms CreateObjectMapping: 0.041063 ms MarkObjects: 1.582520 ms  DeleteObjects: 0.016361 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000444 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.956 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1146 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.5 MB.
-System memory in use after: 73.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1631.
-Total: 3.568930 ms (FindLiveObjects: 0.162005 ms CreateObjectMapping: 0.478317 ms MarkObjects: 2.912247 ms  DeleteObjects: 0.014757 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002289 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.220 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1146 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.5 MB.
-System memory in use after: 73.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1634.
-Total: 1.851673 ms (FindLiveObjects: 0.329785 ms CreateObjectMapping: 0.043629 ms MarkObjects: 1.463181 ms  DeleteObjects: 0.014115 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 67.234282 seconds.
-  path: Assets/FalopaFran/Scenes/EnemyMovementTest.unity
-  artifactKey: Guid(465db3e356361e64ba94ad7947da5242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scenes/EnemyMovementTest.unity using Guid(465db3e356361e64ba94ad7947da5242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e15493f0462a830bce798d5476e330b9') in 0.202361 seconds
-  Import took 0.204703 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 193.817720 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph
-  artifactKey: Guid(d6c8a3600298898498c8e9bd470a82c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph using Guid(d6c8a3600298898498c8e9bd470a82c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f2a78311d919e0a739274c69d1e7da') in 0.008987 seconds
-  Import took 0.011844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.534506 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data
-  artifactKey: Guid(8b6c5efc2e94ed04cbc315211187aa55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data using Guid(8b6c5efc2e94ed04cbc315211187aa55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a105b2756bc510fa60d027bfd2707e4') in 0.008516 seconds
-  Import took 0.010505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.370615 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions
-  artifactKey: Guid(175a43f9f4afaf843a66f575f53d81e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions using Guid(175a43f9f4afaf843a66f575f53d81e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5dcd277fe3968be34902e634950af6') in 0.008216 seconds
-  Import took 0.010134 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.115162 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Attack.asset
-  artifactKey: Guid(8589bce116097104a9bf73f90bdef495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Attack.asset using Guid(8589bce116097104a9bf73f90bdef495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8b3e00f87f228821ad1942b3240a3d') in 0.010050 seconds
-  Import took 0.012232 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/ChaseRaton.asset
-  artifactKey: Guid(84c7145e1561045469d26039fa2c46c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/ChaseRaton.asset using Guid(84c7145e1561045469d26039fa2c46c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6370c349011664189f1f8573eb460cf') in 0.007993 seconds
-  Import took 0.010062 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000162 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Reset Auxiliar Pos.asset
-  artifactKey: Guid(44461ac021821ec41b40b730ff59d4a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Reset Auxiliar Pos.asset using Guid(44461ac021821ec41b40b730ff59d4a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58097c25e6b943327fa52eb81ac20e8d') in 0.009183 seconds
-  Import took 0.011790 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/GetHungry.asset
-  artifactKey: Guid(e0966919632ecc44a95b3a1373a603ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/GetHungry.asset using Guid(e0966919632ecc44a95b3a1373a603ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56060c1a252c0a71ceb739628ab36951') in 0.010675 seconds
-  Import took 0.013666 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/GoTo_PlatoComido.asset
-  artifactKey: Guid(3d1c92d515028554f90e3ea272523622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/GoTo_PlatoComido.asset using Guid(3d1c92d515028554f90e3ea272523622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2e36b6849f86ac57d465cc776ce4f83') in 0.009505 seconds
-  Import took 0.011816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/StopMoving.asset
-  artifactKey: Guid(431307d280c19bd49bcdd5cd8d94813d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/StopMoving.asset using Guid(431307d280c19bd49bcdd5cd8d94813d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0415d198ceecb5f039c80f9dcc7df8dc') in 0.009033 seconds
-  Import took 0.011555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/GoToNextPatrolPoint.asset
-  artifactKey: Guid(d9049a7e9b0c0af4c88fd3c213aa2a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/GoToNextPatrolPoint.asset using Guid(d9049a7e9b0c0af4c88fd3c213aa2a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a7db0f7ef556e35829732e946befff') in 0.009554 seconds
-  Import took 0.035613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Search Auxiliar Landing Spot_State Action.asset
-  artifactKey: Guid(1f9fb6126e91c1047b97ec626889fe88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Search Auxiliar Landing Spot_State Action.asset using Guid(1f9fb6126e91c1047b97ec626889fe88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0742aaa85cd6dcd6d1bc76efe99e0c7') in 0.011019 seconds
-  Import took 0.015371 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/SettingEntity_Wait.asset
-  artifactKey: Guid(92d20b1a3ed420e46a7057ff49df0b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/SettingEntity_Wait.asset using Guid(92d20b1a3ed420e46a7057ff49df0b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8075bbb389ba9f47cc455fe191f69a54') in 0.009145 seconds
-  Import took 0.011508 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000427 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Jump.asset
-  artifactKey: Guid(3eb5c8185d7e1ed4ba4e882f78828782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Jump.asset using Guid(3eb5c8185d7e1ed4ba4e882f78828782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4bd9a3f5b2d55aaeace0498b7452cc4') in 0.008536 seconds
-  Import took 0.011773 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Go To Auxiliar Position.asset
-  artifactKey: Guid(3d8d5e131bac3f947aec3ecbfa70a8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Go To Auxiliar Position.asset using Guid(3d8d5e131bac3f947aec3ecbfa70a8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af05522441c958ec2e62a5d256d4a8e') in 0.016624 seconds
-  Import took 0.021308 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Eat.asset
-  artifactKey: Guid(8f3fbd593d4f6c545b3e571cdda91bdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Eat.asset using Guid(8f3fbd593d4f6c545b3e571cdda91bdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baa2d07fd7de694c1a1709d8f2210e3e') in 0.009920 seconds
-  Import took 0.012506 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Search New Pos To Go.asset
-  artifactKey: Guid(47f58b3e74fa4cc4a816642ef52cd9dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Search New Pos To Go.asset using Guid(47f58b3e74fa4cc4a816642ef52cd9dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f9647dd649bf889ff4a63984ca1ad9') in 0.008694 seconds
-  Import took 0.011161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/TakeDamage.asset
-  artifactKey: Guid(d410c08d13f7ae5458bc2d9ea5471883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/TakeDamage.asset using Guid(d410c08d13f7ae5458bc2d9ea5471883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc91371050a92a4648134cb12f62886') in 0.011912 seconds
-  Import took 0.015191 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013205 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Search New Pos To Go.asset
-  artifactKey: Guid(47f58b3e74fa4cc4a816642ef52cd9dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Search New Pos To Go.asset using Guid(47f58b3e74fa4cc4a816642ef52cd9dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f9647dd649bf889ff4a63984ca1ad9') in 0.004108 seconds
-  Import took 0.006672 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.905401 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Auxiliar Position Avaliable.asset
-  artifactKey: Guid(a22139c2a941aa44990be1d82cb6bdea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Auxiliar Position Avaliable.asset using Guid(a22139c2a941aa44990be1d82cb6bdea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56591edeeacbdaaf1c669c11ccd0fa94') in 0.008145 seconds
-  Import took 0.010442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is Close To Auxiliar Pos.asset
-  artifactKey: Guid(c8714d4f5b7123e43a15ad728e79503e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is Close To Auxiliar Pos.asset using Guid(c8714d4f5b7123e43a15ad728e79503e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8bda7e8eafb603a7de364724056b8b7') in 0.008224 seconds
-  Import took 0.010094 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsFed.asset
-  artifactKey: Guid(dcc646be2382f924498520241fde9f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsFed.asset using Guid(dcc646be2382f924498520241fde9f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a07b69e3959828c19a8610ec28e0d0') in 0.009918 seconds
-  Import took 0.012167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsHeight.asset
-  artifactKey: Guid(30e4ae34a08ac9942994bd5a88d7b8b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsHeight.asset using Guid(30e4ae34a08ac9942994bd5a88d7b8b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1cb1dd7d417a193832dc3ad18e9f70') in 0.009788 seconds
-  Import took 0.012212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000291 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsCloseToComida.asset
-  artifactKey: Guid(8d9065b3675b28847b2bf720b90da712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsCloseToComida.asset using Guid(8d9065b3675b28847b2bf720b90da712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c47e755db35d38b6baaff41e2d10fd3c') in 0.009502 seconds
-  Import took 0.012866 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Obstacle In Jump.asset
-  artifactKey: Guid(951f08b0e038612409bc93642ee7326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Obstacle In Jump.asset using Guid(951f08b0e038612409bc93642ee7326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6727cbfc350f5f1b6e858cb8b598e899') in 0.009270 seconds
-  Import took 0.011727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsHungry.asset
-  artifactKey: Guid(bacdb047fd332aa46ba24120be9bb8c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsHungry.asset using Guid(bacdb047fd332aa46ba24120be9bb8c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6eb02f784d347d30bba23a57c5fc4e0') in 0.009366 seconds
-  Import took 0.011537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Finish Jumping.asset
-  artifactKey: Guid(c844315ecb4f6be408b3f8ec836721a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Finish Jumping.asset using Guid(c844315ecb4f6be408b3f8ec836721a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88db7021a001075626c03242973fc247') in 0.010914 seconds
-  Import took 0.013539 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/JumpConditon_Holder.asset
-  artifactKey: Guid(e956a1d24e862704495d9755305dfafd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/JumpConditon_Holder.asset using Guid(e956a1d24e862704495d9755305dfafd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe971908d615101df3c38261834cbdb') in 0.011342 seconds
-  Import took 0.013869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/ImInJumpDistance.asset
-  artifactKey: Guid(d1703bfcbb832ab49ac1f4415631d799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/ImInJumpDistance.asset using Guid(d1703bfcbb832ab49ac1f4415631d799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04cb7c26cddae8800e9efc8b65bb3ff0') in 0.008563 seconds
-  Import took 0.011056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsCloseToTarget.asset
-  artifactKey: Guid(9b43f60e96fa5f242aeb3ba9376362c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsCloseToTarget.asset using Guid(9b43f60e96fa5f242aeb3ba9376362c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de67689abbd574cac2a2ef3761e85e3') in 0.007997 seconds
-  Import took 0.010962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsStop.asset
-  artifactKey: Guid(61ef628752421c342b21bd8d8f7862f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/IsStop.asset using Guid(61ef628752421c342b21bd8d8f7862f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5e910d8d9dce6e8c337df059c7f6798') in 0.010885 seconds
-  Import took 0.013990 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Cant Reach To Desired Position.asset
-  artifactKey: Guid(d8d08674e0609254089861586efc4300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Cant Reach To Desired Position.asset using Guid(d8d08674e0609254089861586efc4300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e338282a7aee7ffb93080ce806e251c9') in 0.008904 seconds
-  Import took 0.011104 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Im Stuck.asset
-  artifactKey: Guid(d1cc7c23ff229ac47a0e104ae9ec903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Im Stuck.asset using Guid(d1cc7c23ff229ac47a0e104ae9ec903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6feb5515ea8b9b3caf6241f4226ca1') in 0.008240 seconds
-  Import took 0.010742 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is Set Up Finished.asset
-  artifactKey: Guid(19646931681f2eb41b3c355daf8573dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is Set Up Finished.asset using Guid(19646931681f2eb41b3c355daf8573dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '222ded3bb2c67b88475c06f8ad08c941') in 0.011494 seconds
-  Import took 0.032819 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Im Stuck.asset
-  artifactKey: Guid(d1cc7c23ff229ac47a0e104ae9ec903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Im Stuck.asset using Guid(d1cc7c23ff229ac47a0e104ae9ec903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6feb5515ea8b9b3caf6241f4226ca1') in 0.003576 seconds
-  Import took 0.005737 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/TargetIsNotInFoV.asset
-  artifactKey: Guid(4701af5554e32684fb37f9af0518f2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/TargetIsNotInFoV.asset using Guid(4701af5554e32684fb37f9af0518f2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '461078d5ed57678b6b60f123d6328424') in 0.011181 seconds
-  Import took 0.013561 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is In FoV.asset
-  artifactKey: Guid(045066bb02e9c3749a9d84dc59b3e696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is In FoV.asset using Guid(045066bb02e9c3749a9d84dc59b3e696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '723464dd460fe91de241bc0f8e79ba5d') in 0.009874 seconds
-  Import took 0.012671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is In FoV.asset
-  artifactKey: Guid(045066bb02e9c3749a9d84dc59b3e696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is In FoV.asset using Guid(045066bb02e9c3749a9d84dc59b3e696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '723464dd460fe91de241bc0f8e79ba5d') in 0.003575 seconds
-  Import took 0.005947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.006537 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs/BehavGraph.asset
-  artifactKey: Guid(0c7302afec211ec41ba9876c65dbbb59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs/BehavGraph.asset using Guid(0c7302afec211ec41ba9876c65dbbb59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a6dca7c8d9a4336398e6f538ccf5ac') in 0.009907 seconds
-  Import took 0.012601 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 138.504794 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/BehaviourGraph.cs
-  artifactKey: Guid(d930b66460e18a148b77ecf9e1369f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/BehaviourGraph.cs using Guid(d930b66460e18a148b77ecf9e1369f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '315716b3ed5a5f55de1f869a6af1afc0') in 0.005333 seconds
-  Import took 0.023816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.014297 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/BehaviourGraph.cs
-  artifactKey: Guid(d930b66460e18a148b77ecf9e1369f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/BehaviourGraph.cs using Guid(d930b66460e18a148b77ecf9e1369f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '315716b3ed5a5f55de1f869a6af1afc0') in 0.003269 seconds
-  Import took 0.005656 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 97.350423 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GameEntity.cs
-  artifactKey: Guid(34544ea7a955ccb4b8ce025f520357be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GameEntity.cs using Guid(34544ea7a955ccb4b8ce025f520357be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8305842fad4cd07b379eb06e0d09f857') in 0.009411 seconds
-  Import took 0.012297 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 112.301704 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset
-  artifactKey: Guid(e914fcec07916cb47810059f289a561d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset using Guid(e914fcec07916cb47810059f289a561d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2b2e08a059447c454907fc5603b1c6c') in 0.004422 seconds
-  Import took 0.006821 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Sleep.asset
-  artifactKey: Guid(cd80045dea4d7e14c8b18a088f3cb728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Sleep.asset using Guid(cd80045dea4d7e14c8b18a088f3cb728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07bfc5802367ee0508ea2ef9c1d7bd62') in 0.008668 seconds
-  Import took 0.010515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset
-  artifactKey: Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset using Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c796e7b61ae5c7f0c285f8ca8cbf2b95') in 0.008266 seconds
-  Import took 0.010597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Move.asset
-  artifactKey: Guid(9826e693abee32e449887272a5398c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Move.asset using Guid(9826e693abee32e449887272a5398c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e97cd7e8705c32715a347d332e72d0c') in 0.012277 seconds
-  Import took 0.015188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/MovePatrol.asset
-  artifactKey: Guid(5b3d6c1c18f1e464a9ab9fc36798e7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/MovePatrol.asset using Guid(5b3d6c1c18f1e464a9ab9fc36798e7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ee8f448e972dc0bef62bb6f6c0ea939') in 0.012031 seconds
-  Import took 0.014941 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/SearchForJumpingPosition.asset
-  artifactKey: Guid(8fda082fb2c1c1b48914aeab39d6a60b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/SearchForJumpingPosition.asset using Guid(8fda082fb2c1c1b48914aeab39d6a60b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cffc3f9d3a557b2db7738f0920d3f6f') in 0.012371 seconds
-  Import took 0.014934 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Eating.asset
-  artifactKey: Guid(28a7e4b21ccda2a4898c149a0a67bd04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Eating.asset using Guid(28a7e4b21ccda2a4898c149a0a67bd04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '971b8ec1059f7f1c8992743c1bcf1804') in 0.008237 seconds
-  Import took 0.011300 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000445 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/SetPatrolLocation.asset
-  artifactKey: Guid(65536c2b5973a954aae4dcaad122fb88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/SetPatrolLocation.asset using Guid(65536c2b5973a954aae4dcaad122fb88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c6788c867461f72aef22b8691f8d38') in 0.009256 seconds
-  Import took 0.012962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000110 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Jump.asset
-  artifactKey: Guid(eca8b1bdfa3a417439a50e5e8ecf3bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Jump.asset using Guid(eca8b1bdfa3a417439a50e5e8ecf3bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2869901d68e3962bfd058e1cec700519') in 0.004044 seconds
-  Import took 0.006136 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset
-  artifactKey: Guid(a798b24def6f8bd47b0c4915bc667f8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset using Guid(a798b24def6f8bd47b0c4915bc667f8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b4efadaa8892ac818ec2451c920834f') in 0.008621 seconds
-  Import took 0.011013 seconds .
+  Time since last request: 0.000258 seconds.
+  path: Assets/Prefabs/CardModel/Mat.mat
+  artifactKey: Guid(19489a0603b00054393878a816398605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/CardModel/Mat.mat using Guid(19489a0603b00054393878a816398605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd0c3dad7109a72fa97ba521ebdf1f8') in 0.897145 seconds
+  Import took 0.900127 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000227 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/EmiTest.asset
-  artifactKey: Guid(312396c6a953a0c4eb6e48942a377648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/EmiTest.asset using Guid(312396c6a953a0c4eb6e48942a377648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0047fe833d58f3d391cdad7966b49a1d') in 0.009087 seconds
-  Import took 0.011525 seconds .
+  path: Assets/Prefabs/CardModel/BombCardModel.prefab
+  artifactKey: Guid(decbd3a93c5ba38449b3ad6e48ecb703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/CardModel/BombCardModel.prefab using Guid(decbd3a93c5ba38449b3ad6e48ecb703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bb384add1f6b505cd3fe6632ba2c9a3') in 0.028937 seconds
+  Import took 0.035099 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/EntitySetUp.asset
-  artifactKey: Guid(ab8e01f2bba64834b82c73921e86d9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/EntitySetUp.asset using Guid(ab8e01f2bba64834b82c73921e86d9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d7d6d97ef8c7000068db9ad76fd83c6') in 0.010478 seconds
-  Import took 0.013017 seconds .
+  Time since last request: 0.000275 seconds.
+  path: Assets/Prefabs/CardModel
+  artifactKey: Guid(160868e7933d3f444b4b1e04e1ce7268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/CardModel using Guid(160868e7933d3f444b4b1e04e1ce7268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef6bfae4794f698d6d71199d3e3a6522') in 0.007692 seconds
+  Import took 0.019499 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005284 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/EmiTest.asset
-  artifactKey: Guid(312396c6a953a0c4eb6e48942a377648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/EmiTest.asset using Guid(312396c6a953a0c4eb6e48942a377648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0047fe833d58f3d391cdad7966b49a1d') in 0.003372 seconds
-  Import took 0.005759 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.314946 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/Condition.cs
-  artifactKey: Guid(0c353b4560089c74bbd65657cadfe0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/Condition.cs using Guid(0c353b4560089c74bbd65657cadfe0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc68708dad9f9820fb50505630d15cc') in 0.008007 seconds
-  Import took 0.010167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.836250 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/CantReachToDesiredPosition.cs
-  artifactKey: Guid(c6cdfdad793043eca4df272c49d6b3b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/CantReachToDesiredPosition.cs using Guid(c6cdfdad793043eca4df272c49d6b3b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd066eee924cc76d42cd914a214737c') in 0.008804 seconds
-  Import took 0.011064 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.198747 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/AuxiliarPositionAvaliable.cs
-  artifactKey: Guid(5ec465b27642445fa75dc2cb92b762d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/AuxiliarPositionAvaliable.cs using Guid(5ec465b27642445fa75dc2cb92b762d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd811751d9518a9497c4b4108f61acb') in 0.009637 seconds
-  Import took 0.011728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.721996 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/FinishJumping.cs
-  artifactKey: Guid(841f36170bbaedf489cc3de4974e50d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/FinishJumping.cs using Guid(841f36170bbaedf489cc3de4974e50d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05044505b9dd7e47f97eb1e860704eb') in 0.008644 seconds
-  Import took 0.010673 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.038250 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/ObstacleInJump.cs
-  artifactKey: Guid(cc45338965394ac7b15c89129a908c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/ObstacleInJump.cs using Guid(cc45338965394ac7b15c89129a908c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b8f4d7d6193fbd16bda67b6a6622ae') in 0.008672 seconds
-  Import took 0.011135 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.777541 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/TargetisHeight.cs
-  artifactKey: Guid(766b31181b214574cb3f5241bc8e39b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/TargetisHeight.cs using Guid(766b31181b214574cb3f5241bc8e39b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d62233799f0a013aa51fd93bfa4efd') in 0.025468 seconds
-  Import took 0.028345 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.105886 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Attack_StateAction.cs
-  artifactKey: Guid(7b06e4b2da9b44689f300f3cd82d91c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Attack_StateAction.cs using Guid(7b06e4b2da9b44689f300f3cd82d91c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6925c027752803e66c00a9e7eca032cb') in 0.009043 seconds
-  Import took 0.011106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.593553 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/ChangeHunger_StateAction.cs
-  artifactKey: Guid(0a399abfd99f84f4895c06bf01d604b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/ChangeHunger_StateAction.cs using Guid(0a399abfd99f84f4895c06bf01d604b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '237a9a6435d68dd7767b66dd5f7aa50a') in 0.008500 seconds
-  Import took 0.030292 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.244337 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/ChaseTarget.cs
-  artifactKey: Guid(775e724ef142c5b4f87d3a91e4c0a19f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/ChaseTarget.cs using Guid(775e724ef142c5b4f87d3a91e4c0a19f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebf79dbcf9848c87dd263f21e521db93') in 0.017235 seconds
-  Import took 0.023198 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.766448 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoTo.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoTo.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5178e1f7d69b4764a29ea70153501dc') in 0.008362 seconds
-  Import took 0.010976 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.426117 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToAuxiliarPosition.cs
-  artifactKey: Guid(6e950550badc41588f3835afccda36f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToAuxiliarPosition.cs using Guid(6e950550badc41588f3835afccda36f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '563abd7b2910a066ebeca80e6af86360') in 0.009372 seconds
-  Import took 0.011637 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.392949 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/IsCloseToTarget.cs
-  artifactKey: Guid(0b278f0f45554842a9d0102696ec447b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/IsCloseToTarget.cs using Guid(0b278f0f45554842a9d0102696ec447b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d91f412c291e742f9534c791d02aa28') in 0.003862 seconds
-  Import took 0.006261 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.506909 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Jump.cs
-  artifactKey: Guid(5b9a0cb466d627548bb3d295dc8c1ed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Jump.cs using Guid(5b9a0cb466d627548bb3d295dc8c1ed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aac9239b4e4c03bd6b7e68f900f6e46a') in 0.003827 seconds
-  Import took 0.006674 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.446206 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Patrol.cs
-  artifactKey: Guid(d64f9d78f105f154cb45433a44e45837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Patrol.cs using Guid(d64f9d78f105f154cb45433a44e45837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfabc79e8acdd36bb4975f3a6888af4e') in 0.009129 seconds
-  Import took 0.011498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.444392 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/ResetAuxiliarPos.cs
-  artifactKey: Guid(a3745985ef574d1ca2e051642d439539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/ResetAuxiliarPos.cs using Guid(a3745985ef574d1ca2e051642d439539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb356d31124b3d1ff886bfce541328c') in 0.011828 seconds
-  Import took 0.015149 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.580854 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/SearchAuxiliarLandingSpot_StateAction.cs
-  artifactKey: Guid(d1fade88e4ac4b7e9e3632756febd6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/SearchAuxiliarLandingSpot_StateAction.cs using Guid(d1fade88e4ac4b7e9e3632756febd6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043f3e7084e8fc87efcdc74569d27e48') in 0.009819 seconds
-  Import took 0.012033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.510140 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/SearchNewPosToGo.cs
-  artifactKey: Guid(8dc9b92d04dc4816884df7af74c8a23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/SearchNewPosToGo.cs using Guid(8dc9b92d04dc4816884df7af74c8a23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa0557caf8d1a88f2a58e768ed5dcc67') in 0.010903 seconds
-  Import took 0.013803 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.301028 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/StateActions.cs
-  artifactKey: Guid(41571dd68464d9c44b30b651a319624d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/StateActions.cs using Guid(41571dd68464d9c44b30b651a319624d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b992ecb96b06bb89793b18861d2f5ca') in 0.009331 seconds
-  Import took 0.011333 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.239542 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/StopMoving.cs
-  artifactKey: Guid(88d247d9e8e84fe8a039ee133b801cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/StopMoving.cs using Guid(88d247d9e8e84fe8a039ee133b801cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4874a67f4c0ad0a2e62c100547dc3369') in 0.003102 seconds
-  Import took 0.005466 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.024920 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Wait.cs
-  artifactKey: Guid(e0e70c33beb87bc488dbf7f4f2dd5919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/Wait.cs using Guid(e0e70c33beb87bc488dbf7f4f2dd5919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b398a11ec158476dadb403b721848b') in 0.020485 seconds
-  Import took 0.025365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.949281 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions
-  artifactKey: Guid(3851e5a5bd657ed4b9905498e2bb4d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions using Guid(3851e5a5bd657ed4b9905498e2bb4d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894c935fce6833e7125a5119a9635cc4') in 0.008874 seconds
-  Import took 0.011182 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 99.246025 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions
-  artifactKey: Guid(91e2741e251d94348bffc91c9ba4e9c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions using Guid(91e2741e251d94348bffc91c9ba4e9c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3aa357c78b1d6ac866a214546a197b') in 0.003678 seconds
-  Import took 0.006266 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 67.560317 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/Custom Inspectors/SearchNewLandigPos_CustomEditor.cs
-  artifactKey: Guid(bec92d6479a14db1bb0b3a5502764a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/Custom Inspectors/SearchNewLandigPos_CustomEditor.cs using Guid(bec92d6479a14db1bb0b3a5502764a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2830c0efb148fce25ba988628cad622f') in 0.008274 seconds
-  Import took 0.010667 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.302026 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/Custom Inspectors/SearchNewPosToGo_Editor.cs
-  artifactKey: Guid(9bc55da22bb44fccae1b2909bd783844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor/Custom Inspectors/SearchNewPosToGo_Editor.cs using Guid(9bc55da22bb44fccae1b2909bd783844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de532bb5a8dccf914f7bcb011f73f247') in 0.009217 seconds
-  Import took 0.026144 seconds .
+  Time since last request: 0.000554 seconds.
+  path: Assets/Prefabs/CardModel/SkillShotCardModel.prefab
+  artifactKey: Guid(09eb20c9960c7f6428f724ab9ad6aa00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/CardModel/SkillShotCardModel.prefab using Guid(09eb20c9960c7f6428f724ab9ad6aa00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceee808f047c4db5bfa382f376e39916') in 0.051678 seconds
+  Import took 0.082694 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000421 seconds.
+Registered in 0.000971 seconds.
 Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.835 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.9 MB.
-System memory in use after: 74.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1652.
-Total: 1.951443 ms (FindLiveObjects: 0.120622 ms CreateObjectMapping: 0.032401 ms MarkObjects: 1.783984 ms  DeleteObjects: 0.013153 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.597943 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs
-  artifactKey: Guid(1cd4649b903fe9544927f0f773827d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs using Guid(1cd4649b903fe9544927f0f773827d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '333654c1da22995235e778f6884fb8e3') in 0.010077 seconds
-  Import took 0.012357 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003736 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs
-  artifactKey: Guid(1cd4649b903fe9544927f0f773827d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs using Guid(1cd4649b903fe9544927f0f773827d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '333654c1da22995235e778f6884fb8e3') in 0.003224 seconds
-  Import took 0.005392 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.593196 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs/BehaviourGraph.asset
-  artifactKey: Guid(adaf5dddb4b975a4ba1c7f56cc8b984c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs/BehaviourGraph.asset using Guid(adaf5dddb4b975a4ba1c7f56cc8b984c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd783d495dde174b71b183daa6d1327d9') in 0.012962 seconds
-  Import took 0.015060 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.040547 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs/BehaviourGraph.asset
-  artifactKey: Guid(adaf5dddb4b975a4ba1c7f56cc8b984c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Graphs/BehaviourGraph.asset using Guid(adaf5dddb4b975a4ba1c7f56cc8b984c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd783d495dde174b71b183daa6d1327d9') in 0.003792 seconds
-  Import took 0.006852 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.720720 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States
-  artifactKey: Guid(4548ecf6770d9b64883c9630116f99c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States using Guid(4548ecf6770d9b64883c9630116f99c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f7a0bf731d24c87279758b466d66c8') in 0.011377 seconds
-  Import took 0.014042 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.046126 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset
-  artifactKey: Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset using Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd652c3d4806f4083a81d8f9c0b2a9b9e') in 0.018541 seconds
-  Import took 0.021952 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.021554 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset
-  artifactKey: Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset using Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd652c3d4806f4083a81d8f9c0b2a9b9e') in 0.003394 seconds
-  Import took 0.007426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.807045 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle 1.asset
-  artifactKey: Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle 1.asset using Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e07ca085eef4ec6a11fe6a5b132213') in 0.009702 seconds
-  Import took 0.012936 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.022204 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle 1.asset
-  artifactKey: Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle 1.asset using Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e07ca085eef4ec6a11fe6a5b132213') in 0.003271 seconds
-  Import took 0.005532 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.635834 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset
-  artifactKey: Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset using Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e7315c1025aaae828d3da08615d17d') in 0.006781 seconds
-  Import took 0.009791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.035008 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset
-  artifactKey: Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset using Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e7315c1025aaae828d3da08615d17d') in 0.003911 seconds
-  Import took 0.006084 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.479852 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase 1.asset
-  artifactKey: Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase 1.asset using Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496ea3e473868b3a82f52952d07b3b40') in 0.010224 seconds
-  Import took 0.013034 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset
-  artifactKey: Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase.asset using Guid(2c778694a1631df459da90017de7c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d4fe9e36fdd75458273f1d639a777e') in 0.003474 seconds
-  Import took 0.015540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.019843 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase 1.asset
-  artifactKey: Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Chase 1.asset using Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496ea3e473868b3a82f52952d07b3b40') in 0.004703 seconds
-  Import took 0.007002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.160311 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset
-  artifactKey: Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset using Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd11de05023a5f93eccda1b909193129') in 0.003554 seconds
-  Import took 0.006353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.039817 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset
-  artifactKey: Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset using Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd11de05023a5f93eccda1b909193129') in 0.003378 seconds
-  Import took 0.005937 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.673139 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack 1.asset
-  artifactKey: Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack 1.asset using Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fda4d013d7b62f0eab62afbc90e483d') in 0.009200 seconds
-  Import took 0.012132 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.042389 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack 1.asset
-  artifactKey: Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack 1.asset using Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fda4d013d7b62f0eab62afbc90e483d') in 0.004454 seconds
-  Import took 0.007633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset
-  artifactKey: Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset using Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da381bad6fe856afdc851c0fbd21e77c') in 0.003967 seconds
-  Import took 0.006319 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.031060 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset
-  artifactKey: Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Attack.asset using Guid(a38f0852953f4424f92f5d4c61d51d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da381bad6fe856afdc851c0fbd21e77c') in 0.003424 seconds
-  Import took 0.005767 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.440668 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/TakeDamage.asset
-  artifactKey: Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/TakeDamage.asset using Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66bb31090e4290dff2dd08d3f5ca3f3') in 0.005358 seconds
-  Import took 0.008232 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.046611 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/TakeDamage.asset
-  artifactKey: Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/TakeDamage.asset using Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66bb31090e4290dff2dd08d3f5ca3f3') in 0.004274 seconds
-  Import took 0.006554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 97.411752 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions
-  artifactKey: Guid(ef66021c3a591cb4bada6b1a15e71081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions using Guid(ef66021c3a591cb4bada6b1a15e71081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04aa17e5e29b6a0f31b0fa179c72be78') in 0.006999 seconds
-  Import took 0.013035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.456117 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs
-  artifactKey: Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs using Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe80da6915150d18c36e1da113ccdf2') in 0.011096 seconds
-  Import took 0.016496 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000466 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.0 MB.
-System memory in use after: 74.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1656.
-Total: 1.827292 ms (FindLiveObjects: 0.143078 ms CreateObjectMapping: 0.121905 ms MarkObjects: 1.546269 ms  DeleteObjects: 0.014436 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.429632 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs
-  artifactKey: Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs using Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '617bee9250dcaff0119dba126d25b949') in 0.014008 seconds
-  Import took 0.018117 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000467 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.848 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.08 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.0 MB.
-System memory in use after: 74.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1659.
-Total: 3.828780 ms (FindLiveObjects: 0.495961 ms CreateObjectMapping: 0.131208 ms MarkObjects: 3.184287 ms  DeleteObjects: 0.014757 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.006818 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs
-  artifactKey: Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs using Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2248d295e31c0a837f6ce58ee94bb9c3') in 0.039344 seconds
-  Import took 0.055767 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.054548 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs
-  artifactKey: Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/Conditions/IsMateInFoV.cs using Guid(10ca296a78020c54895cfddb0111c978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5256162c434103eaaa4dbdac6f417ac1') in 0.004648 seconds
-  Import took 0.006997 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000489 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.814 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.0 MB.
-System memory in use after: 74.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1662.
-Total: 1.740034 ms (FindLiveObjects: 0.194086 ms CreateObjectMapping: 0.053574 ms MarkObjects: 1.465106 ms  DeleteObjects: 0.026306 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000469 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.815 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.0 MB.
-System memory in use after: 74.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1665.
-Total: 1.866751 ms (FindLiveObjects: 0.139870 ms CreateObjectMapping: 0.042988 ms MarkObjects: 1.667532 ms  DeleteObjects: 0.015078 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 150.291033 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Resources/ActiveSkin.guiskin
-  artifactKey: Guid(14fa01783a4532d48a68a32f0ad796fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Resources/ActiveSkin.guiskin using Guid(14fa01783a4532d48a68a32f0ad796fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95edc05a808589f117c3ca68036a7f7b') in 0.026546 seconds
-  Import took 0.028628 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Resources/EditorSettings.asset
-  artifactKey: Guid(9f4992ee8e4877643a3862620a375afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Resources/EditorSettings.asset using Guid(9f4992ee8e4877643a3862620a375afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c3dd318da54da94a9ce648039f61a4') in 0.013526 seconds
-  Import took 0.015544 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Resources/GuiSkin.guiskin
-  artifactKey: Guid(56ad93b917ebea3468a454940e351109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Resources/GuiSkin.guiskin using Guid(56ad93b917ebea3468a454940e351109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e1172443981e25a93281f332d6d081') in 0.009656 seconds
-  Import took 0.012100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.223275 seconds.
-  path: Assets/FalopaFran/Resources/EnemmyDummy.prefab
-  artifactKey: Guid(e677a5e17e508e345a1de9e931d078a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Resources/EnemmyDummy.prefab using Guid(e677a5e17e508e345a1de9e931d078a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4947182da10d27811889aa887687406') in 0.078258 seconds
-  Import took 0.080968 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000699 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.955 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1677.
-Total: 1.994109 ms (FindLiveObjects: 0.191519 ms CreateObjectMapping: 0.076351 ms MarkObjects: 1.680685 ms  DeleteObjects: 0.044592 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000507 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.947 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1680.
-Total: 1.842370 ms (FindLiveObjects: 0.177404 ms CreateObjectMapping: 0.039138 ms MarkObjects: 1.613317 ms  DeleteObjects: 0.011228 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000433 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.851 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1683.
-Total: 2.226050 ms (FindLiveObjects: 0.277815 ms CreateObjectMapping: 0.099449 ms MarkObjects: 1.830821 ms  DeleteObjects: 0.016682 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000756 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.869 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1686.
-Total: 1.885037 ms (FindLiveObjects: 0.148532 ms CreateObjectMapping: 0.097203 ms MarkObjects: 1.612033 ms  DeleteObjects: 0.025985 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 247.911946 seconds.
-  path: Assets/FalopaFran/Resources/EnemmyDummy.prefab
-  artifactKey: Guid(e677a5e17e508e345a1de9e931d078a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Resources/EnemmyDummy.prefab using Guid(e677a5e17e508e345a1de9e931d078a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23dd22b1e7824216e0dc1a02d630355f') in 0.072992 seconds
-  Import took 0.075434 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000487 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.865 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1690.
-Total: 1.758319 ms (FindLiveObjects: 0.137624 ms CreateObjectMapping: 0.038176 ms MarkObjects: 1.508414 ms  DeleteObjects: 0.073143 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000789 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.790 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1693.
-Total: 1.934761 ms (FindLiveObjects: 0.145644 ms CreateObjectMapping: 0.043950 ms MarkObjects: 1.719182 ms  DeleteObjects: 0.025023 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 46.835737 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts
-  artifactKey: Guid(f7069e0b1d6cd2148a802d4a2f0c1721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts using Guid(f7069e0b1d6cd2148a802d4a2f0c1721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd85a53d8f1e5503ac992d286955b4d51') in 0.009795 seconds
-  Import took 0.011944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003759 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts
-  artifactKey: Guid(f7069e0b1d6cd2148a802d4a2f0c1721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts using Guid(f7069e0b1d6cd2148a802d4a2f0c1721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd85a53d8f1e5503ac992d286955b4d51') in 0.003442 seconds
-  Import took 0.005703 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.144298 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor
-  artifactKey: Guid(f468ce8812b5a2f47a678785a2436bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Editor using Guid(f468ce8812b5a2f47a678785a2436bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '509b1bfc900c0618b487ae41bf790766') in 0.008331 seconds
-  Import took 0.010805 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.348108 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is Mate In Fo V.asset
-  artifactKey: Guid(b4fe478af2e4a124ea46b6825863a21f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Conditions/Is Mate In Fo V.asset using Guid(b4fe478af2e4a124ea46b6825863a21f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2c19540e3050e2651099cd18abd4e4c') in 0.016981 seconds
-  Import took 0.019317 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000512 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.2 MB.
-System memory in use after: 74.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1696.
-Total: 1.648605 ms (FindLiveObjects: 0.154627 ms CreateObjectMapping: 0.051328 ms MarkObjects: 1.416985 ms  DeleteObjects: 0.024381 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000675 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.877 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1699.
-Total: 2.685760 ms (FindLiveObjects: 0.250226 ms CreateObjectMapping: 0.043950 ms MarkObjects: 2.375544 ms  DeleteObjects: 0.014757 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000527 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1702.
-Total: 1.610750 ms (FindLiveObjects: 0.153664 ms CreateObjectMapping: 0.051008 ms MarkObjects: 1.391963 ms  DeleteObjects: 0.012191 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000427 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.882 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1705.
-Total: 1.621337 ms (FindLiveObjects: 0.148211 ms CreateObjectMapping: 0.042025 ms MarkObjects: 1.405437 ms  DeleteObjects: 0.024381 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001621 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.893 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1708.
-Total: 1.685497 ms (FindLiveObjects: 0.158477 ms CreateObjectMapping: 0.040100 ms MarkObjects: 1.471843 ms  DeleteObjects: 0.013474 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000430 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.798 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1711.
-Total: 1.751583 ms (FindLiveObjects: 0.145324 ms CreateObjectMapping: 0.039138 ms MarkObjects: 1.540815 ms  DeleteObjects: 0.025664 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000663 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.923 seconds
+- Completed reload, in  0.987 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1162 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
+System memory in use before: 73.8 MB.
+System memory in use after: 73.9 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1714.
-Total: 2.243373 ms (FindLiveObjects: 0.439179 ms CreateObjectMapping: 0.087258 ms MarkObjects: 1.700896 ms  DeleteObjects: 0.014757 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 347.458263 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoTo.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoTo.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7630e4e859a519af436ad7f762b7e0ab') in 0.016684 seconds
-  Import took 0.020067 seconds .
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1671.
+Total: 2.454200 ms (FindLiveObjects: 0.333000 ms CreateObjectMapping: 0.072900 ms MarkObjects: 1.956800 ms  DeleteObjects: 0.089000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.025085 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoTo.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoTo.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7630e4e859a519af436ad7f762b7e0ab') in 0.004185 seconds
-  Import took 0.006306 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000428 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.792 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1718.
-Total: 2.420777 ms (FindLiveObjects: 0.160081 ms CreateObjectMapping: 0.043629 ms MarkObjects: 2.199423 ms  DeleteObjects: 0.016040 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000446 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.876 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1721.
-Total: 1.668174 ms (FindLiveObjects: 0.209163 ms CreateObjectMapping: 0.076030 ms MarkObjects: 1.355712 ms  DeleteObjects: 0.025664 ms)
+  Time since last request: 28.143093 seconds.
+  path: Assets/Scripts/CardEffect
+  artifactKey: Guid(dd7e5ec8b4c295849bf31ab764510dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardEffect using Guid(dd7e5ec8b4c295849bf31ab764510dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03515b2bcb1d7451dd8c15763c1ada4d') in 0.009587 seconds
+  Import took 0.035870 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 152.983505 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc23a41e7e8682900e223825319e5b3') in 0.027977 seconds
-  Import took 0.031388 seconds .
+  Time since last request: 1.018000 seconds.
+  path: Assets/Scripts/Cards/TestSettings 1.asset
+  artifactKey: Guid(48cc241fc13bf9f499dd72414dc97b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Cards/TestSettings 1.asset using Guid(48cc241fc13bf9f499dd72414dc97b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16fcdfddaa7cc7cf2a7acd30a088a77a') in 0.109348 seconds
+  Import took 0.114111 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.043462 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc23a41e7e8682900e223825319e5b3') in 0.007809 seconds
-  Import took 0.011654 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000454 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.796 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1724.
-Total: 1.857127 ms (FindLiveObjects: 0.155910 ms CreateObjectMapping: 0.043629 ms MarkObjects: 1.640906 ms  DeleteObjects: 0.015078 ms)
+  Time since last request: 0.000291 seconds.
+  path: Assets/Scripts/Cards/TestSettings.asset
+  artifactKey: Guid(e54ab81dda52710449c4340da1854695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Cards/TestSettings.asset using Guid(e54ab81dda52710449c4340da1854695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8364dcef0ba74bafbe25a280b2bc9d1f') in 0.014583 seconds
+  Import took 0.019848 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.035002 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d356b6e30b21551cc3f98d19f330d14') in 0.006302 seconds
-  Import took 0.008831 seconds .
+  Time since last request: 0.000350 seconds.
+  path: Assets/Scripts/Cards/TestSettings 2.asset
+  artifactKey: Guid(7f073db4a92ad3c4ba613013d6d73395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Cards/TestSettings 2.asset using Guid(7f073db4a92ad3c4ba613013d6d73395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d3565b52429498270fb4fa775bb3d72') in 0.005772 seconds
+  Import took 0.009792 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.062395 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d356b6e30b21551cc3f98d19f330d14') in 0.008357 seconds
-  Import took 0.013189 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000439 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.831 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1727.
-Total: 1.621016 ms (FindLiveObjects: 0.163289 ms CreateObjectMapping: 0.046837 ms MarkObjects: 1.397096 ms  DeleteObjects: 0.012832 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000637 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.829 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1730.
-Total: 1.834670 ms (FindLiveObjects: 0.211409 ms CreateObjectMapping: 0.046837 ms MarkObjects: 1.436875 ms  DeleteObjects: 0.137624 ms)
+  Time since last request: 0.000489 seconds.
+  path: Assets/Scripts/Cards/TestSettings 1.asset
+  artifactKey: Guid(48cc241fc13bf9f499dd72414dc97b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Cards/TestSettings 1.asset using Guid(48cc241fc13bf9f499dd72414dc97b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16fcdfddaa7cc7cf2a7acd30a088a77a') in 0.004166 seconds
+  Import took 0.007364 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.142656 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset
-  artifactKey: Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/Idle.asset using Guid(176c3aac82fd3a24cb0556912938fd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34e3f9e8621a32a4f890286d8dfb0dcd') in 0.017864 seconds
-  Import took 0.020212 seconds .
+  Time since last request: 0.026803 seconds.
+  path: Assets/Scripts/Cards/TestSettings 2.asset
+  artifactKey: Guid(7f073db4a92ad3c4ba613013d6d73395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Cards/TestSettings 2.asset using Guid(7f073db4a92ad3c4ba613013d6d73395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d3565b52429498270fb4fa775bb3d72') in 0.005251 seconds
+  Import took 0.009752 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs
-  artifactKey: Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Scripts/Behaviour/StateActions/GoToPlayer.cs using Guid(cc5e5ca7f8572a74fae3114429751313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8faf8dcb2f1ab3c703e5f383e1bb68b5') in 0.003120 seconds
-  Import took 0.005082 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/TakeDamage.asset
-  artifactKey: Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/States/TakeDamage.asset using Guid(c5cad27356934914a8061ec5de763316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6421b7f4beedb2cf75e307510d19c7a1') in 0.003909 seconds
-  Import took 0.005928 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000429 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.876 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1733.
-Total: 1.606580 ms (FindLiveObjects: 0.166176 ms CreateObjectMapping: 0.037213 ms MarkObjects: 1.390359 ms  DeleteObjects: 0.011870 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.838114 seconds.
-  path: Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Go To Player.asset
-  artifactKey: Guid(2c491d4da0c1d94478a9ac916d88548b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FalopaFran/Scripts/BehaviourGraph/Data/Actions/Go To Player.asset using Guid(2c491d4da0c1d94478a9ac916d88548b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '866b3eb6e063497b7df6b9da36db25dd') in 0.018700 seconds
-  Import took 0.020981 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001316 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.831 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1163 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.4 MB.
-System memory in use after: 74.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1736.
-Total: 1.634169 ms (FindLiveObjects: 0.168421 ms CreateObjectMapping: 0.043629 ms MarkObjects: 1.408003 ms  DeleteObjects: 0.013153 ms)
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
