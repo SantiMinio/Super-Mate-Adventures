@@ -13,8 +13,8 @@ public class MovementHandler
     public Transform target;
     [SerializeField]float turnSpeed;
     [SerializeField]float speed;
-    [SerializeField] float minDistToChangeNode = .5f;
-    [SerializeField] float minDistToReachPos = 12f;
+    [SerializeField] float minDistToChangeNode = 3f;
+    [SerializeField] float minDistToReachPos = 3f;
     public Vector3[] path;
     public Vector3 currentWaypoint;
     public int targetIndex;

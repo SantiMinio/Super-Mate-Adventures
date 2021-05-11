@@ -11,7 +11,7 @@ public class DummySpawner : MonoBehaviour
     {
         EnemyDummy dummy = Resources.Load<EnemyDummy>("EnemmyDummy");
 
-        _currentEnemy = Instantiate(dummy, transform.position, Quaternion.identity);
+        _currentEnemy = Instantiate(dummy, transform.position, transform.rotation);
     }
 
     private void Update()
