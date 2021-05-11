@@ -45,4 +45,6 @@ public class LifeHandler : MonoBehaviour
         _currentLife = maxLife;
         UIManager.instance.ChangeLifeBar(_currentLife / maxLife);
     }
+
+    public bool CheckEnoughLife(float life) => _currentLife - life < 0 ? false : true;
 }

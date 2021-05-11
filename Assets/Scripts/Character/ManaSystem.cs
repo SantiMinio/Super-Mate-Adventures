@@ -17,10 +17,11 @@ public class ManaSystem
     public void ModifyMana(int manaAmmount)
     {
         currentMana += manaAmmount;
+        Debug.Log(currentMana);
 
         if (currentMana < 0) currentMana = 0;
         else if (currentMana > maxMana) currentMana = maxMana;
-        UIManager.instance.ChangeManaBar(currentMana / maxMana);
+        UIManager.instance.ChangeManaBar((float)currentMana / (float)maxMana);
     }
 
     public bool EnoughMana(int manaAmmount) => currentMana - manaAmmount < 0 ? false : true;

@@ -8,13 +8,15 @@ public class BombCard : CardModel, IAttacker
     [SerializeField] GameObject feedback = null;
     [SerializeField] float range = 8;
     [SerializeField] float damage = 10;
+    [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
 
     private void Awake()
     {
         feedback.SetActive(false);
+        myRequirements.Add(manaRequirement);
     }
 
-    public override bool CanUse()
+    protected override bool OnCanUse()
     {
         return true;
     }
@@ -26,7 +28,7 @@ public class BombCard : CardModel, IAttacker
         feedback.transform.localScale = Vector3.one * range;
     }
 
-    public override void UseCard()
+    protected override void OnUseCard()
     {
         feedback.SetActive(false);
         var overlap = Physics.OverlapSphere(transform.position, range);

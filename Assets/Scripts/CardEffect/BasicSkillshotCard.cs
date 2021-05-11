@@ -9,13 +9,15 @@ public class BasicSkillshotCard : CardModel
     [SerializeField] float damage = 10;
 
     [SerializeField] Bullet bulletPrefab = null;
+    [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
 
     private void Awake()
     {
         feedback.SetActive(false);
+        myRequirements.Add(manaRequirement);
     }
 
-    public override bool CanUse()
+    protected override bool OnCanUse()
     {
         return true;
     }
@@ -26,7 +28,7 @@ public class BasicSkillshotCard : CardModel
         feedback.transform.position = Main.instance.GetMainCharacter.transform.position;
     }
 
-    public override void UseCard()
+    protected override void OnUseCard()
     {
         feedback.SetActive(false);
 

@@ -22,3 +22,15 @@ public class ManaRequirement : Requirement
         Main.instance.GetMainCharacter.manaSystem.ModifyMana(-requiredMana);
     }
 }
+
+[Serializable]
+public class LifeRequirement : Requirement
+{
+    [SerializeField] float requiredLife = 10;
+
+    public override bool CheckRequirement() => Main.instance.GetMainCharacter.GetComponent<LifeHandler>().CheckEnoughLife(requiredLife);
+
+    public override void RequirementEffect()
+    {
+    }
+}
