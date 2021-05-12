@@ -30,4 +30,5 @@ public class ManaSystem
     }
 
     public bool EnoughMana(int manaAmmount) => currentMana - manaAmmount < 0 ? false : true;
+    public bool IsFullMana() => currentMana == maxMana;
 }

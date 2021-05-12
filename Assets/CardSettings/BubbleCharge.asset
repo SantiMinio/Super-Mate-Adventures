@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b15fc4eee6046fd4ebe635fa16c1c034, type: 3}
-  m_Name: TestSettings
+  m_Name: BubbleCharge
   m_EditorClassIdentifier: 
-  img: {fileID: 21300000, guid: cb7706e9fe2886b408c7859016cb5d7e, type: 3}
-  title: Bomb
-  desc: Tiro una bombita
-  model: {fileID: 5851942958749611047, guid: decbd3a93c5ba38449b3ad6e48ecb703, type: 3}
+  img: {fileID: -3847302959580399924, guid: e8ff9ceee44d41a4e821a35b5839511f, type: 3}
+  title: Recarga Burbujitas
+  desc: Recarga 1 de mana. Si se tiran 2 juntas, llena el burbujero.
+  model: {fileID: 6521525998054827949, guid: 17ea14e70370ac64483176897c1a3b1a, type: 3}

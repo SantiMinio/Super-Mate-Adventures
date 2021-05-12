@@ -50,4 +50,6 @@ public class LifeHandler : MonoBehaviour
     }
 
     public bool CheckEnoughLife(float life) => _currentLife - life < 0 ? false : true;
+
+    public bool IsFullLife() => _currentLife == maxLife ? true : false;
 }

@@ -81,7 +81,9 @@ public class LastCardRequirement : Requirement
 
     public override bool CheckRequirement()
     {
-        if (DeckOfCards.GetTimeToUseLastCard() <= timeToCombo && cardUsedRequire == DeckOfCards.GetLastCard())
+        Debug.Log(DeckOfCards.privateInstance.LastCard());
+        if (DeckOfCards.privateInstance.TimeToUseLastCard() <= timeToCombo &&
+            cardUsedRequire.title == DeckOfCards.privateInstance.LastCard().title)
             return true;
         else
             return false;
