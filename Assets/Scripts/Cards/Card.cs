@@ -24,7 +24,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
 
     Vector3 currentPos;
     DeckOfCards currentDeck;
-    CardSettings settings;
+    [HideInInspector] public CardSettings settings;
 
     CardModel currentModel;
 

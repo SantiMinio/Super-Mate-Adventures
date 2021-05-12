@@ -95,3 +95,23 @@ public class LastCardRequirement : Requirement
         
     }
 }
+
+[Serializable]
+public class CardOnHandRequirement : Requirement
+{
+    [SerializeField] int cardRequireAmmount = 3;
+    [SerializeField] CardSettings cardRequire = null;
+
+    public override bool CheckRequirement()
+    {
+        if (DeckOfCards.privateInstance.IsInMyHand(cardRequire, cardRequireAmmount))
+            return true;
+        else
+            return false;
+    }
+
+    public override void RequirementEffect()
+    {
+        DeckOfCards.privateInstance.DiscardCardOfType(cardRequire, cardRequireAmmount - 1);
+    }
+}

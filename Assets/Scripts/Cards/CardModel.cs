@@ -22,10 +22,9 @@ public abstract class CardModel : MonoBehaviour
 
     public void UseCard()
     {
+        OnUseCard();
         for (int i = 0; i < myRequirements.Count; i++)
             myRequirements[i].RequirementEffect();
-
-        OnUseCard();
     }
 
     protected abstract void OnUseCard();

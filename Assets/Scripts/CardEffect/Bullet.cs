@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour, IAttacker
     [SerializeField] Rigidbody rb = null;
     Transform owner;
     [SerializeField] float skillShotSpeed = 15;
+    float timer = 0;
+    [SerializeField] float timeToDestroy = 5;
 
     public float GetDamage()
     {
@@ -39,5 +41,8 @@ public class Bullet : MonoBehaviour, IAttacker
     private void Update()
     {
         rb.velocity = transform.up * skillShotSpeed;
+
+        timer += Time.deltaTime;
+        if (timer >= timeToDestroy) Destroy(this.gameObject);
     }
 }

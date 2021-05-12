@@ -116,4 +116,31 @@ public class DeckOfCards : MonoBehaviour
     public static CardSettings GetLastCard() => privateInstance.LastCard();
 
     public CardSettings LastCard() => lastCardUsed;
+
+    public bool IsInMyHand(CardSettings settings, int ammount)
+    {
+        int _ammount = ammount;
+        for (int i = 0; i < currentCards.Count; i++)
+        {
+            if (currentCards[i].settings == settings) _ammount -= 1; 
+
+        }
+
+        if (_ammount <= 0) return true;
+        else return false;
+    }
+
+    public void DiscardCardOfType(CardSettings settings, int ammount)
+    {
+        int _ammount = ammount;
+        for (int i = 0; i < currentCards.Count; i++)
+        {
+            if (currentCards[i].settings == settings) 
+            {
+                _ammount -= 1;
+                DiscardCard(currentCards[i], settings);
+            }
+            if (ammount <= 0) return;
+        }
+    }
 }

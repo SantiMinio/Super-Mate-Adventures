@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15fc4eee6046fd4ebe635fa16c1c034, type: 3}
+  m_Name: MultiShot
+  m_EditorClassIdentifier: 
+  img: {fileID: -179706365752813510, guid: 122925cfd8815f049a5c4fb0db4ffb59, type: 3}
+  title: Multi shot
+  desc: "Tira varios tiros en c\xEDrculo"
+  model: {fileID: 2916985336795990486, guid: d4da3b59c575aa24c8f5c7b2b0476d78, type: 3}
