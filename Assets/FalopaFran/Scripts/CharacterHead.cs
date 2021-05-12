@@ -80,11 +80,11 @@ namespace Frano
 
         public void Hit(IAttacker attacker)
         {
-            // _lifeHandler.TakeDamage(atttacker.GetDamage());
-            //
-            //
-            // hittedFeedback.transform.forward = (transform.position - atttacker.GetPosition()).normalized;
-            // hittedFeedback.Play();
+            _lifeHandler.TakeDamage(attacker.GetDamage());
+            _animator.Play("Take damage");
+            
+            takeDamageFeedback.transform.forward = (transform.position - attacker.GetPosition()).normalized;
+            takeDamageFeedback.Play();
         }
     }
     

@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 5545934869353497013}
   - component: {fileID: 5545934869353496968}
   - component: {fileID: 5545934869353496969}
+  - component: {fileID: 5159466001826704469}
   m_Layer: 9
   m_Name: CharacterTest
   m_TagString: Untagged
@@ -236,6 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e20a4a9ed6a6249b37851cb97cd75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manaSystem:
+    maxMana: 100
+  takeDamageFeedback: {fileID: 6077478470730501246}
   attackDamage: 1
 --- !u!114 &5545934869353496969
 MonoBehaviour:
@@ -263,6 +267,19 @@ MonoBehaviour:
   edgeResolveInteration: 4
   edgeDistanceTreshhold: 0.5
   showFieldOfView: 0
+--- !u!114 &5159466001826704469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5545934869353497015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694c1c3e360013c49bf1ea5a212e72d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 10
 --- !u!1 &6031413643724677003
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +292,7 @@ GameObject:
   - component: {fileID: 6077478470730501246}
   - component: {fileID: 6977916847894330502}
   m_Layer: 9
-  m_Name: Particle System
+  m_Name: TakeDamageFeedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
