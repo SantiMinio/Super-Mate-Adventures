@@ -173,6 +173,7 @@ public class MovementHandler
 
     public void Stop()
     {
+        _myRb.velocity = Vector3.zero;
         moving = false;
         currentWaypoint = Vector3.zero;
         path = null;

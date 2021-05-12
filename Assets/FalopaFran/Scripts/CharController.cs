@@ -9,6 +9,7 @@ namespace Frano
     {
 
         [SerializeField] private float moveSpeed = 4f;
+        float initialSpeed;
 
         private Vector3 forward, right;
         private Rigidbody _rb;
@@ -17,8 +18,8 @@ namespace Frano
         private CharacterHead _characterHead;
 
         public bool Moving => moving;
-        
-            
+
+
 
         void Start()
         {
@@ -31,7 +32,7 @@ namespace Frano
             forward = Vector3.Normalize(forward);
             right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
 
-            
+            initialSpeed = moveSpeed;
         }
 
         void Update()
@@ -65,6 +66,15 @@ namespace Frano
             if(!(heading == Vector3.zero))
                 transform.forward = heading;
         }
+
+        public void IncreaseSpeed(float moreSpeed)
+        {
+            moveSpeed += moreSpeed;
+        }
+
+        public void ReturnToInitValues() => moveSpeed = initialSpeed;
+
+        public bool IsSpeedIncreased() => initialSpeed < moveSpeed;
     }
 }
 

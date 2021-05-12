@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d170b3954776a4dada8fe0b5fa5144, type: 3}
+  m_Name: CanIAttack
+  m_EditorClassIdentifier: 
+  description: 
+  conditions:
+  - {fileID: 11400000, guid: 6d098692622fd0c45a3f5646c9d2d285, type: 2}
+  - {fileID: 11400000, guid: b4fe478af2e4a124ea46b6825863a21f, type: 2}
+  count: 0.21610166
+  timeToCheck: 1

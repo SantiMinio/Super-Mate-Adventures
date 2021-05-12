@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler
+public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     Canvas canvas;
     RectTransform rectTransform;
@@ -13,25 +13,60 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     [SerializeField] Image imgSprite = null;
 
     [SerializeField] float permissiveLimit = 10;
+    [SerializeField] LayerMask mask = 1 << 8;
+    [SerializeField] Animator anim = null;
+    [SerializeField, Range(0,1f)] float moveSpeed = 0.1f;
 
     Vector3 currentPos;
     DeckOfCards currentDeck;
     CardSettings settings;
 
     CardModel currentModel;
+
+    bool moving;
+
+    public Action stopMoveCallback;
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>();
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void Initialize(Vector3 position, DeckOfCards deck, CardSettings _settings)
+    private void Update()
     {
-        currentPos = position;
+        if (moving)
+        {
+            moveTimer += Time.deltaTime * moveSpeed;
+            rectTransform.position = Vector3.Lerp(rectTransform.position, currentPos, moveTimer);
+
+            if(Vector3.Distance(rectTransform.position, currentPos) <= 1)
+            {
+                moveTimer = 0;
+                rectTransform.position = currentPos;
+                moving = false;
+                GetComponent<Image>().raycastTarget = true;
+                stopMoveCallback?.Invoke();
+            }
+        }
+    }
+    float moveTimer;
+
+    public void Initialize(DeckOfCards deck, CardSettings _settings)
+    {
         currentDeck = deck;
         settings = _settings;
         imgSprite.sprite = settings.img;
         currentModel = Instantiate(settings.model);
+    }
+
+    Vector3 startPos;
+    public void GoToPos(Vector3 position, Action Callback = null)
+    {
+        GetComponent<Image>().raycastTarget = false;
+        stopMoveCallback = Callback;
+        currentPos = position;
+        startPos = rectTransform.position;
+        moving = true;
     }
 
     public void SetPosition(Vector3 pos)
@@ -39,7 +74,6 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         currentPos = pos;
         rectTransform.position = currentPos;
     }
-
     #region Events
     public void OnDrag(PointerEventData eventData)
     {
@@ -48,28 +82,51 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, 10000, 1 << 8, QueryTriggerInteraction.Ignore))
+        if(Physics.Raycast(ray.origin, ray.direction, out hit, 8000000, mask, QueryTriggerInteraction.Ignore))
         {
             currentModel.transform.position = hit.point;
         }
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!CheckPosition() || !currentModel.CanUse())
         {
-            rectTransform.position = currentPos;
             currentModel.ResetCard();
+            GoToPos(currentPos);
         }
         else
         {
             currentModel.UseCard();
             currentDeck.OnUseCard(this, settings);
         }
-}
+    }
+    bool onCard;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        onCard = true;
+        anim.Play("ScaleOnEnter");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (onCard)
+        {
+            onCard = false;
+            anim.Play("ScaleOnExit");
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        //onCard = false;
+        //anim.Play("Idle");
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        currentModel.RangeFeedback();
+        rectTransform.SetAsLastSibling();
     }
     #endregion
 
@@ -86,11 +143,6 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
             return false;
 
         return true;
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        currentModel.RangeFeedback();
     }
 
     #endregion

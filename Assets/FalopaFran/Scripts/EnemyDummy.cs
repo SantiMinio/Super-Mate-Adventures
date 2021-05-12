@@ -5,22 +5,26 @@ using System.Linq;
 using Frano;
 using UnityEngine;
 
-public class EnemyDummy : MonoBehaviour, IHiteable
+public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 {
     [SerializeField] ParticleSystem hittedFeedback;
-
     private Rigidbody _rb;
     [SerializeField]private MovementHandler _movementHandler;
-
     [SerializeField] private FieldOfView _fieldOfView;
 
-    public MovementHandler GetMovementHandler => _movementHandler;
     
-    public FieldOfView GetFoV => _fieldOfView;
-    
+    private Animator _animator;
+    private AnimEvent _animEvent;
     private StateManager _fsm;
-    
     private LifeHandler _lifeHandler;
+
+    [SerializeField] private float attackDamage;
+    
+    
+    public float meleeDistance { get; private set; }
+    public MovementHandler GetMovementHandler => _movementHandler;
+    public Animator GetAnimator => _animator;
+    public FieldOfView GetFoV => _fieldOfView;
     void Awake()
     {
         _lifeHandler = GetComponent<LifeHandler>();
@@ -33,25 +37,45 @@ public class EnemyDummy : MonoBehaviour, IHiteable
         _rb = GetComponent<Rigidbody>();
         _movementHandler = new MovementHandler();
         _movementHandler.Init(FindObjectOfType<Pathfinding>(), this, _rb);
-        
 
+        _animator = GetComponentInChildren<Animator>();
+        _animEvent = GetComponentInChildren<AnimEvent>();
 
     }
+
+    private void Start()
+    {
+        _animEvent.Add_Callback("doDamage", DoAttack);
+
+        meleeDistance = 12f;
+        attackDamage = 1f;
+    }
+
+    
+
     private void Update()
     {
+        _animator.SetBool("moving", _movementHandler.moving);
         _fsm.OnUpdate();
-        
-        // if (_fieldOfView.GetVisibleTargets.Any())
-        // {
-        //     Debug.Log(_fieldOfView.GetVisibleTargets[0].position);
-        //     _movementHandler.GoTo(_fieldOfView.GetVisibleTargets[0].position);
-        // }
     }
 
     private void FixedUpdate()
     {
         _fsm.OnFixedUpdate();
         _movementHandler.OnFixedUpdate();
+    }
+
+    private void DoAttack()
+    {
+        Debug.Log("ataque bizcocho");
+        List<Transform> targets = _fieldOfView.GetVisibleTargets;
+
+        for (int i = 0; i < targets.Count; i++)
+        {
+            IHiteable hiteable = GetHiteableFromTransform(targets[i]);
+                
+            if(hiteable != null) hiteable.Hit(this);
+        }
     }
 
     public void Hit(IAttacker atttacker)
@@ -64,4 +88,25 @@ public class EnemyDummy : MonoBehaviour, IHiteable
         hittedFeedback.transform.forward = (transform.position - atttacker.GetPosition()).normalized;
         hittedFeedback.Play();
     }
+    
+    
+    #region AuxMethods
+
+    IHiteable GetHiteableFromTransform(Transform transform)
+    {
+        foreach (var component in transform.GetComponents<MonoBehaviour>())
+        {
+            if (component is IHiteable)
+            {
+                return component as IHiteable;
+            }
+        }
+        return null;
+    }
+
+    #endregion
+
+    public Vector3 GetPosition() {return transform.position; }
+
+    public float GetDamage(){return attackDamage;}
 }
