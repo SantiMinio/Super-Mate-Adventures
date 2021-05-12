@@ -41,6 +41,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
 
             if(Vector3.Distance(rectTransform.position, currentPos) <= 1)
             {
+                Debug.Log("?");
                 moveTimer = 0;
                 rectTransform.position = currentPos;
                 moving = false;
@@ -134,8 +135,8 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
 
     bool CheckPosition()
     {
-        if (rectTransform.position.x < 0 - permissiveLimit || rectTransform.position.x > canvas.worldCamera.pixelWidth + permissiveLimit
-            || rectTransform.position.y < 0 - permissiveLimit || rectTransform.position.y > canvas.worldCamera.pixelHeight + permissiveLimit)
+        if (rectTransform.position.x < 0 - permissiveLimit || rectTransform.position.x > Camera.main.pixelWidth + permissiveLimit
+            || rectTransform.position.y < 0 - permissiveLimit || rectTransform.position.y > Camera.main.pixelHeight + permissiveLimit)
             return false;
 
         if (rectTransform.position.y < currentPos.y + 80 && rectTransform.position.x > currentDeck.lastPos.position.x - 80
