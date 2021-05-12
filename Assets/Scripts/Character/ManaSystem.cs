@@ -14,6 +14,11 @@ public class ManaSystem
         currentMana = maxMana;
     }
 
+    public void FillFullMana()
+    {
+        ModifyMana(maxMana);
+    }
+
     public void ModifyMana(int manaAmmount)
     {
         currentMana += manaAmmount;
