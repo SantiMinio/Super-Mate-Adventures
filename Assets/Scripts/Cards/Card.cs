@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
@@ -16,6 +17,10 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     [SerializeField] LayerMask mask = 1 << 8;
     [SerializeField] Animator anim = null;
     [SerializeField, Range(0,1f)] float moveSpeed = 0.1f;
+
+    [SerializeField] GameObject debugDesc = null;
+    [SerializeField] TextMeshProUGUI titleTxt = null;
+    [SerializeField] TextMeshProUGUI descTxt = null;
 
     Vector3 currentPos;
     DeckOfCards currentDeck;
@@ -57,6 +62,10 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         settings = _settings;
         imgSprite.sprite = settings.img;
         currentModel = Instantiate(settings.model);
+        debugDesc.gameObject.SetActive(true);
+        titleTxt.text = settings.title;
+        descTxt.text = settings.desc;
+        debugDesc.gameObject.SetActive(false);
     }
 
     Vector3 startPos;
@@ -89,6 +98,20 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        Vector2 position = Camera.main.ScreenToViewportPoint(eventData.position) * 100;
+
+        if (rectTransform.position.y < currentDeck.recycleBin.position.y + currentDeck.recycleBin.rect.height / 2
+            && rectTransform.position.y > currentDeck.recycleBin.position.y - currentDeck.recycleBin.rect.height / 2
+            && rectTransform.position.x > currentDeck.recycleBin.position.x - currentDeck.recycleBin.rect.width / 2
+            && rectTransform.position.x < currentDeck.recycleBin.position.x + currentDeck.recycleBin.rect.width / 2)
+        {
+            currentModel.ResetCard();
+            currentModel.Discard();
+            currentDeck.DiscardCard(this, settings);
+
+            return;
+        }
+
         if (!CheckPosition() || !currentModel.CanUse())
         {
             currentModel.ResetCard();
@@ -106,6 +129,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     {
         onCard = true;
         anim.Play("ScaleOnEnter");
+        debugDesc.gameObject.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -114,13 +138,13 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         {
             onCard = false;
             anim.Play("ScaleOnExit");
+            debugDesc.gameObject.SetActive(false);
         }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        //onCard = false;
-        //anim.Play("Idle");
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)

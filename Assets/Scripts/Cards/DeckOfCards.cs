@@ -8,6 +8,7 @@ public class DeckOfCards : MonoBehaviour
     [SerializeField] int numberOfMaxCards = 5;
     [SerializeField] Card cardModel;
 
+    public RectTransform recycleBin = null;
     List<Card> currentDeck = new List<Card>();
     List<Card> currentCards = new List<Card>();
 
@@ -17,7 +18,7 @@ public class DeckOfCards : MonoBehaviour
 
     Vector3[] positions = new Vector3[0];
 
-    public CardSettings lastCardUsed = null;
+    CardSettings lastCardUsed = null;
     float timeToUsedLastCard = 0;
 
     private void Update()
@@ -84,6 +85,20 @@ public class DeckOfCards : MonoBehaviour
         Debug.Log(lastCardUsed.title);
         timeToUsedLastCard = 0;
     }
+
+    public void DiscardCard(Card card, CardSettings settings)
+    {
+        MoveCards(currentCards.IndexOf(card));
+        currentCards.Remove(card);
+        SelectRandomCard();
+        card.GoToPos(posToSpawn.position, () =>
+        {
+            card.gameObject.SetActive(false);
+        });
+        currentDeck.Add(card);
+        deck.Add(settings);
+    }
+
     public static DeckOfCards privateInstance;
 
     void MoveCards(int index)

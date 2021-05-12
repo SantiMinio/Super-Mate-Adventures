@@ -33,4 +33,9 @@ public abstract class CardModel : MonoBehaviour
     public abstract void RangeFeedback();
 
     public abstract void ResetCard();
+
+    public void Discard()
+    {
+        Destroy(this.gameObject);
+    }
 }
