@@ -18,6 +18,7 @@ namespace Frano
         [SerializeField] private ParticleSystem takeDamageFeedback;
         
         [SerializeField] private float attackDamage;
+        float initDamage;
 
         private void Awake()
         {
@@ -28,6 +29,7 @@ namespace Frano
             
             _lifeHandler = GetComponent<LifeHandler>();
             _lifeHandler.RefreshLifePercent += UIManager.instance.ChangeLifeBar;
+            initDamage = attackDamage;
         }
 
         private void Start()
@@ -62,6 +64,9 @@ namespace Frano
 
         public Vector3 GetPosition() => transform.position;
         public float GetDamage() => attackDamage;
+        public void AddDamage(float dmg) => attackDamage += dmg;
+        public bool IsDamageBuffed() => attackDamage == initDamage ? false : true;
+        public void ResetDamageValue() => attackDamage = initDamage;
 
         #region AuxMethods
 
@@ -81,6 +86,7 @@ namespace Frano
 
         public void Hit(IAttacker attacker)
         {
+            if (_lifeHandler.Invulnerability) return;
             _lifeHandler.TakeDamage(attacker.GetDamage());
             _animator.Play("Take damage");
             

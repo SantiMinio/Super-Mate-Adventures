@@ -11,6 +11,8 @@ public class LifeHandler : MonoBehaviour
 
     public event Action OnDead;
     public event Action<float> RefreshLifePercent = delegate { };
+
+    public bool Invulnerability { get; private set; }
     
     private void Awake()
     {
@@ -26,6 +28,8 @@ public class LifeHandler : MonoBehaviour
 
         RefreshLifePercent?.Invoke(_currentLife / maxLife);
     }
+
+    public void ChangeInvulnerability(bool b) => Invulnerability = b;
 
     public void Heal(float value)
     {

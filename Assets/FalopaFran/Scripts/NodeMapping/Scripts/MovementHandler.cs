@@ -15,6 +15,7 @@ public class MovementHandler
     [SerializeField]float speed;
     [SerializeField] float minDistToChangeNode = 3f;
     [SerializeField] float minDistToReachPos = 3f;
+    float initSpeed;
     public Vector3[] path;
     public Vector3 currentWaypoint;
     public int targetIndex;
@@ -86,6 +87,7 @@ public class MovementHandler
         OnReachDestination += () => Stop();
 
         systemActive = true;
+        initSpeed = speed;
     }
 
     #endregion
@@ -194,6 +196,15 @@ public class MovementHandler
     }
     
     public void ResetAuxiliarPos(){auxiliarPosition = new Vector3(-1, -1, -1);}
+
+    public void SpeedDown(float speedDown)
+    {
+        speed -= speedDown;
+        if (speed < 1) speed = 1;
+    }
+
+    public void ResetSpeed() => speed = initSpeed;
+
     #endregion
 
     #region InternalMovementSystem

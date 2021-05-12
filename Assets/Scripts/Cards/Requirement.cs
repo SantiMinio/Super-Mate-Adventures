@@ -33,6 +33,7 @@ public class LifeRequirement : Requirement
 
     public override void RequirementEffect()
     {
+        Main.instance.GetMainCharacter.GetComponent<LifeHandler>().TakeDamage(requiredLife);
     }
 }
 
