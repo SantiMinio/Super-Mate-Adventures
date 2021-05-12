@@ -1,0 +1,406 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1345409451832067813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4436817114063229585}
+  - component: {fileID: 6122080647234272292}
+  - component: {fileID: 8394148142528668719}
+  m_Layer: 0
+  m_Name: Servilleta001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4436817114063229585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345409451832067813}
+  m_LocalRotation: {x: 0.7639206, y: -0.016967623, z: -0.6447738, w: -0.020103035}
+  m_LocalPosition: {x: -0.0366807, y: 0.0799503, z: 0.2436538}
+  m_LocalScale: {x: 0.5546229, y: 0.554623, z: 0.55462307}
+  m_Children: []
+  m_Father: {fileID: 6047497273084750541}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6122080647234272292
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345409451832067813}
+  m_Mesh: {fileID: 4601822672858279347, guid: c3e2f84b308f98c418abdddc02dd6771, type: 3}
+--- !u!23 &8394148142528668719
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345409451832067813}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 44ffff6b3577a4043b40e016ea123918, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3735637700006278871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6047497273084750541}
+  - component: {fileID: 6854508395362876160}
+  - component: {fileID: 7762040601807748430}
+  - component: {fileID: 1345826113553155997}
+  m_Layer: 0
+  m_Name: Servilletero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6047497273084750541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735637700006278871}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -5.359121, y: 0, z: 6.3158793}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8288599427955140861}
+  - {fileID: 4436817114063229585}
+  - {fileID: 8579394475813294275}
+  - {fileID: 6196627942297960453}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6854508395362876160
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735637700006278871}
+  m_Mesh: {fileID: -1211055240795801371, guid: c3e2f84b308f98c418abdddc02dd6771, type: 3}
+--- !u!23 &7762040601807748430
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735637700006278871}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 44ffff6b3577a4043b40e016ea123918, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1345826113553155997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735637700006278871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63294584, y: 1.4351445, z: 0.6018185}
+  m_Center: {x: 0, y: 0.00000047683716, z: 0.30090973}
+--- !u!1 &8950447370841814582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6196627942297960453}
+  - component: {fileID: 8814877874427045743}
+  - component: {fileID: 852070885167819390}
+  m_Layer: 0
+  m_Name: Servilleta003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6196627942297960453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950447370841814582}
+  m_LocalRotation: {x: 0.14802118, y: -0.6277942, z: 0.18944867, w: -0.7403198}
+  m_LocalPosition: {x: 0.008401394, y: -0.41364348, z: 0.5478606}
+  m_LocalScale: {x: 0.554623, y: 0.5546229, z: 0.5546231}
+  m_Children: []
+  m_Father: {fileID: 6047497273084750541}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8814877874427045743
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950447370841814582}
+  m_Mesh: {fileID: -6506860444046057332, guid: c3e2f84b308f98c418abdddc02dd6771, type: 3}
+--- !u!23 &852070885167819390
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950447370841814582}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 44ffff6b3577a4043b40e016ea123918, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9065691231087579095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8579394475813294275}
+  - component: {fileID: 4371481345909778536}
+  - component: {fileID: 9140457099038044881}
+  m_Layer: 0
+  m_Name: Servilleta002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8579394475813294275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9065691231087579095}
+  m_LocalRotation: {x: 0.69861495, y: 0.030285772, z: -0.7116331, w: -0.067811064}
+  m_LocalPosition: {x: 0.02744627, y: 0.0799503, z: 0.2436538}
+  m_LocalScale: {x: 0.55462295, y: 0.554623, z: 0.55462307}
+  m_Children: []
+  m_Father: {fileID: 6047497273084750541}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4371481345909778536
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9065691231087579095}
+  m_Mesh: {fileID: 813611079192037705, guid: c3e2f84b308f98c418abdddc02dd6771, type: 3}
+--- !u!23 &9140457099038044881
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9065691231087579095}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 44ffff6b3577a4043b40e016ea123918, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &6064708597849857924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6047497273084750541}
+    m_Modifications:
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.14915419
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.053465873
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2436538
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.76415175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0071468353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6449688
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.006032169
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415347701744949885, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+      propertyPath: m_Name
+      value: Servilleta
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+--- !u!4 &8288599427955140861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2822957714384926585, guid: 1dd2a3bd7fae28e4a85944a81ff4259e, type: 3}
+  m_PrefabInstance: {fileID: 6064708597849857924}
+  m_PrefabAsset: {fileID: 0}
