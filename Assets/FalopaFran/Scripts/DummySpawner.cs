@@ -7,6 +7,8 @@ public class DummySpawner : MonoBehaviour, IHiteable
 {
     private EnemyDummy _currentEnemy;
 
+    [SerializeField] private string prefabName;
+    
     private LifeHandler _lifeHandler;
     [SerializeField] private ParticleSystem _takeDamageFeedback;
 
@@ -24,7 +26,7 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     void SpawnNewEnemy()
     {
-        EnemyDummy dummy = Resources.Load<EnemyDummy>("EnemmyDummy");
+        EnemyDummy dummy = Resources.Load<EnemyDummy>(prefabName);
 
         _currentEnemy = Instantiate(dummy, transform.position, transform.rotation);
     }
