@@ -24,6 +24,6 @@ MonoBehaviour:
     targetState: {fileID: 11400000}
     disable: 0
   - id: 1
-    condition: {fileID: 11400000, guid: aa0f29b276d80914ca4ab6505776c812, type: 2}
-    targetState: {fileID: 11400000, guid: 176c3aac82fd3a24cb0556912938fd91, type: 2}
+    condition: {fileID: 11400000, guid: b4fe478af2e4a124ea46b6825863a21f, type: 2}
+    targetState: {fileID: 11400000, guid: 2c778694a1631df459da90017de7c5e8, type: 2}
     disable: 0

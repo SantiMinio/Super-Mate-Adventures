@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CantSeeMate
   m_EditorClassIdentifier: 
   description: 
-  conditions: []
+  conditions:
+  - {fileID: 11400000, guid: aa0f29b276d80914ca4ab6505776c812, type: 2}
+  - {fileID: 11400000, guid: 21804cf082d9e8f4a8785ba1ec59fa56, type: 2}
   count: 0
   timeToCheck: 1
