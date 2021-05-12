@@ -27,6 +27,7 @@ namespace Frano
             _fieldOfView = GetComponentInChildren<FieldOfView>();
             
             _lifeHandler = GetComponent<LifeHandler>();
+            _lifeHandler.RefreshLifePercent += UIManager.instance.ChangeLifeBar;
         }
 
         private void Start()

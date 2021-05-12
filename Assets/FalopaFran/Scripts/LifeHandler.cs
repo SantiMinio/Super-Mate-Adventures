@@ -10,6 +10,7 @@ public class LifeHandler : MonoBehaviour
     public float _currentLife { get; private set; }
 
     public event Action OnDead;
+    public event Action<float> RefreshLifePercent = delegate { };
     
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class LifeHandler : MonoBehaviour
         if (_currentLife <= 0)
             Die();
 
-        UIManager.instance?.ChangeLifeBar(_currentLife / maxLife);
+        RefreshLifePercent?.Invoke(_currentLife / maxLife);
     }
 
     public void Heal(float value)
@@ -32,7 +33,8 @@ public class LifeHandler : MonoBehaviour
 
         if (_currentLife >= maxLife)
             _currentLife = maxLife;
-        UIManager.instance?.ChangeLifeBar(_currentLife / maxLife);
+
+        RefreshLifePercent?.Invoke(_currentLife / maxLife);
     }
     
     private void Die()
@@ -43,7 +45,8 @@ public class LifeHandler : MonoBehaviour
     public void ResetLife()
     {
         _currentLife = maxLife;
-        UIManager.instance?.ChangeLifeBar(_currentLife / maxLife);
+
+        RefreshLifePercent?.Invoke(_currentLife / maxLife);
     }
 
     public bool CheckEnoughLife(float life) => _currentLife - life < 0 ? false : true;

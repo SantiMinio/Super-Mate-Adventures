@@ -27,6 +27,7 @@ public class DeckOfCards : MonoBehaviour
 
     private void Start()
     {
+        privateInstance = this;
         positions = new Vector3[numberOfMaxCards];
         float spacingBetweenCards = (firstPos.position.x - lastPos.position.x) / (numberOfMaxCards -1);
         Vector3 currentPos = firstPos.position;

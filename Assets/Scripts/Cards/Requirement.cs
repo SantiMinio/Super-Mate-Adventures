@@ -72,3 +72,23 @@ public class SpeedRequirement : Requirement
         Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().IncreaseSpeed(speedToIncrease);
     }
 }
+
+[Serializable]
+public class LastCardRequirement : Requirement
+{
+    [SerializeField] float timeToCombo = 3;
+    [SerializeField] CardSettings cardUsedRequire = null;
+
+    public override bool CheckRequirement()
+    {
+        if (DeckOfCards.GetTimeToUseLastCard() <= timeToCombo && cardUsedRequire == DeckOfCards.GetLastCard())
+            return true;
+        else
+            return false;
+    }
+
+    public override void RequirementEffect()
+    {
+        
+    }
+}
