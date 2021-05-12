@@ -17,6 +17,14 @@ public class DeckOfCards : MonoBehaviour
 
     Vector3[] positions = new Vector3[0];
 
+    CardSettings lastCardUsed = null;
+    float timeToUsedLastCard = 0;
+
+    private void Update()
+    {
+        timeToUsedLastCard += Time.deltaTime;
+    }
+
     private void Start()
     {
         positions = new Vector3[numberOfMaxCards];
@@ -70,7 +78,11 @@ public class DeckOfCards : MonoBehaviour
         });
         currentDeck.Add(card);
         deck.Add(settings);
+
+        lastCardUsed = settings;
+        timeToUsedLastCard = 0;
     }
+    static DeckOfCards privateInstance;
 
     void MoveCards(int index)
     {
@@ -79,4 +91,12 @@ public class DeckOfCards : MonoBehaviour
             currentCards[i].GoToPos(positions[i - 1]);
         }
     }
+
+    public static float GetTimeToUseLastCard() => privateInstance.TimeToUseLastCard();
+
+    public float TimeToUseLastCard() => timeToUsedLastCard;
+
+    public static CardSettings GetLastCard() => privateInstance.LastCard();
+
+    public CardSettings LastCard() => lastCardUsed;
 }

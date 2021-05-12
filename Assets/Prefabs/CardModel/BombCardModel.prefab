@@ -47,6 +47,8 @@ MonoBehaviour:
   feedback: {fileID: 5851942959349351399}
   range: 15
   damage: 10
+  manaRequirement:
+    requiredMana: 2
 --- !u!1 &5851942959349351399
 GameObject:
   m_ObjectHideFlags: 0

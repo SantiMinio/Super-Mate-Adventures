@@ -601,6 +601,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -464.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7296414654246437442, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
+      propertyPath: manaSystem.maxMana
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7296414654246437443, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
       propertyPath: viewAngle
       value: 158
@@ -1424,17 +1428,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1845247408143591325, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1845247408390809689, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845247408390809689, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1845247408390809693, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
       propertyPath: m_Pivot.x
@@ -1518,22 +1514,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845247408390809693, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845247408549162959, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845247408963201933, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845247408963546690, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845247409001545898, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

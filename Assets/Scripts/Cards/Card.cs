@@ -41,7 +41,6 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
 
             if(Vector3.Distance(rectTransform.position, currentPos) <= 1)
             {
-                Debug.Log("?");
                 moveTimer = 0;
                 rectTransform.position = currentPos;
                 moving = false;

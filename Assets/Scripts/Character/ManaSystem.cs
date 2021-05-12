@@ -12,6 +12,7 @@ public class ManaSystem
     public void Initialize()
     {
         currentMana = maxMana;
+        UIManager.instance.CreateManaBar(maxMana);
     }
 
     public void FillFullMana()
@@ -25,7 +26,7 @@ public class ManaSystem
 
         if (currentMana < 0) currentMana = 0;
         else if (currentMana > maxMana) currentMana = maxMana;
-        UIManager.instance.ChangeManaBar((float)currentMana / (float)maxMana);
+        UIManager.instance.ChangeManaBar(currentMana);
     }
 
     public bool EnoughMana(int manaAmmount) => currentMana - manaAmmount < 0 ? false : true;

@@ -47,7 +47,7 @@ MonoBehaviour:
   feedback: {fileID: 3999192581095876843}
   buffTime: 10
   manaRequirement:
-    requiredMana: 10
+    requiredMana: 1
   distanceRequirement:
     distance: 7
     root: {fileID: 1917731652117955184}
