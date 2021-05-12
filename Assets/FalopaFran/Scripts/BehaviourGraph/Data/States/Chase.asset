@@ -17,10 +17,14 @@ MonoBehaviour:
   onEnter:
   - {fileID: 11400000, guid: 2c491d4da0c1d94478a9ac916d88548b, type: 2}
   onExit:
-  - {fileID: 11400000, guid: da9ebe1c331cbd54faf74dd9cc75fb89, type: 2}
-  idCount: 1
+  - {fileID: 0}
+  idCount: 2
   transitions:
   - id: 0
     condition: {fileID: 11400000, guid: 3515692e8e19fef4e8c5864d2011853e, type: 2}
     targetState: {fileID: 11400000, guid: a38f0852953f4424f92f5d4c61d51d99, type: 2}
+    disable: 0
+  - id: 1
+    condition: {fileID: 11400000, guid: b4fe478af2e4a124ea46b6825863a21f, type: 2}
+    targetState: {fileID: 11400000}
     disable: 0

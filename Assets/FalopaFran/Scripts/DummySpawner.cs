@@ -3,10 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DummySpawner : MonoBehaviour
+public class DummySpawner : MonoBehaviour, IHiteable
 {
     private EnemyDummy _currentEnemy;
-    
+
+    private LifeHandler _lifeHandler;
+    [SerializeField] private ParticleSystem _takeDamageFeedback;
+
+    private void Awake()
+    {
+        _lifeHandler = GetComponent<LifeHandler>();
+
+        _lifeHandler.OnDead += Dead;
+    }
+
+    private void Dead()
+    {
+      Destroy(gameObject); 
+    }
+
     void SpawnNewEnemy()
     {
         EnemyDummy dummy = Resources.Load<EnemyDummy>("EnemmyDummy");
@@ -17,5 +32,11 @@ public class DummySpawner : MonoBehaviour
     private void Update()
     {
         if(_currentEnemy == null) SpawnNewEnemy();
+    }
+
+    public void Hit(IAttacker attacker)
+    {
+        _takeDamageFeedback.Play();
+        _lifeHandler.TakeDamage(attacker.GetDamage());
     }
 }
