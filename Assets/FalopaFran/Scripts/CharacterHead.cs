@@ -37,6 +37,14 @@ namespace Frano
             //_lifeHandler.OnDead += () => Destroy(gameObject); no hace falta todavia esto
             _animEvent.Add_Callback("Attack", HitCloseEnemiesWithBaseAttack);
             manaSystem.Initialize();
+            
+            Main.instance.EventManager.SubscribeToEvent(GameEvent.UseCard, CardUsed);
+            
+        }
+
+        private void CardUsed()
+        {
+            _animator.Play("UseCard");
         }
 
         private void HitCloseEnemiesWithBaseAttack()

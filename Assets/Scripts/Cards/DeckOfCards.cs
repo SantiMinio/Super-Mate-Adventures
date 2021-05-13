@@ -84,6 +84,8 @@ public class DeckOfCards : MonoBehaviour
         lastCardUsed = settings;
         Debug.Log(lastCardUsed.title);
         timeToUsedLastCard = 0;
+        
+        Main.instance.EventManager.TriggerEvent(GameEvent.UseCard);
     }
 
     public void DiscardCard(Card card, CardSettings settings)
