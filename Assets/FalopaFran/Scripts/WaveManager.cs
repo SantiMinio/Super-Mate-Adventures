@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class WaveManager : MonoBehaviour
         Main.instance.EventManager.SubscribeToEvent(GameEvent.TermoClicked, StartNewWave);
         //StartNewWave();
     }
+
+    public bool SpawnersActive => spawners.Any(x => x.active && x != null);
 
     public void StartNewWave()
     {

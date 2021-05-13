@@ -192,7 +192,6 @@ Transform:
   m_Children:
   - {fileID: 1773243373}
   - {fileID: 2082574801}
-  - {fileID: 783191772}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -501,7 +500,6 @@ MonoBehaviour:
   waveEnemyScaler: 2
   spawners:
   - {fileID: 1359512934}
-  - {fileID: 0}
   - {fileID: 1182056749}
   - {fileID: 313717055}
   - {fileID: 1437970574}
@@ -1765,63 +1763,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1976005747586550868, guid: 83cb094c89f9d3348bfc20f72fe41722, type: 3}
   m_PrefabInstance: {fileID: 156402327}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &725917942
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 32449952}
-    m_Modifications:
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -45.29205
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 123.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3874946423747533428, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-      propertyPath: m_Name
-      value: TermoRecarga (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
 --- !u!1 &747051183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,11 +1933,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83cb094c89f9d3348bfc20f72fe41722, type: 3}
---- !u!4 &783191772 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
-  m_PrefabInstance: {fileID: 725917942}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &841149618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2651,6 +2587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TermoRecarga
       objectReference: {fileID: 0}
+    - target: {fileID: 3874946423747533430, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
+      propertyPath: _waveManager
+      value: 
+      objectReference: {fileID: 98109316}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
 --- !u!1 &995309643 stripped

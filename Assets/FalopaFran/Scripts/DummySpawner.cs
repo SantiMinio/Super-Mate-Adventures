@@ -23,8 +23,9 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     private List<EnemyDummy> _currentSpawnedEnemies = new List<EnemyDummy>();
 
-    [SerializeField]private bool active;
+    public bool active { get; private set; }
 
+    
     private void Awake()
     {
         
