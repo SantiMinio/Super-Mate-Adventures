@@ -12,11 +12,22 @@ public class DummySpawner : MonoBehaviour, IHiteable
     private LifeHandler _lifeHandler;
     [SerializeField] private ParticleSystem _takeDamageFeedback;
 
+    [SerializeField]
+    private GameObject nodeBlocker;
+
+    [SerializeField] private Transform spawnPoint;
+
     private void Awake()
     {
+        
         _lifeHandler = GetComponent<LifeHandler>();
         _anim = GetComponent<Animator>();
         _lifeHandler.OnDead += Dead;
+    }
+
+    private void Start()
+    {
+        nodeBlocker.SetActive(false);
     }
 
     private void Dead()
@@ -28,7 +39,7 @@ public class DummySpawner : MonoBehaviour, IHiteable
     {
         EnemyDummy dummy = Resources.Load<EnemyDummy>(prefabName);
 
-        _currentEnemy = Instantiate(dummy, transform.position, transform.rotation);
+        _currentEnemy = Instantiate(dummy, spawnPoint.position, spawnPoint.rotation);
     }
 
     private void Update()
