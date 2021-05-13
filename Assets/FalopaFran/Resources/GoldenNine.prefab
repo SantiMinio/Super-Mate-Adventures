@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: -7938393660398610179}
   - component: {fileID: 1381344450607894541}
   m_Layer: 7
-  m_Name: EnemmyDummy
+  m_Name: GoldenNine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5963928888847913633}
   m_LocalRotation: {x: -0.32324597, y: -0, z: -0, w: 0.94631505}
-  m_LocalPosition: {x: 0, y: -0.81, z: 0}
+  m_LocalPosition: {x: 0, y: -0.45, z: -0.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5963928888608481683}
@@ -423,7 +423,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.92
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -476,7 +476,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 21.37
+      scalar: 14.18
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -914,7 +914,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5133,7 +5133,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f3b0400311b3c1a4fa715c9644e90caf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -8,14 +8,14 @@ public class DummySpawner : MonoBehaviour, IHiteable
     private EnemyDummy _currentEnemy;
 
     [SerializeField] private string prefabName;
-    
+    private Animator _anim;
     private LifeHandler _lifeHandler;
     [SerializeField] private ParticleSystem _takeDamageFeedback;
 
     private void Awake()
     {
         _lifeHandler = GetComponent<LifeHandler>();
-
+        _anim = GetComponent<Animator>();
         _lifeHandler.OnDead += Dead;
     }
 
@@ -38,6 +38,7 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     public void Hit(IAttacker attacker)
     {
+        _anim.Play("Dmg");
         _takeDamageFeedback.Play();
         _lifeHandler.TakeDamage(attacker.GetDamage());
     }
