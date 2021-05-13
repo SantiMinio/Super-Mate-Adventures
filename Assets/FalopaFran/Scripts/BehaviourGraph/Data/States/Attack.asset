@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   onFixed: []
-  onUpdate: []
-  onEnter:
+  onUpdate:
   - {fileID: 11400000, guid: 8fdd84dc1e942054ca1011c77c32ea7b, type: 2}
+  onEnter: []
   onExit: []
   idCount: 2
   transitions:
