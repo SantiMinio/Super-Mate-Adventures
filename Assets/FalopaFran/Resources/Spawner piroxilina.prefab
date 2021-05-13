@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: Oreo
   _takeDamageFeedback: {fileID: 5148090263481069688}
-  distanceToActivate: 20
+  distanceToActivate: 40
   timeBetweenSpawns: 5
   amountSpawnInWave: 2
   nodeBlocker: {fileID: 7518774927161387008}

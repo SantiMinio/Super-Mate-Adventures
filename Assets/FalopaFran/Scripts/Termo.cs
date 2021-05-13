@@ -9,11 +9,14 @@ public class Termo : MonoBehaviour
     
     private void OnMouseDown()
     {
-        var sphereCheck = Physics.CheckSphere(transform.position, 20f, targets);
+        Main.instance.EventManager.TriggerEvent(GameEvent.TermoClicked);
+        
+        var sphereCheck = Physics.CheckSphere(transform.position, 15f, targets);
 
         if (sphereCheck)
         {
             Main.instance.GetMainCharacter.manaSystem.FillFullMana();
+            Main.instance.GetMainCharacter.GetLifeHandler.ResetLife();
         }
     }
 }

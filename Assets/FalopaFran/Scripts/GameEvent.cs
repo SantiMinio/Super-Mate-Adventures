@@ -1,5 +1,9 @@
 ﻿public enum GameEvent
 {
-    UseCard
+    UseCard,
+    SpawnCookie,
+    FinishWaveSpawn,
+    StartNewWave,
+    TermoClicked
 }
 

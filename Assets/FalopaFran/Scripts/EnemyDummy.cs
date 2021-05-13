@@ -19,7 +19,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     private LifeHandler _lifeHandler;
 
     [SerializeField] private float attackDamage;
-    
+    public float _count;
+    [SerializeField] private float delayToAttack;
     
     public float meleeDistance { get; private set; }
     public MovementHandler GetMovementHandler => _movementHandler;
@@ -65,9 +66,24 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         _movementHandler.OnFixedUpdate();
     }
 
+    public void TryToDoAttack()
+    {
+        _count += Time.deltaTime;
+
+        if (_count >= delayToAttack)
+        {
+            _count = 0;
+            
+            var player = Main.instance.GetMainCharacter;
+
+            var dir = (player.GetPosition() - transform.position).normalized;
+            transform.forward = dir;
+            GetAnimator.Play("attack");
+        }
+    }
+    
     private void DoAttack()
     {
-        Debug.Log("ataque bizcocho");
         List<Transform> targets = _fieldOfView.GetVisibleTargets;
 
         for (int i = 0; i < targets.Count; i++)

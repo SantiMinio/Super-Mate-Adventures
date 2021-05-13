@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: GoldenNine
   _takeDamageFeedback: {fileID: 2684959178953903776}
-  distanceToActivate: 20
+  distanceToActivate: 40
   timeBetweenSpawns: 7
   amountSpawnInWave: 3
   nodeBlocker: {fileID: 8612394293061343982}

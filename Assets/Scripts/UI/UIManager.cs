@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] RectTransform bubbleParent = null;
     [SerializeField] Image bubbleModel = null;
+    [SerializeField] private Text waveNumber;
 
     Image[] bubbles = new Image[0];
 
@@ -19,6 +21,20 @@ public class UIManager : MonoBehaviour
     {
         instance = this;
     }
+
+    private void Start()
+    {
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, RefreshWaveCounter);
+    }
+
+    private void RefreshWaveCounter(object[] parametercontainer)
+    {
+        Debug.Log("se hace");
+        string number = parametercontainer[0].ToString();
+
+        waveNumber.text = $"Ola {number}";
+    }
+
 
     public void CreateManaBar(int maxMana)
     {

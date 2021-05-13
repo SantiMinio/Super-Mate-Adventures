@@ -18,6 +18,9 @@ namespace Frano
         [SerializeField] private ParticleSystem takeDamageFeedback;
         
         [SerializeField] private float attackDamage;
+
+        
+        
         float initDamage;
 
         private void Awake()
@@ -72,6 +75,7 @@ namespace Frano
 
         public Vector3 GetPosition() => transform.position;
         public float GetDamage() => attackDamage;
+        public LifeHandler GetLifeHandler => _lifeHandler; 
         public void AddDamage(float dmg) => attackDamage += dmg;
         public bool IsDamageBuffed() => attackDamage == initDamage ? false : true;
         public void ResetDamageValue() => attackDamage = initDamage;

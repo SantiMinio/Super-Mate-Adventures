@@ -10,7 +10,7 @@ public class DummySpawner : MonoBehaviour, IHiteable
     private LifeHandler _lifeHandler;
     [SerializeField] private ParticleSystem _takeDamageFeedback;
 
-    [SerializeField] private float distanceToActivate;
+    [SerializeField] private float distanceToActivate = 30f;
     
     private float _count;
     [SerializeField] private float timeBetweenSpawns;
@@ -23,6 +23,8 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     private List<EnemyDummy> _currentSpawnedEnemies = new List<EnemyDummy>();
 
+    [SerializeField]private bool active;
+
     private void Awake()
     {
         
@@ -33,11 +35,23 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     private void Start()
     {
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, ActiveSpawner);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.FinishWaveSpawn, DisableSpawner);
+        
         nodeBlocker.SetActive(false);
         
-        Spawns();
     }
 
+    private void ActiveSpawner()
+    {
+        active = true;
+    }
+
+    private void DisableSpawner()
+    {
+        active = false;
+    }
+    
     private void Dead()
     {
       Destroy(gameObject); 
@@ -57,14 +71,20 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     void SpawnNewEnemy(Transform spawnPoint)
     {
+        
         EnemyDummy dummy = Resources.Load<EnemyDummy>(prefabName);
 
         var _currentEnemy = Instantiate(dummy, spawnPoint.position, spawnPoint.rotation);
         _currentSpawnedEnemies.Add(_currentEnemy);
+        
+        Main.instance.EventManager.TriggerEvent(GameEvent.SpawnCookie);
     }
 
     private void Update()
     {
+        if(!active) return;
+        
+        
         if (Vector3.Distance(Main.instance.GetMainCharacter.GetPosition(), transform.position) >
             distanceToActivate) return;
 
