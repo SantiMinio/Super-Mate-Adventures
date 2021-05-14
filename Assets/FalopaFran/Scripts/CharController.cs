@@ -24,7 +24,7 @@ namespace Frano
 
 
         public void InputsOn() => inputAvaliable = true;
-        public void InputsOff() => inputAvaliable = false;
+        public void InputsOff() { inputAvaliable = false; moving = false; }
         
         void Start()
         {

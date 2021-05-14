@@ -33,12 +33,11 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     public MovementHandler GetMovementHandler => _movementHandler;
     public Animator GetAnimator => _animator;
     public FieldOfView GetFoV => _fieldOfView;
+
+    public Action<EnemyDummy> ReturnToSpawn;
     void Awake()
     {
         _lifeHandler = GetComponent<LifeHandler>();
-
-
-        _lifeHandler.OnDead += () => { ScoreSystem.instance.RefreshScore(giveScore); Destroy(gameObject); };
 
         _lifeHandler.OnDead += Dead;
 
@@ -56,9 +55,11 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     }
 
     private void Dead()
-    { 
-        Destroy(gameObject);
+    {
+        ReturnToSpawn?.Invoke(this);
+        ScoreSystem.instance.RefreshScore(giveScore);
         Main.instance.EventManager.TriggerEvent(GameEvent.EnemyDead);
+        Destroy(gameObject);
     }
 
     private void Start()

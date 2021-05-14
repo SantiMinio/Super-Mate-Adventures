@@ -36,7 +36,7 @@ public class WaveManager : MonoBehaviour
                 {
                     waveActive = false;
                     Debug.Log("termino la wave");  
-                    Main.instance.EventManager.TriggerEvent(GameEvent.KilledAllEnemiesSpawned);
+                    Main.instance.EventManager.TriggerEvent(GameEvent.KilledAllEnemiesSpawned, currentWaveNumber);
                 }
                 
             }
@@ -47,13 +47,13 @@ public class WaveManager : MonoBehaviour
 
     private void IsWaveKilled()
     {
-        if (spawners.Any(x => x.GetLiveEnemies() > 0))
+        if (!spawners.Any(x => { Debug.Log(x.GetLiveEnemies() + x.name); return x.GetLiveEnemies() > 0; }))
         {
             if (waveActive)
             {
                 waveActive = false;
                 Debug.Log("termino la wave");    
-                Main.instance.EventManager.TriggerEvent(GameEvent.KilledAllEnemiesSpawned);
+                Main.instance.EventManager.TriggerEvent(GameEvent.KilledAllEnemiesSpawned, currentEnemiesInWave);
             }
             
             //Debug.Log("termino la wave");  

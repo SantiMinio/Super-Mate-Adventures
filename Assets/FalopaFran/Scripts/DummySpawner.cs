@@ -26,7 +26,7 @@ public class DummySpawner : MonoBehaviour, IHiteable
     [SerializeField] Transform  spawnPoint;
     [SerializeField] private float spawnRadius;
 
-    private List<EnemyDummy> _currentSpawnedEnemies = new List<EnemyDummy>();
+    [SerializeField] private List<EnemyDummy> _currentSpawnedEnemies = new List<EnemyDummy>();
 
     public bool active { get; private set; }
 
@@ -95,6 +95,7 @@ public class DummySpawner : MonoBehaviour, IHiteable
         Vector3 realSpawnPos = new Vector3(newVector.x, spawnPoint.localPosition.y, newVector.z);
         var _currentEnemy = Instantiate(dummy, spawnPoint.position, spawnPoint.rotation);
         _currentEnemy.transform.position = realSpawnPos + spawnPoint.position;
+        _currentEnemy.ReturnToSpawn = (x) => _currentSpawnedEnemies.Remove(x);
         _currentSpawnedEnemies.Add(_currentEnemy);
         
         Main.instance.EventManager.TriggerEvent(GameEvent.SpawnCookie);
