@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class DummySpawner : MonoBehaviour, IHiteable
 {
@@ -19,7 +21,9 @@ public class DummySpawner : MonoBehaviour, IHiteable
     [SerializeField]
     private GameObject nodeBlocker;
 
-    [SerializeField] private List<Transform> spawnPoint;
+    [SerializeField] private List<Transform>  spawnPoints;
+    [SerializeField] Transform  spawnPoint;
+    [SerializeField] private float spawnRadius;
 
     private List<EnemyDummy> _currentSpawnedEnemies = new List<EnemyDummy>();
 
@@ -62,20 +66,24 @@ public class DummySpawner : MonoBehaviour, IHiteable
     {
         for (int i = 0; i < amountSpawnInWave; i++)
         {
-            int spanwIndex = i;
-
-            if (spanwIndex >= spawnPoint.Count) spanwIndex = 0 +  i - spawnPoint.Count;
-                
-            SpawnNewEnemy(spawnPoint[spanwIndex]);
+            SpawnNewEnemy();
         }
     }
 
-    void SpawnNewEnemy(Transform spawnPoint)
+    void SpawnNewEnemy()
     {
         
         EnemyDummy dummy = Resources.Load<EnemyDummy>(prefabName);
 
+        var test = (Random.insideUnitCircle * spawnRadius);
+
+        var cosa = new Vector3(test.x, 0, test.y); 
+        
+        
+        Vector3 realSpawnPos = new Vector3(cosa.x, spawnPoint.localPosition.y, cosa.z);
+        Debug.Log(realSpawnPos);
         var _currentEnemy = Instantiate(dummy, spawnPoint.position, spawnPoint.rotation);
+        _currentEnemy.transform.position = realSpawnPos + spawnPoint.position;
         _currentSpawnedEnemies.Add(_currentEnemy);
         
         Main.instance.EventManager.TriggerEvent(GameEvent.SpawnCookie);
@@ -109,7 +117,10 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     private void OnDrawGizmosSelected()
     {
-  
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(spawnPoint.position, spawnRadius);
+        
+        
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, distanceToActivate);
         
