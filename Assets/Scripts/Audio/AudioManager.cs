@@ -153,7 +153,6 @@ public class AudioManager : MonoBehaviour
     public SoundPool GetSoundPool(string soundPoolName, SoundDimesion dimension, 
         AudioClip audioClip = null, bool loop = false, int prewarmAmount = 2)
     {
-        Debug.Log(soundPoolName);
         if (_soundRegistry.ContainsKey(soundPoolName)) return _soundRegistry[soundPoolName];
         else if (audioClip != null) return CreateNewSoundPool(audioClip, soundPoolName, dimension,loop, prewarmAmount);
         else return null;

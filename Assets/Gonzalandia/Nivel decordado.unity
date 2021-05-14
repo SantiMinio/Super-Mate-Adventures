@@ -2191,7 +2191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227034241907187839, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -520.6401
       objectReference: {fileID: 0}
     - target: {fileID: 9115223867310706232, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2332,7 +2332,7 @@ AudioSource:
   m_Volume: 0.13
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
