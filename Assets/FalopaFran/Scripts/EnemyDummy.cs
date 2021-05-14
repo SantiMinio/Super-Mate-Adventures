@@ -21,8 +21,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     [SerializeField] private float attackDamage;
     public float _count;
     [SerializeField] private float delayToAttack;
-    
-    public float meleeDistance { get; private set; }
+
+    [SerializeField] private float meleeDistance;
+
+    public float GetMeleeDistance => meleeDistance;
     public MovementHandler GetMovementHandler => _movementHandler;
     public Animator GetAnimator => _animator;
     public FieldOfView GetFoV => _fieldOfView;
@@ -48,7 +50,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _animEvent.Add_Callback("doDamage", DoAttack);
 
-        meleeDistance = 6.5f;
+        //meleeDistance = 6.5f;
         //attackDamage = 1f;
     }
 

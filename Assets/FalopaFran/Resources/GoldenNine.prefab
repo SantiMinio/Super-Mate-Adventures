@@ -164,7 +164,7 @@ MonoBehaviour:
     m_Bits: 512
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   visibletargets: []
   meshResolution: 1
   viewMeshFilter: {fileID: 816809197194267124}
@@ -266,7 +266,8 @@ MonoBehaviour:
   _fieldOfView: {fileID: 2292428578565266429}
   attackDamage: 1
   _count: 0
-  delayToAttack: 1
+  delayToAttack: 1.5
+  meleeDistance: 2
 --- !u!114 &-3811395992596308188
 MonoBehaviour:
   m_ObjectHideFlags: 0
