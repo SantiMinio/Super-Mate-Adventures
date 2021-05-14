@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 7296414654804014305}
   - component: {fileID: 1019584769}
   - component: {fileID: 5460047021492735124}
+  - component: {fileID: 1782225299524757158}
   m_Layer: 0
   m_Name: CorePlayer
   m_TagString: Untagged
@@ -196,6 +197,20 @@ MonoBehaviour:
   _ambient_FX: {fileID: 0}
   _onFightMusic: {fileID: 0}
   _offFightMusic: {fileID: 0}
+--- !u!114 &1782225299524757158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296414654804014304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4931b6ecfd137049b5852b5354358c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboMultiplier: 2
+  comboTimeLimit: 3
 --- !u!1001 &3005321628307735498
 PrefabInstance:
   m_ObjectHideFlags: 0
