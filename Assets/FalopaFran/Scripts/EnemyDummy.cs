@@ -49,7 +49,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         _animEvent.Add_Callback("doDamage", DoAttack);
 
         meleeDistance = 6.5f;
-        attackDamage = 1f;
+        //attackDamage = 1f;
     }
 
     

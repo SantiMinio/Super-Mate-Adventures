@@ -264,7 +264,7 @@ MonoBehaviour:
     prevPosToGoThatCantGo: {x: 0, y: 0, z: 0}
     currentLandingSpot: {x: 0, y: 0, z: 0}
   _fieldOfView: {fileID: 2292428578565266429}
-  attackDamage: 0
+  attackDamage: 1
   _count: 0
   delayToAttack: 2
 --- !u!114 &-3811395992596308188
