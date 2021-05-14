@@ -26,7 +26,12 @@ public class ChargeTemperatureCard : CardModel
 
     protected override bool OnCanUse()
     {
-        return !Main.instance.GetMainCharacter.GetComponent<LifeHandler>().IsFullLife();
+        if (Main.instance.GetMainCharacter.GetComponent<LifeHandler>().IsFullLife())
+        {
+            UIManager.instance.DisplayDialog("Tenés la vida llena!!");
+            return false;
+        }
+        else return true;
     }
 
     protected override void OnUseCard()

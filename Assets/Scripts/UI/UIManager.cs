@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] RectTransform bubbleParent = null;
     [SerializeField] Image bubbleModel = null;
     [SerializeField] private Text waveNumber;
+    [SerializeField] UIDialog ui_Dialog = null;
 
     Image[] bubbles = new Image[0];
 
@@ -60,5 +61,10 @@ public class UIManager : MonoBehaviour
     public void ChangeLifeBar(float percent)
     {
         lifeBar.fillAmount = percent;
+    }
+
+    public void DisplayDialog(string txt)
+    {
+        ui_Dialog.Open(txt);
     }
 }

@@ -7,21 +7,16 @@ public abstract class CardModel : MonoBehaviour
 {
     protected List<Requirement> myRequirements = new List<Requirement>();
 
-    private void Start()
-    {
-        if(myRequirements.Count > 0)
-        {
-            Debug.Log(myRequirements[0].GetType().FullName);
-        }
-    }
-
     public virtual Requirement GetRequire() => null;
     public bool CanUse()
     {
         for (int i = 0; i < myRequirements.Count; i++)
         {
             if (!myRequirements[i].CheckRequirement())
+            {
+                UIManager.instance.DisplayDialog(myRequirements[i].ErrorMesseage());
                 return false;
+            }
         }
 
         return OnCanUse();
