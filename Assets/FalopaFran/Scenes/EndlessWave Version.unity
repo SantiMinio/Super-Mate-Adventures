@@ -581,7 +581,7 @@ MonoBehaviour:
   prevWaveNumber: -1
   currentEnemiesInWave: 0
   waveEnemyScaler: 2
-  baseEnemiesPerWave: 0
+  baseEnemiesPerWave: 2
   spawners:
   - {fileID: 1359512934}
   - {fileID: 1182056749}
@@ -3053,7 +3053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.6
+      value: 32.82
       objectReference: {fileID: 0}
     - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3061,7 +3061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.2
+      value: 21.12
       objectReference: {fileID: 0}
     - target: {fileID: 3874946423747533425, guid: f2a112f9064c201428bb6de541298f6c, type: 3}
       propertyPath: m_LocalRotation.w

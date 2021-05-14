@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -29,6 +30,17 @@ public class DummySpawner : MonoBehaviour, IHiteable
 
     public bool active { get; private set; }
 
+
+    public bool AreEnemiesSpawnedAlive()
+    {
+        //Debug.Log("el spawn " + gameObject.name + "  " + _currentSpawnedEnemies.Any(x => x != null));
+        return _currentSpawnedEnemies.Any(x => x != null);
+    }
+
+    public int GetLiveEnemies()
+    {
+        return _currentSpawnedEnemies.Count;
+    }
     
     private void Awake()
     {
@@ -91,6 +103,9 @@ public class DummySpawner : MonoBehaviour, IHiteable
     private void Update()
     {
         if(!active) return;
+
+
+        _currentSpawnedEnemies = _currentSpawnedEnemies.Where(x => x != null).ToList();
         
         
         if (Vector3.Distance(Main.instance.GetMainCharacter.GetPosition(), transform.position) >

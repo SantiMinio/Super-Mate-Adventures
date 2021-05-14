@@ -37,7 +37,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _lifeHandler = GetComponent<LifeHandler>();
 
+
         _lifeHandler.OnDead += () => { ScoreSystem.instance.RefreshScore(giveScore); Destroy(gameObject); };
+
+        _lifeHandler.OnDead += Dead;
 
         _fsm = GetComponent<StateManager>();
         _fsm.Init(this);
@@ -50,6 +53,12 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         _animator = GetComponentInChildren<Animator>();
         _animEvent = GetComponentInChildren<AnimEvent>();
 
+    }
+
+    private void Dead()
+    { 
+        Destroy(gameObject);
+        Main.instance.EventManager.TriggerEvent(GameEvent.EnemyDead);
     }
 
     private void Start()

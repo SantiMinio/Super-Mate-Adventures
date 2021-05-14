@@ -4,6 +4,9 @@
     SpawnCookie,
     FinishWaveSpawn,
     StartNewWave,
-    TermoClicked
+    TermoClicked,
+    MateDead,
+    KilledAllEnemiesSpawned,
+    EnemyDead
 }
 

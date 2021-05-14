@@ -12,7 +12,7 @@ namespace Frano
             var mate = Main.instance.GetMainCharacter;
             var myEnemy = state.GetEntity.transform.position;
             
-            Debug.Log(Vector3.Distance(mate.GetPosition(), myEnemy));
+//            Debug.Log(Vector3.Distance(mate.GetPosition(), myEnemy));
             
             if (Vector3.Distance(mate.GetPosition(), myEnemy) <= state.GetEntity.GetMeleeDistance) return true;
 
