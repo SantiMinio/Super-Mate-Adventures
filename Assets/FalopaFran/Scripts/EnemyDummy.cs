@@ -148,4 +148,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     public Vector3 GetPosition() {return transform.position; }
 
     public float GetDamage(){return attackDamage;}
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(_movementHandler.currentPosToGo, 1f);
+    }
 }

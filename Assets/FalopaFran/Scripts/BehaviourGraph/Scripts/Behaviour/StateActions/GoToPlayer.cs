@@ -15,7 +15,7 @@ namespace Frano
             
             //Debug.Log(c.GetPosition());
 
-            if (movement.UnitIsMoving) return;
+            //if (movement.UnitIsMoving) return;
             
             movement.GoTo(c.GetPosition());
         }

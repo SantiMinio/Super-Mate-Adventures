@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794250753843035672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.123, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5687437798050752822}
@@ -137,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3049893071725715006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862961883248601175}
@@ -200,8 +200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5963928888608481679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.96, y: 0.86, z: 20.5}
-  m_LocalScale: {x: 1.334, y: 1.334, z: 1.334}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5963928888847913636}
   - {fileID: 5687437798050752822}
@@ -237,7 +237,7 @@ MonoBehaviour:
   hittedFeedback: {fileID: 5963928888847913638}
   _movementHandler:
     target: {fileID: 0}
-    minDistToChangeNode: 10
+    minDistToChangeNode: 4
     minDistToReachPos: 4
     path: []
     currentWaypoint: {x: 0, y: 0, z: 0}
@@ -269,7 +269,7 @@ MonoBehaviour:
   attackDamage: 1
   _count: 0
   delayToAttack: 1.5
-  meleeDistance: 5
+  meleeDistance: 6
   knockbackIntensity: 500
 --- !u!114 &-3811395992596308188
 MonoBehaviour:
@@ -298,7 +298,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1381344450607894541
 MonoBehaviour:

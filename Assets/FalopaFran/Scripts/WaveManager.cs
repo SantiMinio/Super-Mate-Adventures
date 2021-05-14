@@ -53,6 +53,7 @@ public class WaveManager : MonoBehaviour
             {
                 waveActive = false;
                 Debug.Log("termino la wave");    
+                Main.instance.EventManager.TriggerEvent(GameEvent.KilledAllEnemiesSpawned);
             }
             
             //Debug.Log("termino la wave");  

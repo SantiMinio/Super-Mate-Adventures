@@ -38,6 +38,8 @@ namespace Frano
             right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
 
             initialSpeed = moveSpeed;
+            
+            InputsOn();
         }
 
         void Update()
