@@ -6,6 +6,7 @@ public class ScoreSystem : MonoBehaviour
 {
     public static ScoreSystem instance { get; private set; }
     int currentScore = 0;
+    SaveState save;
     int currentCombo = 0;
     int maxCombo = 0;
     int wavesCompleted;
@@ -15,7 +16,8 @@ public class ScoreSystem : MonoBehaviour
 
     [SerializeField, Range(1,10)] int comboMultiplier = 2;
     [SerializeField] float comboTimeLimit = 3;
-
+    [SerializeField] int scorePerWave = 100;
+    public const string saveStateName = "SaveState";
 
     private void Awake()
     {
@@ -26,6 +28,15 @@ public class ScoreSystem : MonoBehaviour
     {
         Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, RefreshWaveCount);
         UIManager.instance.RefreshScoreUI(currentScore);
+        if (BinarySerialization.IsFileExist(saveStateName))
+        {
+            save = BinarySerialization.Deserialize<SaveState>(saveStateName);
+        }
+        else
+        {
+            save = new SaveState();
+            BinarySerialization.Serialize(saveStateName, save);
+        }
     }
 
     public void RefreshScore(int score)
@@ -64,5 +75,20 @@ public class ScoreSystem : MonoBehaviour
     void RefreshWaveCount(params object[] parameters)
     {
         wavesCompleted = (int)parameters[0] - 1;
+        currentScore += scorePerWave * wavesCompleted;
+    }
+
+    void EndGame()
+    {
+        OverComboTime();
+        bool highScore;
+        if(save.highscore < currentScore)
+        {
+            save.highscore = currentScore;
+            BinarySerialization.Serialize(saveStateName, save);
+            highScore = true;
+        }
+
+
     }
 }
