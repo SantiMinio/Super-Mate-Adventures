@@ -26,6 +26,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     [SerializeField] private float meleeDistance;
 
+    [SerializeField] private float knockbackIntensity;
+
     public float GetMeleeDistance => meleeDistance;
     public MovementHandler GetMovementHandler => _movementHandler;
     public Animator GetAnimator => _animator;
@@ -106,10 +108,14 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         Debug.Log("Recibo daño");
 
         _lifeHandler.TakeDamage(atttacker.GetDamage());
+        Vector3 attackDirection = (transform.position - atttacker.GetPosition()).normalized;
         
+        _movementHandler.myRb.AddForce(attackDirection * knockbackIntensity, ForceMode.Impulse);
 
-        hittedFeedback.transform.forward = (transform.position - atttacker.GetPosition()).normalized;
+        hittedFeedback.transform.forward = attackDirection;
         hittedFeedback.Play();
+        
+        _animator.Play("Take Damage");
     }
     
     

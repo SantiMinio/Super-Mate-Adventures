@@ -53,7 +53,7 @@ public class MovementHandler
     public bool UnitIsJumping => jumping;
     public bool CantReachToDesiredPosition => cantReachToDesiredPosition;
 
-    private Rigidbody _myRb;
+    public Rigidbody myRb;
     
     
     #region JumpControllerQueries
@@ -75,7 +75,7 @@ public class MovementHandler
     public void Init(Pathfinding pathfinding, EnemyDummy myDummy, Rigidbody rb)
     {
         _pathfinding = pathfinding;
-        _myRb = rb;
+        myRb = rb;
         //cc = charController;
         //turnSpeed = 20f;//state.turnSpeed;
         //speed = 10f; //state.speed;
@@ -175,7 +175,7 @@ public class MovementHandler
 
     public void Stop()
     {
-        _myRb.velocity = Vector3.zero;
+        myRb.velocity = Vector3.zero;
         moving = false;
         currentWaypoint = Vector3.zero;
         path = null;
@@ -258,7 +258,7 @@ public class MovementHandler
     private void MoveTowardsNextNode(Vector3 dir)
     {
         velocity = dir * speed;
-        _myRb.velocity = velocity;
+        myRb.velocity = velocity;
     }
     private bool NodeReached()
     {
