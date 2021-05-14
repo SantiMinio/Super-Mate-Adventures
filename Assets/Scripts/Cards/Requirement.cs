@@ -11,6 +11,8 @@ public abstract class Requirement
     public abstract void RequirementEffect();
 
     public abstract float GetRequirment();
+
+    public abstract string ErrorMesseage();
 }
 
 [Serializable]
@@ -19,6 +21,8 @@ public class ManaRequirement : Requirement
     [SerializeField] int requiredMana = 10;
 
     public override bool CheckRequirement() => Main.instance.GetMainCharacter.manaSystem.EnoughMana(requiredMana);
+
+    public override string ErrorMesseage() => "¡Te falta mana!";
 
     public override float GetRequirment() => requiredMana;
 
@@ -34,6 +38,8 @@ public class LifeRequirement : Requirement
     [SerializeField] float requiredLife = 10;
 
     public override bool CheckRequirement() => Main.instance.GetMainCharacter.GetComponent<LifeHandler>().CheckEnoughLife(requiredLife);
+
+    public override string ErrorMesseage() => "¡Te falta vida!";
 
     public override float GetRequirment() => requiredLife;
 
@@ -51,6 +57,8 @@ public class DistanceRequirement : Requirement
     [SerializeField] string typeName = "CharacterHead";
 
     public override float GetRequirment() => distance;
+
+    public override string ErrorMesseage() => "¡Tira la carta a " + distance + " de distancia!";
 
     public override bool CheckRequirement()
     {
@@ -76,6 +84,8 @@ public class SpeedRequirement : Requirement
 
     public override float GetRequirment() => 0;
 
+    public override string ErrorMesseage() => "Ya tenes incrementada la velocidad!!";
+
     public override bool CheckRequirement() => !Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().IsSpeedIncreased();
 
     public override void RequirementEffect()
@@ -91,6 +101,8 @@ public class LastCardRequirement : Requirement
     [SerializeField] CardSettings cardUsedRequire = null;
 
     public override float GetRequirment() => 0;
+
+    public override string ErrorMesseage() => "Necesitas usar " + cardUsedRequire.title + " primero!!";
 
     public override bool CheckRequirement()
     {
@@ -115,6 +127,8 @@ public class CardOnHandRequirement : Requirement
     [SerializeField] CardSettings cardRequire = null;
 
     public override float GetRequirment() => cardRequireAmmount;
+
+    public override string ErrorMesseage() => "Necesitas " + cardRequireAmmount + " cartas del tipo " + cardRequire.title + "!!";
 
     public override bool CheckRequirement()
     {

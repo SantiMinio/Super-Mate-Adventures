@@ -18,7 +18,12 @@ public class ChargeBubbleCard : CardModel
 
     protected override bool OnCanUse()
     {
-        return !Main.instance.GetMainCharacter.manaSystem.IsFullMana();
+        if (Main.instance.GetMainCharacter.manaSystem.IsFullMana())
+        {
+            UIManager.instance.DisplayDialog("Tenés el mana lleno!!");
+            return false;
+        }
+        else return true;
     }
 
     protected override void OnUseCard()
