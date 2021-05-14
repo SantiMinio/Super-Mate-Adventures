@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fc45513cb5ddc4fb953f10e560c779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 30
-  viewAngle: 344
+  viewRadius: 300
+  viewAngle: 360
   targetMask:
     serializedVersion: 2
     m_Bits: 512
@@ -237,8 +237,8 @@ MonoBehaviour:
   hittedFeedback: {fileID: 5963928888847913638}
   _movementHandler:
     target: {fileID: 0}
-    turnSpeed: 10
-    speed: 15
+    turnSpeed: 20
+    speed: 8
     minDistToChangeNode: 1
     minDistToReachPos: 12
     path: []
@@ -266,7 +266,7 @@ MonoBehaviour:
   _fieldOfView: {fileID: 2292428578565266429}
   attackDamage: 0
   _count: 0
-  delayToAttack: 5
+  delayToAttack: 2
 --- !u!114 &-3811395992596308188
 MonoBehaviour:
   m_ObjectHideFlags: 0
