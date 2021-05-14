@@ -218,10 +218,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.34
+  m_Height: 1.22
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.41, z: 0}
 --- !u!114 &5963928888608481680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,10 +237,8 @@ MonoBehaviour:
   hittedFeedback: {fileID: 5963928888847913638}
   _movementHandler:
     target: {fileID: 0}
-    turnSpeed: 20
-    speed: 10
-    minDistToChangeNode: 1
-    minDistToReachPos: 12
+    minDistToChangeNode: 6
+    minDistToReachPos: 4
     path: []
     currentWaypoint: {x: 0, y: 0, z: 0}
     targetIndex: 0
@@ -264,10 +262,12 @@ MonoBehaviour:
     prevPosToGoThatCantGo: {x: 0, y: 0, z: 0}
     currentLandingSpot: {x: 0, y: 0, z: 0}
   _fieldOfView: {fileID: 2292428578565266429}
+  turnSpeed: 20
+  moveSpeed: 10
   attackDamage: 1
   _count: 0
   delayToAttack: 1.5
-  meleeDistance: 2
+  meleeDistance: 5
 --- !u!114 &-3811395992596308188
 MonoBehaviour:
   m_ObjectHideFlags: 0

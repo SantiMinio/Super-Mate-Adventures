@@ -13,6 +13,10 @@ namespace Frano
             var movement = states.GetEntity.GetMovementHandler;
             CharacterHead c = Main.instance.GetMainCharacter;
             
+            //Debug.Log(c.GetPosition());
+
+            if (movement.UnitIsMoving) return;
+            
             movement.GoTo(c.GetPosition());
         }
     }    

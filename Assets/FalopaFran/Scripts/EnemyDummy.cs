@@ -9,9 +9,11 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 {
     [SerializeField] ParticleSystem hittedFeedback;
     private Rigidbody _rb;
-    [SerializeField]private MovementHandler _movementHandler;
+    [SerializeField]private MovementHandler _movementHandler = new MovementHandler();
     [SerializeField] private FieldOfView _fieldOfView;
 
+
+    [SerializeField] private float turnSpeed, moveSpeed;
     
     private Animator _animator;
     private AnimEvent _animEvent;
@@ -38,8 +40,9 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         _fsm.Init(this);
 
         _rb = GetComponent<Rigidbody>();
-        _movementHandler = new MovementHandler();
+        //_movementHandler = new MovementHandler();
         _movementHandler.Init(FindObjectOfType<Pathfinding>(), this, _rb);
+        _movementHandler.SetSpeeds(turnSpeed, moveSpeed);
 
         _animator = GetComponentInChildren<Animator>();
         _animEvent = GetComponentInChildren<AnimEvent>();
@@ -50,6 +53,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _animEvent.Add_Callback("doDamage", DoAttack);
 
+        
+        
         //meleeDistance = 6.5f;
         //attackDamage = 1f;
     }

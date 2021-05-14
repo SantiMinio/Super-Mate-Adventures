@@ -11,10 +11,10 @@ using System.Linq;
 public class MovementHandler
 {
     public Transform target;
-    [SerializeField]float turnSpeed;
-    [SerializeField]float speed;
-    [SerializeField] float minDistToChangeNode = 3f;
-    [SerializeField] float minDistToReachPos = 3f;
+    float turnSpeed;
+    float speed;
+    [SerializeField] float minDistToChangeNode;
+    [SerializeField] private float minDistToReachPos;
     float initSpeed;
     public Vector3[] path;
     public Vector3 currentWaypoint;
@@ -77,8 +77,8 @@ public class MovementHandler
         _pathfinding = pathfinding;
         _myRb = rb;
         //cc = charController;
-        turnSpeed = 20f;//state.turnSpeed;
-        speed = 10f; //state.speed;
+        //turnSpeed = 20f;//state.turnSpeed;
+        //speed = 10f; //state.speed;
         myTransform = myDummy.transform;
         //_parabolicShooter = new ParabolicShooter(myTransform);
         
@@ -264,14 +264,14 @@ public class MovementHandler
     {
         //Debug.Log(Vector3.Distance(myTransform.position, currentPosToGo));
 
-        if (Vector3.Distance(myTransform.position, currentPosToGo) < minDistToReachPos)
-        {
-            moving = false;
-            
-            Stop();
-            OnReachDestination?.Invoke();
-            return true;
-        }
+        // if (Vector3.Distance(myTransform.position, currentPosToGo) < minDistToReachPos)
+        // {
+        //     moving = false;
+        //     
+        //     Stop();
+        //     OnReachDestination?.Invoke();
+        //     return true;
+        // }
         
         if (Vector3.Distance(myTransform.position, currentWaypoint) <= minDistToChangeNode)
         {
@@ -322,5 +322,11 @@ public class MovementHandler
     public IEnumerable<Vector3> SearchForAnotherNodeZone(float distToSearch, Vector3 dirToSearch)
     {
         return _pathfinding.SearchZoneNode(myTransform.position,dirToSearch,distToSearch, 80f);
+    }
+
+    public void SetSpeeds(float turnSpeed, float moveSpeed)
+    {
+        speed = moveSpeed;
+        this.turnSpeed = turnSpeed;
     }
 }

@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     public int prevWaveNumber = -1;
     public int currentEnemiesInWave;
     [SerializeField] private int waveEnemyScaler = 2;
+    [SerializeField] private int baseEnemiesPerWave;
 
     [SerializeField] private List<DummySpawner> spawners = new List<DummySpawner>();
 
@@ -40,7 +41,7 @@ public class WaveManager : MonoBehaviour
     {
         currentEnemiesInWave++;
 
-        if (currentEnemiesInWave >= Mathf.RoundToInt(currentWaveNumber * waveEnemyScaler) + 5) FinishWave();
+        if (currentEnemiesInWave >= Mathf.RoundToInt(currentWaveNumber * waveEnemyScaler) + baseEnemiesPerWave) FinishWave();
     }
 
     private void FinishWave()
