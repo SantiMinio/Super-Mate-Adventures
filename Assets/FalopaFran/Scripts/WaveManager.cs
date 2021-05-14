@@ -18,9 +18,18 @@ public class WaveManager : MonoBehaviour
         Main.instance.EventManager.SubscribeToEvent(GameEvent.SpawnCookie, OnSpawn);
         Main.instance.EventManager.SubscribeToEvent(GameEvent.TermoClicked, StartNewWave);
         //StartNewWave();
+
+        foreach (var VARIABLE in spawners)
+        {
+            Debug.Log(VARIABLE);
+        }
     }
 
-    public bool SpawnersActive => spawners.Any(x => x.active && x != null);
+    public bool SpawnersActive()
+    {
+        Debug.Log(spawners.Any(x => x.active));
+        return spawners.Any(x => x.active);
+    }
 
     public void StartNewWave()
     {

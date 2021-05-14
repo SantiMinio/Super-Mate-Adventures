@@ -11,7 +11,7 @@ public class Termo : MonoBehaviour
     
     private void OnMouseDown()
     {
-        if (_waveManager.SpawnersActive) return;
+        if (_waveManager.SpawnersActive()) return;
         
         Main.instance.EventManager.TriggerEvent(GameEvent.TermoClicked);
         
