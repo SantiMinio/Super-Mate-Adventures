@@ -27,6 +27,14 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     [SerializeField] Image requireImg = null;
     [SerializeField] RequirementString_SpriteDictionary requireSprites = new RequirementString_SpriteDictionary();
 
+    [Header("Sounds")]
+    [SerializeField] AudioClip initSound = null;
+    [SerializeField] AudioClip pickSound = null;
+    [SerializeField] AudioClip useSound = null;
+    [SerializeField] AudioClip errorSound = null;
+
+
+
     Vector3 currentPos;
     DeckOfCards currentDeck;
     [HideInInspector] public CardSettings settings;
@@ -40,6 +48,11 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     {
         canvas = FindObjectOfType<Canvas>();
         rectTransform = GetComponent<RectTransform>();
+
+        if (initSound != null) AudioManager.instance.GetSoundPool(initSound.name, AudioManager.SoundDimesion.TwoD, initSound);
+        if (pickSound != null) AudioManager.instance.GetSoundPool(pickSound.name, AudioManager.SoundDimesion.TwoD, pickSound);
+        if (useSound != null) AudioManager.instance.GetSoundPool(useSound.name, AudioManager.SoundDimesion.TwoD, useSound);
+        if (errorSound != null) AudioManager.instance.GetSoundPool(errorSound.name, AudioManager.SoundDimesion.TwoD, errorSound);
     }
 
     private void Update()
@@ -84,6 +97,10 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
             requireImg.gameObject.SetActive(true);
             requireAmmountTxt.text = cardRequire.GetRequirment().ToString();
             requireImg.sprite = requireSprites[cardRequire.GetType().FullName];
+        }
+        if (initSound != null) 
+        {
+            AudioManager.instance.PlaySound(initSound.name);
         }
     }
 
@@ -135,9 +152,11 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         {
             currentModel.ResetCard();
             GoToPos(currentPos);
+            if (errorSound != null) AudioManager.instance.PlaySound(errorSound.name);
         }
         else
         {
+            if (useSound != null) AudioManager.instance.PlaySound(useSound.name);
             currentModel.UseCard();
             currentDeck.OnUseCard(this, settings);
         }
@@ -163,7 +182,7 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
+        if (pickSound != null) AudioManager.instance.PlaySound(pickSound.name);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
