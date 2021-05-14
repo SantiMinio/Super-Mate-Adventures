@@ -139,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7296414654804014305}
   - component: {fileID: 1019584769}
+  - component: {fileID: 5460047021492735124}
   m_Layer: 0
   m_Name: CorePlayer
   m_TagString: Untagged
@@ -175,6 +176,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterHead: {fileID: 7296414654246437442}
+--- !u!114 &5460047021492735124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296414654804014304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dc06f99304e3445875867e1611e50b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fx: {fileID: 0}
+  _jabali: {fileID: 0}
+  _music: {fileID: 0}
+  _misc: {fileID: 0}
+  _slowmo: {fileID: 0}
+  _ambient_FX: {fileID: 0}
+  _onFightMusic: {fileID: 0}
+  _offFightMusic: {fileID: 0}
 --- !u!1001 &3005321628307735498
 PrefabInstance:
   m_ObjectHideFlags: 0
