@@ -132,6 +132,11 @@ public class DeckOfCards : MonoBehaviour
         else return false;
     }
 
+    public void AddCard(CardSettings card)
+    {
+        deck.Add(card);
+    }
+
     public void DiscardCardOfType(CardSettings settings, int ammount)
     {
         int _ammount = ammount;
