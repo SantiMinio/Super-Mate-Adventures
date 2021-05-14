@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] RectTransform bubbleParent = null;
     [SerializeField] Image bubbleModel = null;
-    [SerializeField] private Text waveNumber;
+    [SerializeField] TextMeshProUGUI waveNumber = null;
+    [SerializeField] TextMeshProUGUI scoreTxt = null;
     [SerializeField] UIDialog ui_Dialog = null;
 
     Image[] bubbles = new Image[0];
@@ -36,6 +38,10 @@ public class UIManager : MonoBehaviour
         waveNumber.text = $"Ola {number}";
     }
 
+    public void RefreshScoreUI(int currentScore)
+    {
+        scoreTxt.text = "Puntaje: " + currentScore.ToString();
+    }
 
     public void CreateManaBar(int maxMana)
     {

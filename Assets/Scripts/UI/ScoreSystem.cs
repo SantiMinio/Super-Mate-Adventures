@@ -25,6 +25,7 @@ public class ScoreSystem : MonoBehaviour
     private void Start()
     {
         Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, RefreshWaveCount);
+        UIManager.instance.RefreshScoreUI(currentScore);
     }
 
     public void RefreshScore(int score)
@@ -37,6 +38,7 @@ public class ScoreSystem : MonoBehaviour
         timer = 0;
         currentCombo += 1;
         enemiesKilled += 1;
+        UIManager.instance.RefreshScoreUI(currentScore);
     }
 
     private void Update()

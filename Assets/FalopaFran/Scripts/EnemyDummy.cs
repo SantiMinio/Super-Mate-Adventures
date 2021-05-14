@@ -11,6 +11,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     private Rigidbody _rb;
     [SerializeField]private MovementHandler _movementHandler = new MovementHandler();
     [SerializeField] private FieldOfView _fieldOfView;
+    [SerializeField] int giveScore = 50;
 
 
     [SerializeField] private float turnSpeed, moveSpeed;
@@ -36,7 +37,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _lifeHandler = GetComponent<LifeHandler>();
 
-        _lifeHandler.OnDead += () => Destroy(gameObject);
+        _lifeHandler.OnDead += () => { ScoreSystem.instance.RefreshScore(giveScore); Destroy(gameObject); };
 
         _fsm = GetComponent<StateManager>();
         _fsm.Init(this);

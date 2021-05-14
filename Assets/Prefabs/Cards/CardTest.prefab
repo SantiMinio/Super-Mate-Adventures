@@ -201,8 +201,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Una descripci\xF3n muy larga para probar el textmesh pro"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ec89f6919a2e624791f844b321aa410, type: 2}
-  m_sharedMaterial: {fileID: -2445470875802532000, guid: 1ec89f6919a2e624791f844b321aa410, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 927aea5d1a0c1544f8aaa273d9170a77, type: 2}
+  m_sharedMaterial: {fileID: 6331335051961864041, guid: 927aea5d1a0c1544f8aaa273d9170a77, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.6
+  m_fontSize: 25.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -335,8 +335,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2c4773ed81016f3429216608e16b3ba8, type: 2}
-  m_sharedMaterial: {fileID: 8639183520005035548, guid: 2c4773ed81016f3429216608e16b3ba8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ec89f6919a2e624791f844b321aa410, type: 2}
+  m_sharedMaterial: {fileID: -2445470875802532000, guid: 1ec89f6919a2e624791f844b321aa410, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.7
+  m_fontSize: 51.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
