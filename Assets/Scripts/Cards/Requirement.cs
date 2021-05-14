@@ -9,6 +9,8 @@ public abstract class Requirement
     public abstract bool CheckRequirement();
 
     public abstract void RequirementEffect();
+
+    public abstract float GetRequirment();
 }
 
 [Serializable]
@@ -17,6 +19,8 @@ public class ManaRequirement : Requirement
     [SerializeField] int requiredMana = 10;
 
     public override bool CheckRequirement() => Main.instance.GetMainCharacter.manaSystem.EnoughMana(requiredMana);
+
+    public override float GetRequirment() => requiredMana;
 
     public override void RequirementEffect()
     {
@@ -31,6 +35,8 @@ public class LifeRequirement : Requirement
 
     public override bool CheckRequirement() => Main.instance.GetMainCharacter.GetComponent<LifeHandler>().CheckEnoughLife(requiredLife);
 
+    public override float GetRequirment() => requiredLife;
+
     public override void RequirementEffect()
     {
         Main.instance.GetMainCharacter.GetComponent<LifeHandler>().TakeDamage(requiredLife);
@@ -43,6 +49,8 @@ public class DistanceRequirement : Requirement
     [SerializeField] float distance = 7;
     [SerializeField] Transform root;
     [SerializeField] string typeName = "CharacterHead";
+
+    public override float GetRequirment() => distance;
 
     public override bool CheckRequirement()
     {
@@ -66,6 +74,8 @@ public class SpeedRequirement : Requirement
 {
     [SerializeField] float speedToIncrease = 6;
 
+    public override float GetRequirment() => 0;
+
     public override bool CheckRequirement() => !Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().IsSpeedIncreased();
 
     public override void RequirementEffect()
@@ -79,6 +89,8 @@ public class LastCardRequirement : Requirement
 {
     [SerializeField] float timeToCombo = 3;
     [SerializeField] CardSettings cardUsedRequire = null;
+
+    public override float GetRequirment() => 0;
 
     public override bool CheckRequirement()
     {
@@ -101,6 +113,8 @@ public class CardOnHandRequirement : Requirement
 {
     [SerializeField] int cardRequireAmmount = 3;
     [SerializeField] CardSettings cardRequire = null;
+
+    public override float GetRequirment() => cardRequireAmmount;
 
     public override bool CheckRequirement()
     {

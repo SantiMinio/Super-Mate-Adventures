@@ -58,6 +58,7 @@ MonoBehaviour:
   lifeBar: {fileID: 1845247409001545898}
   bubbleParent: {fileID: 9115223867310706232}
   bubbleModel: {fileID: 9162641563640450749, guid: 931be416c89e2d2469fb3f990381c226, type: 3}
+  waveNumber: {fileID: 0}
 --- !u!1 &1845247408215684964
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 684, y: 190.00006}
+  m_AnchoredPosition: {x: 684, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1845247409001545896
@@ -593,7 +594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -614, y: 190.00006}
+  m_AnchoredPosition: {x: -614, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2842891478958904086
@@ -905,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 144, y: 182}
+  m_AnchoredPosition: {x: 144, y: 91.99994}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9024887406319628222

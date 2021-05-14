@@ -18,6 +18,7 @@ public class VampirismCard : CardModel, IAttacker
         myRequirements.Add(manaRequirement);
         myRequirements.Add(distanceRequirement);
     }
+    public override Requirement GetRequire() => manaRequirement;
 
     public override void RangeFeedback()
     {

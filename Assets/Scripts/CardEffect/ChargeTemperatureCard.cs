@@ -13,6 +13,8 @@ public class ChargeTemperatureCard : CardModel
         myRequirements.Add(manaRequirement);
     }
 
+    public override Requirement GetRequire() => manaRequirement;
+
     public override void RangeFeedback()
     {
     }

@@ -22,6 +22,8 @@ public class SlowEnemiesCard : CardModel
         return true;
     }
 
+    public override Requirement GetRequire() => manaRequirement;
+
     public override void RangeFeedback()
     {
         feedback.SetActive(true);

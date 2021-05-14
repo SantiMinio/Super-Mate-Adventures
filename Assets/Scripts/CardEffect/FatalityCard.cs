@@ -13,6 +13,8 @@ public class FatalityCard : CardModel, IAttacker
         myRequirements.Add(cardOnHandRequirement);
     }
 
+    public override Requirement GetRequire() => cardOnHandRequirement;
+
     protected override bool OnCanUse()
     {
         return true;

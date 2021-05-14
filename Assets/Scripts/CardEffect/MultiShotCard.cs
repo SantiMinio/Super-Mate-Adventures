@@ -24,6 +24,8 @@ public class MultiShotCard : CardModel
         return true;
     }
 
+    public override Requirement GetRequire() => manaRequirement;
+
     public override void RangeFeedback()
     {
         feedback.SetActive(true);

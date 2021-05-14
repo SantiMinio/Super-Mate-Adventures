@@ -16,6 +16,8 @@ public class BombCard : CardModel, IAttacker
         myRequirements.Add(manaRequirement);
     }
 
+    public override Requirement GetRequire() => manaRequirement;
+
     protected override bool OnCanUse()
     {
         return true;

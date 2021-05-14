@@ -19,6 +19,8 @@ public class IncreaseSpeed : CardModel
         myRequirements.Add(speedRequirement);
     }
 
+    public override Requirement GetRequire() => manaRequirement;
+
     public override void RangeFeedback()
     {
         onFeedback = true;

@@ -16,6 +16,7 @@ public class BasicSkillshotCard : CardModel
         feedback.SetActive(false);
         myRequirements.Add(manaRequirement);
     }
+    public override Requirement GetRequire() => manaRequirement;
 
     protected override bool OnCanUse()
     {

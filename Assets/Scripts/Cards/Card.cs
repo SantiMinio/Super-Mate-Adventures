@@ -22,6 +22,11 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     [SerializeField] TextMeshProUGUI titleTxt = null;
     [SerializeField] TextMeshProUGUI descTxt = null;
 
+    [SerializeField] TextMeshProUGUI cardTitle = null;
+    [SerializeField] TextMeshProUGUI requireAmmountTxt = null;
+    [SerializeField] Image requireImg = null;
+    [SerializeField] RequirementString_SpriteDictionary requireSprites = new RequirementString_SpriteDictionary();
+
     Vector3 currentPos;
     DeckOfCards currentDeck;
     [HideInInspector] public CardSettings settings;
@@ -66,6 +71,20 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         titleTxt.text = settings.title;
         descTxt.text = settings.desc;
         debugDesc.gameObject.SetActive(false);
+        cardTitle.text = settings.title;
+
+        var cardRequire = currentModel.GetRequire();
+
+        if (cardRequire == null)
+        {
+            requireImg.gameObject.SetActive(false);
+        }
+        else if (requireSprites.ContainsKey(cardRequire.GetType().FullName))
+        {
+            requireImg.gameObject.SetActive(true);
+            requireAmmountTxt.text = cardRequire.GetRequirment().ToString();
+            requireImg.sprite = requireSprites[cardRequire.GetType().FullName];
+        }
     }
 
     Vector3 startPos;
