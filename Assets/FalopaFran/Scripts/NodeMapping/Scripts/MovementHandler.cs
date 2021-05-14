@@ -77,8 +77,7 @@ public class MovementHandler
         _pathfinding = pathfinding;
         _myRb = rb;
         //cc = charController;
-        turnSpeed = 10f;//state.turnSpeed;
-        speed = 20f; //state.speed;
+     
         myTransform = myDummy.transform;
         //_parabolicShooter = new ParabolicShooter(myTransform);
         
