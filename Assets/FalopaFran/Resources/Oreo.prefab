@@ -237,7 +237,7 @@ MonoBehaviour:
   hittedFeedback: {fileID: 5963928888847913638}
   _movementHandler:
     target: {fileID: 0}
-    minDistToChangeNode: 6
+    minDistToChangeNode: 10
     minDistToReachPos: 4
     path: []
     currentWaypoint: {x: 0, y: 0, z: 0}
@@ -263,6 +263,7 @@ MonoBehaviour:
     currentLandingSpot: {x: 0, y: 0, z: 0}
     myRb: {fileID: 0}
   _fieldOfView: {fileID: 2292428578565266429}
+  giveScore: 50
   turnSpeed: 20
   moveSpeed: 10
   attackDamage: 1
@@ -5213,7 +5214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9909b38cd75019b428f68b5fac65e7dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.76
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9909b38cd75019b428f68b5fac65e7dd, type: 3}
       propertyPath: m_LocalPosition.z

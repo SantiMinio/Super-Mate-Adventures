@@ -8,7 +8,14 @@ public class Termo : MonoBehaviour
     [SerializeField] private LayerMask targets;
 
     [SerializeField] private WaveManager _waveManager;
-    
+
+
+    private void Start()
+    {
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, () => GetComponent<Collider>().enabled = false);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned, () => GetComponent<Collider>().enabled = true);
+    }
+
     private void OnMouseDown()
     {
         if (_waveManager.SpawnersActive()) return;

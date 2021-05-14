@@ -20,7 +20,12 @@ namespace Frano
         public bool Moving => moving;
 
 
+        public bool inputAvaliable { get; private set; }
 
+
+        public void InputsOn() => inputAvaliable = true;
+        public void InputsOff() => inputAvaliable = false;
+        
         void Start()
         {
             _rb = GetComponent<Rigidbody>();
@@ -37,6 +42,8 @@ namespace Frano
 
         void Update()
         {
+            if (!inputAvaliable) return;
+            
             if (Input.GetKeyDown(KeyCode.Space))
                 _characterHead.BaseAttack();
             
