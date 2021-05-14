@@ -238,7 +238,7 @@ MonoBehaviour:
   _movementHandler:
     target: {fileID: 0}
     turnSpeed: 10
-    speed: 30
+    speed: 15
     minDistToChangeNode: 1
     minDistToReachPos: 12
     path: []
@@ -266,7 +266,7 @@ MonoBehaviour:
   _fieldOfView: {fileID: 2292428578565266429}
   attackDamage: 0
   _count: 0
-  delayToAttack: 2
+  delayToAttack: 5
 --- !u!114 &-3811395992596308188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694c1c3e360013c49bf1ea5a212e72d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 3
+  maxLife: 10
 --- !u!54 &-7938393660398610179
 Rigidbody:
   m_ObjectHideFlags: 0
