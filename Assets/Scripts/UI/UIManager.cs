@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,6 +20,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] UIDialog ui_Dialog = null;
 
     Image[] bubbles = new Image[0];
+
+    [Header("Score")]
+    [SerializeField] UIDialog scoreScreen = null;
+    [SerializeField] TextMeshProUGUI wavesCompleted = null;
+    [SerializeField] TextMeshProUGUI enemiesKilled = null;
+    [SerializeField] TextMeshProUGUI finalCombo = null;
+    [SerializeField] TextMeshProUGUI finalScore = null;
+    [SerializeField] GameObject highScoreGO = null;
 
     private void Awake()
     {
@@ -72,5 +81,22 @@ public class UIManager : MonoBehaviour
     public void DisplayDialog(string txt)
     {
         ui_Dialog.Open(txt);
+    }
+
+    public void FinalScreen(int waves, int enemies, int combo, int score, bool isHighscore)
+    {
+        wavesCompleted.text = waves.ToString();
+        enemiesKilled.text = enemies.ToString();
+        finalCombo.text = combo.ToString();
+        finalScore.text = score.ToString();
+
+        highScoreGO.SetActive(isHighscore);
+
+        scoreScreen.Open("Puntaje");
+    }
+
+    public void RestartFunction()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

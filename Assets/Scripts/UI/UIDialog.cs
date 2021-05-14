@@ -15,6 +15,8 @@ public class UIDialog : MonoBehaviour
     [SerializeField] float appearTime = 2;
     [SerializeField] TextMeshProUGUI dialog = null;
 
+    [SerializeField] bool automaticClose = true;
+
     Vector3 currentpos;
     Vector3 initHidepos;
     Vector3 finalHidepos;
@@ -28,18 +30,18 @@ public class UIDialog : MonoBehaviour
         currentpos = transform.localPosition;
         switch (appearSide)
         {
-            case AppearSide.Up: initHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y + 500, transform.localPosition.z); break;
-            case AppearSide.Down: initHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y - 500, transform.localPosition.z); break;
-            case AppearSide.Left: initHidepos = new Vector3(transform.localPosition.x - 800, transform.localPosition.y, transform.localPosition.z); break;
-            case AppearSide.Right: initHidepos = new Vector3(transform.localPosition.x + 800, transform.localPosition.y, transform.localPosition.z); break;
+            case AppearSide.Up: initHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y + Screen.height, transform.localPosition.z); break;
+            case AppearSide.Down: initHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y - Screen.height, transform.localPosition.z); break;
+            case AppearSide.Left: initHidepos = new Vector3(transform.localPosition.x - Screen.width, transform.localPosition.y, transform.localPosition.z); break;
+            case AppearSide.Right: initHidepos = new Vector3(transform.localPosition.x + Screen.width, transform.localPosition.y, transform.localPosition.z); break;
         }
 
         switch (dissapearSide)
         {
-            case AppearSide.Up: finalHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y + 500, transform.localPosition.z); break;
-            case AppearSide.Down: finalHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y - 500, transform.localPosition.z); break;
-            case AppearSide.Left: finalHidepos = new Vector3(transform.localPosition.x - 800, transform.localPosition.y, transform.localPosition.z); break;
-            case AppearSide.Right: finalHidepos = new Vector3(transform.localPosition.x + 800, transform.localPosition.y, transform.localPosition.z); break;
+            case AppearSide.Up: finalHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y + Screen.height, transform.localPosition.z); break;
+            case AppearSide.Down: finalHidepos = new Vector3(transform.localPosition.x, transform.localPosition.y - Screen.height, transform.localPosition.z); break;
+            case AppearSide.Left: finalHidepos = new Vector3(transform.localPosition.x - Screen.width, transform.localPosition.y, transform.localPosition.z); break;
+            case AppearSide.Right: finalHidepos = new Vector3(transform.localPosition.x + Screen.width, transform.localPosition.y, transform.localPosition.z); break;
         }
         transform.localPosition = initHidepos;
     }
@@ -78,6 +80,7 @@ public class UIDialog : MonoBehaviour
             }
         }
 
+        if (!automaticClose) return;
         if (open)
         {
             openTimer += Time.deltaTime;

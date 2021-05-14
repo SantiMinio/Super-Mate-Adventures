@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    public int currentWaveNumber = 0;
-    public int prevWaveNumber = -1;
+    public int currentWaveNumber = 1;
+    public int prevWaveNumber = 0;
     public int currentEnemiesInWave;
     [SerializeField] private int waveEnemyScaler = 2;
     [SerializeField] private int baseEnemiesPerWave;

@@ -577,8 +577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2662a70e4ee2e34086e139760376f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWaveNumber: 0
-  prevWaveNumber: -1
+  currentWaveNumber: 1
+  prevWaveNumber: 0
   currentEnemiesInWave: 0
   waveEnemyScaler: 2
   baseEnemiesPerWave: 0
@@ -587,6 +587,7 @@ MonoBehaviour:
   - {fileID: 1182056749}
   - {fileID: 96507258}
   - {fileID: 1437970574}
+  waveActive: 0
 --- !u!4 &98109317
 Transform:
   m_ObjectHideFlags: 0
