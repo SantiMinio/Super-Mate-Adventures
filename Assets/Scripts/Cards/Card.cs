@@ -33,8 +33,6 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     [SerializeField] AudioClip useSound = null;
     [SerializeField] AudioClip errorSound = null;
 
-
-
     Vector3 currentPos;
     DeckOfCards currentDeck;
     [HideInInspector] public CardSettings settings;
@@ -53,6 +51,16 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
         if (pickSound != null) AudioManager.instance.GetSoundPool(pickSound.name, AudioManager.SoundDimesion.TwoD, pickSound);
         if (useSound != null) AudioManager.instance.GetSoundPool(useSound.name, AudioManager.SoundDimesion.TwoD, useSound);
         if (errorSound != null) AudioManager.instance.GetSoundPool(errorSound.name, AudioManager.SoundDimesion.TwoD, errorSound);
+    }
+
+    private void Start()
+    {
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.MateDead, EndGame);
+    }
+
+    void EndGame()
+    {
+        GetComponent<Image>().raycastTarget = false;
     }
 
     private void Update()

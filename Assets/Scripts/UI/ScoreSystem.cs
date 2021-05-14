@@ -27,6 +27,7 @@ public class ScoreSystem : MonoBehaviour
     private void Start()
     {
         Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, RefreshWaveCount);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.MateDead, EndGame);
         UIManager.instance.RefreshScoreUI(currentScore);
         if (BinarySerialization.IsFileExist(saveStateName))
         {
@@ -81,7 +82,7 @@ public class ScoreSystem : MonoBehaviour
     void EndGame()
     {
         OverComboTime();
-        bool highScore;
+        bool highScore = false;
         if(save.highscore < currentScore)
         {
             save.highscore = currentScore;
@@ -89,6 +90,6 @@ public class ScoreSystem : MonoBehaviour
             highScore = true;
         }
 
-
+        UIManager.instance.FinalScreen(wavesCompleted, enemiesKilled, maxCombo, currentScore, highScore);
     }
 }
