@@ -13,6 +13,7 @@ public class Termo : MonoBehaviour
     {
         if (_waveManager.SpawnersActive()) return;
         
+        Debug.Log("lele");
         Main.instance.EventManager.TriggerEvent(GameEvent.TermoClicked);
         
         var sphereCheck = Physics.CheckSphere(transform.position, 15f, targets);

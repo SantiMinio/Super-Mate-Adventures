@@ -75,13 +75,12 @@ public class DummySpawner : MonoBehaviour, IHiteable
         
         EnemyDummy dummy = Resources.Load<EnemyDummy>(prefabName);
 
-        var test = (Random.insideUnitCircle * spawnRadius);
+        var random = (Random.insideUnitCircle * spawnRadius);
 
-        var cosa = new Vector3(test.x, 0, test.y); 
+        var newVector = new Vector3(random.x, 0, random.y); 
         
         
-        Vector3 realSpawnPos = new Vector3(cosa.x, spawnPoint.localPosition.y, cosa.z);
-        Debug.Log(realSpawnPos);
+        Vector3 realSpawnPos = new Vector3(newVector.x, spawnPoint.localPosition.y, newVector.z);
         var _currentEnemy = Instantiate(dummy, spawnPoint.position, spawnPoint.rotation);
         _currentEnemy.transform.position = realSpawnPos + spawnPoint.position;
         _currentSpawnedEnemies.Add(_currentEnemy);
