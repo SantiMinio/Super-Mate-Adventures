@@ -10,7 +10,7 @@ Material:
   m_Name: Roberto Cuerpo 2
   m_Shader: {fileID: 4800000, guid: c463ed76ff50d1546b8479bb2544b3ce, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -41,6 +41,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Float0: 0.05
+    - _FresnelIntensity: 0
+    - _Fresnelintensity: 0
     - _GrosorOutline: 0.06
     - _GrosorOutline1: 0.05
     - __dirty: 0
@@ -48,4 +50,5 @@ Material:
     - _Color0: {r: 0, g: 0, b: 0, a: 0}
     - _ColorOutline: {r: 0, g: 0, b: 0, a: 0}
     - _ColorOutline1: {r: 0, g: 0, b: 0, a: 0}
+    - _FresnelColor: {r: 0.9339623, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
