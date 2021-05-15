@@ -354,6 +354,7 @@ public class MovementHandler
     public void SetSpeeds(float turnSpeed, float moveSpeed)
     {
         speed = moveSpeed;
+        initSpeed = speed;
         this.turnSpeed = turnSpeed;
     }
 }
