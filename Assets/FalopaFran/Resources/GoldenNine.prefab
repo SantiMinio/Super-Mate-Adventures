@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hip: {fileID: 6987645401720527811}
   pushbackForce: 300
+  countDownToDestroy: 3
 --- !u!1 &1031469685213400940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,6 +5973,7 @@ MonoBehaviour:
     currentPosToGo: {x: 0, y: 0, z: 0}
     prevPosToGoThatCantGo: {x: 0, y: 0, z: 0}
     currentLandingSpot: {x: 0, y: 0, z: 0}
+    forceMove: 0
     myRb: {fileID: 0}
   _fieldOfView: {fileID: 2292428578565266429}
   giveScore: 50
