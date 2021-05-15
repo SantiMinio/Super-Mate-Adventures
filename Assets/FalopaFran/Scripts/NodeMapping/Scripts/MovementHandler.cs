@@ -157,6 +157,7 @@ public class MovementHandler
         if (moving) return;
         currentPosToGo = pos;
         currentType = MovementType.WithForwardRotation;
+        Debug.Log("?");
         PathRequestManager.RequestPath(myTransform.position, pos, OnPathFound);
     }
     public void GoToAuxiliarPos()
@@ -283,6 +284,7 @@ public class MovementHandler
                 
                 Stop();
                 OnReachDestination?.Invoke();
+                Debug.Log("Llegué");
                 return true;
             }
 
