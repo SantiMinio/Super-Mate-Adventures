@@ -66,10 +66,10 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < bubbles.Length; i++)
         {
-            if (i < manaAmmount && !bubbles[i].gameObject.activeSelf)
-                bubbles[i].gameObject.SetActive(true);
-            else if (i >= manaAmmount && bubbles[i].gameObject.activeSelf)
-                bubbles[i].gameObject.SetActive(false);
+            if (i < manaAmmount && bubbles[i].color.a == 0)
+                bubbles[i].color = new Color(bubbles[i].color.r, bubbles[i].color.g, bubbles[i].color.b, 1);
+            else if (i >= manaAmmount && bubbles[i].color.a == 1)
+                bubbles[i].color = new Color(bubbles[i].color.r, bubbles[i].color.g, bubbles[i].color.b, 0);
         }
     }
 
@@ -85,6 +85,7 @@ public class UIManager : MonoBehaviour
 
     public void FinalScreen(int waves, int enemies, int combo, int score, bool isHighscore)
     {
+        Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().InputsOn();
         wavesCompleted.text = waves.ToString();
         enemiesKilled.text = enemies.ToString();
         finalCombo.text = combo.ToString();

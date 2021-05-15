@@ -8,6 +8,8 @@ public class DashCard : CardModel
     [SerializeField] float maxRangeFeedback = 8;
     [SerializeField] float damage = 10;
 
+    RagdollHandler handler;
+
     [SerializeField] Bullet bulletPrefab = null;
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
 
