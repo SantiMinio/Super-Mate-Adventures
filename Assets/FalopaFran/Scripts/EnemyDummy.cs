@@ -54,7 +54,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     }
 
-    private void Dead()
+    public void Dead()
     {
         deadbody.SetActive(true);
         deadbody.transform.parent = null;

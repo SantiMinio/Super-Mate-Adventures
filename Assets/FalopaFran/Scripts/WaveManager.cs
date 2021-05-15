@@ -21,29 +21,22 @@ public class WaveManager : MonoBehaviour
         Main.instance.EventManager.SubscribeToEvent(GameEvent.SpawnCookie, OnSpawn);
         Main.instance.EventManager.SubscribeToEvent(GameEvent.TermoClicked, StartNewWave);
         Main.instance.EventManager.SubscribeToEvent(GameEvent.EnemyDead, IsWaveKilled);
-
-        //StartCoroutine(CheckIfWaveEnded());
-    }
-
-    IEnumerator CheckIfWaveEnded()
-    {
-        while (true)
-        {
-
-            if (!spawners.Any(x => x.AreEnemiesSpawnedAlive()))
-            {
-                if (waveActive)
-                {
-                    waveActive = false;
-                    Debug.Log("termino la wave");  
-                    Main.instance.EventManager.TriggerEvent(GameEvent.KilledAllEnemiesSpawned, currentWaveNumber);
-                }
-                
-            }
-            yield return new WaitForSeconds(1f);
-        }
         
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.MateDead, MateDead);
     }
+
+    void MateDead()
+    {
+        foreach (var spawn in spawners)
+        {
+            foreach (var enemy in spawn.GetEnemiesSpawned())
+            {
+                enemy.gameObject.SetActive(false);
+            }
+        }
+    }
+    
+   
 
     private void IsWaveKilled()
     {
