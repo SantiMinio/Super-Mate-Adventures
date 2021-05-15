@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d930b66460e18a148b77ecf9e1369f6e, type: 3}
-  m_Name: GoldenNine
+  m_Name: Bombita
   m_EditorClassIdentifier: 
   windows:
   - id: 0
