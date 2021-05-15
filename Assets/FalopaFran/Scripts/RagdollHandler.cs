@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class RagdollHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody _myRb;
+
+    [SerializeField] private Rigidbody hip;
+    
+    [SerializeField] private float pushbackForce;
+    
+    void Awake()
     {
-        
+        _myRb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PushTo(Vector3 lastDirAttack)
     {
+        Debug.Log(lastDirAttack);
         
+        
+        hip.AddForce(pushbackForce * lastDirAttack, ForceMode.Impulse);   
     }
 }

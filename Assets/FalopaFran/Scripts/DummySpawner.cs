@@ -6,11 +6,11 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-public class DummySpawner : MonoBehaviour, IHiteable
+public class DummySpawner : MonoBehaviour 
 {
     [SerializeField] private string prefabName;
     private Animator _anim;
-    private LifeHandler _lifeHandler;
+    //private LifeHandler _lifeHandler;
     [SerializeField] private ParticleSystem _takeDamageFeedback;
 
     [SerializeField] private float distanceToActivate = 30f;
@@ -46,9 +46,9 @@ public class DummySpawner : MonoBehaviour, IHiteable
     private void Awake()
     {
         
-        _lifeHandler = GetComponent<LifeHandler>();
+        //_lifeHandler = GetComponent<LifeHandler>();
         _anim = GetComponent<Animator>();
-        _lifeHandler.OnDead += Dead;
+        //_lifeHandler.OnDead += Dead;
     }
 
     private void Start()
@@ -124,12 +124,12 @@ public class DummySpawner : MonoBehaviour, IHiteable
         
     }
 
-    public void Hit(IAttacker attacker)
-    {
-        _anim.Play("Dmg");
-        _takeDamageFeedback.Play();
-        _lifeHandler.TakeDamage(attacker.GetDamage());
-    }
+    // public void Hit(IAttacker attacker)
+    // {
+    //     _anim.Play("Dmg");
+    //     _takeDamageFeedback.Play();
+    //     _lifeHandler.TakeDamage(attacker.GetDamage());
+    // }
 
     private void OnDrawGizmosSelected()
     {

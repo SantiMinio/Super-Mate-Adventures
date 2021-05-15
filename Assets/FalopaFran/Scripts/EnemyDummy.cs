@@ -58,6 +58,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         deadbody.SetActive(true);
         deadbody.transform.parent = null;
+        deadbody.transform.position = transform.position;
+        deadbody.GetComponent<RagdollHandler>().PushTo(_lastDirAttack);
         ReturnToSpawn?.Invoke(this);
         ScoreSystem.instance.RefreshScore(giveScore);
         Main.instance.EventManager.TriggerEvent(GameEvent.EnemyDead);
@@ -116,13 +118,15 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         }
     }
 
+    [SerializeField]private Vector3 _lastDirAttack;
     public void Hit(IAttacker atttacker)
     {
         Debug.Log("Recibo daño");
 
         _lifeHandler.TakeDamage(atttacker.GetDamage());
         Vector3 attackDirection = (transform.position - atttacker.GetPosition()).normalized;
-        
+
+        _lastDirAttack = attackDirection;
         _movementHandler.myRb.AddForce(attackDirection * knockbackIntensity, ForceMode.Impulse);
 
         hittedFeedback.transform.forward = attackDirection;
