@@ -55,6 +55,7 @@ MonoBehaviour:
     typeName: CharacterHead
   speedRequirement:
     speedToIncrease: 6
+  speedFeedback: {fileID: 398148302381351210}
 --- !u!1 &2606351698887959761
 GameObject:
   m_ObjectHideFlags: 0

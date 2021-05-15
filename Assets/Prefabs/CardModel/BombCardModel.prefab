@@ -50,6 +50,7 @@ MonoBehaviour:
   damage: 10
   manaRequirement:
     requiredMana: 2
+  bombParticle: {fileID: 7284883621276856271}
 --- !u!1 &5851942959349351399
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +144,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 282923367256027082, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 282923367256027082, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 282923367256027082, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 282923367256027082, guid: 187eda6964143d742981f7884b1907eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -186,6 +199,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2880294473168335478, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5039680104650708871, guid: 187eda6964143d742981f7884b1907eb, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -194,10 +211,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion
       objectReference: {fileID: 0}
+    - target: {fileID: 9050863025733550509, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050863025733550509, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050863025733550509, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187eda6964143d742981f7884b1907eb, type: 3}
 --- !u!4 &6433241330393637210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 282923367256027082, guid: 187eda6964143d742981f7884b1907eb, type: 3}
+  m_PrefabInstance: {fileID: 6533126199324610192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7284883621276856271 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4590092316375392607, guid: 187eda6964143d742981f7884b1907eb, type: 3}
   m_PrefabInstance: {fileID: 6533126199324610192}
   m_PrefabAsset: {fileID: 0}

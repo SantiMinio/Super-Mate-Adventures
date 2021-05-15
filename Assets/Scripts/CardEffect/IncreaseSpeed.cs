@@ -15,6 +15,7 @@ public class IncreaseSpeed : CardModel
     private void Awake()
     {
         feedback.SetActive(false);
+        speedFeedback.gameObject.SetActive(false);
         myRequirements.Add(manaRequirement);
         myRequirements.Add(distanceRequirement);
         myRequirements.Add(speedRequirement);
@@ -43,6 +44,7 @@ public class IncreaseSpeed : CardModel
         onFeedback = false;
         feedback.SetActive(false);
         speedFeedback.transform.position = Main.instance.GetMainCharacter.transform.position;
+        speedFeedback.transform.rotation = Main.instance.GetMainCharacter.transform.rotation;
         speedFeedback.transform.parent = Main.instance.GetMainCharacter.transform;
         StartCoroutine(WaitSeconds());
     }
@@ -51,6 +53,7 @@ public class IncreaseSpeed : CardModel
     {
         yield return new WaitForSeconds(buffTime);
 
+        speedFeedback.transform.parent = transform;
         Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().ReturnToInitValues();
         Destroy(this.gameObject);
     }

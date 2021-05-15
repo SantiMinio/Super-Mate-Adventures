@@ -34,9 +34,7 @@ public class DashCard : CardModel
     {
         feedback.SetActive(false);
 
-        var newBullet = Instantiate<Bullet>(bulletPrefab);
-        newBullet.transform.position = feedback.transform.position;
-        newBullet.Shoot(feedback.transform.forward, damage, Main.instance.GetMainCharacter.transform);
+
 
         Destroy(this.gameObject);
     }

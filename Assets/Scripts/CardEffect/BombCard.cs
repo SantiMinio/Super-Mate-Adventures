@@ -9,6 +9,7 @@ public class BombCard : CardModel, IAttacker
     [SerializeField] float range = 8;
     [SerializeField] float damage = 10;
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
+    [SerializeField] ParticleSystem bombParticle = null;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class BombCard : CardModel, IAttacker
     {
         feedback.SetActive(false);
         var overlap = Physics.OverlapSphere(transform.position, range);
+        bombParticle.transform.position = transform.position;
+        bombParticle.Play();
 
         foreach (var item in overlap)
         {
@@ -42,6 +45,12 @@ public class BombCard : CardModel, IAttacker
                 hiteable.Hit(this);
         }
 
+        StartCoroutine(BombParticleDissappear());
+    }
+
+    IEnumerator BombParticleDissappear()
+    {
+        yield return new WaitWhile(() => bombParticle.isPlaying);
         Destroy(this.gameObject);
     }
 
