@@ -132,12 +132,13 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 
-        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        Plane plane = new Plane(Vector3.up, -0.199999f);
 
-        RaycastHit hit;
-        if(Physics.Raycast(ray.origin, ray.direction, out hit, 8000000, mask, QueryTriggerInteraction.Ignore))
+        float distance;
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        if (plane.Raycast(ray, out distance))
         {
-            currentModel.transform.position = hit.point;
+            currentModel.transform.position = ray.GetPoint(distance);
         }
     }
     public void OnEndDrag(PointerEventData eventData)
