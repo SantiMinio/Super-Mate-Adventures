@@ -9,10 +9,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 {
     [SerializeField] ParticleSystem hittedFeedback;
     private Rigidbody _rb;
-    [SerializeField]private MovementHandler _movementHandler = new MovementHandler();
+    [SerializeField] private MovementHandler _movementHandler = new MovementHandler();
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] int giveScore = 50;
-
+    [SerializeField] GameObject deadbody;
 
     [SerializeField] private float turnSpeed, moveSpeed;
     
@@ -56,10 +56,11 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     private void Dead()
     {
+        deadbody.SetActive(true);
         ReturnToSpawn?.Invoke(this);
         ScoreSystem.instance.RefreshScore(giveScore);
         Main.instance.EventManager.TriggerEvent(GameEvent.EnemyDead);
-        Destroy(gameObject);
+       // Destroy(gameObject);
     }
 
     private void Start()
