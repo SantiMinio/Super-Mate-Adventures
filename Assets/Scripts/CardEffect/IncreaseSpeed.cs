@@ -9,6 +9,7 @@ public class IncreaseSpeed : CardModel
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
     [SerializeField] DistanceRequirement distanceRequirement = new DistanceRequirement();
     [SerializeField] SpeedRequirement speedRequirement = new SpeedRequirement();
+    [SerializeField] ParticleSystem speedFeedback;
     bool onFeedback;
 
     private void Awake()
@@ -41,7 +42,8 @@ public class IncreaseSpeed : CardModel
     {
         onFeedback = false;
         feedback.SetActive(false);
-
+        speedFeedback.transform.position = Main.instance.GetMainCharacter.transform.position;
+        speedFeedback.transform.parent = Main.instance.GetMainCharacter.transform;
         StartCoroutine(WaitSeconds());
     }
 
