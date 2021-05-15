@@ -57,10 +57,11 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     private void Dead()
     {
         deadbody.SetActive(true);
+        deadbody.transform.parent = null;
         ReturnToSpawn?.Invoke(this);
         ScoreSystem.instance.RefreshScore(giveScore);
         Main.instance.EventManager.TriggerEvent(GameEvent.EnemyDead);
-       // Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     private void Start()
