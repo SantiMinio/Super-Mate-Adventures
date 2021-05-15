@@ -105,7 +105,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
             GetAnimator.Play("attack");
         }
     }
-    
+
     private void DoAttack()
     {
         List<Transform> targets = _fieldOfView.GetVisibleTargets;

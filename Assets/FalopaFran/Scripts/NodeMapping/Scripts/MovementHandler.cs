@@ -43,8 +43,10 @@ public class MovementHandler
     public Vector3 currentPosToGo;
     public Vector3 prevPosToGoThatCantGo;
     public Vector3 currentLandingSpot;
-    
 
+
+    public bool forceMove = false;
+    
     private Pathfinding _pathfinding;
 
     private bool systemActive;
@@ -151,6 +153,29 @@ public class MovementHandler
         _pathfinding.GetNodesCloseToPos(myTransform.position,currentLandingSpot, 200f,50);
     public IEnumerable<Vector3> SearchForPosibleLandingNodesFromPos(Vector3 pos) => 
         _pathfinding.GetNodesCloseToPos(pos,currentLandingSpot, 200f,50);
+
+
+    private float _count;
+    public void CountDownToForceMove()
+    {
+        if (!forceMove)
+        {
+            _count += Time.deltaTime;
+
+            if (_count >= 3f)
+            {
+                forceMove = true;
+            }
+        }
+        else
+        {
+            forceMove = false;
+            _count = 0;
+        }
+    }
+    
+    
+    
     
     public void GoTo(Vector3 pos)
     {
