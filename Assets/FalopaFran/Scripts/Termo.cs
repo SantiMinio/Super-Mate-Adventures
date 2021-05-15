@@ -6,7 +6,7 @@ using UnityEngine;
 public class Termo : MonoBehaviour
 {
     [SerializeField] private LayerMask targets;
-
+    public Animator anim;
     [SerializeField] private WaveManager _waveManager;
 
     private Collider myCol;
@@ -18,18 +18,20 @@ public class Termo : MonoBehaviour
 
     private void Start()
     {
-        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave,OffCollider);
-        Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned,OnCollider);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave,StartWave);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned,FinishWave);
     }
 
-    void OffCollider()
+    void StartWave()
     {
         myCol.enabled = false;
+        anim.SetBool("On", false);
     }
     
-    void OnCollider()
+    void FinishWave()
     {
         Debug.Log("sucede");
+        anim.SetBool("On", true);
         myCol.enabled = true;
     }
     

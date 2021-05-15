@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6035088350607299697}
   - component: {fileID: 5879232868905857640}
   - component: {fileID: 4951167589592463260}
-  m_Layer: 0
+  - component: {fileID: 1259665145}
+  m_Layer: 6
   m_Name: Tapita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806830719045033003}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.02, y: 12.414789, z: 0.24}
+  m_LocalPosition: {x: 5.36, y: -0.55, z: 0.24}
   m_LocalScale: {x: 1.504526, y: 1.5045261, z: 1.6118691}
   m_Children: []
   m_Father: {fileID: 3874946423747533425}
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1259665145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806830719045033003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4387257, y: 2.377582, z: 1.9351932}
+  m_Center: {x: 0.00000047683716, y: 0, z: 0.9675981}
 --- !u!1 &3874946423747533428
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +106,8 @@ GameObject:
   - component: {fileID: 3874946423747533425}
   - component: {fileID: 3874946423747533430}
   - component: {fileID: 3874946423747533431}
-  m_Layer: 0
+  - component: {fileID: 1793623539}
+  m_Layer: 6
   m_Name: TermoRecarga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,6 +145,7 @@ MonoBehaviour:
   targets:
     serializedVersion: 2
     m_Bits: 512
+  anim: {fileID: 1793623539}
   _waveManager: {fileID: 0}
 --- !u!136 &3874946423747533431
 CapsuleCollider:
@@ -145,6 +161,25 @@ CapsuleCollider:
   m_Height: 13.8
   m_Direction: 1
   m_Center: {x: 0, y: 6.2, z: 0}
+--- !u!95 &1793623539
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874946423747533428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44a754e8cb32cbf409b42d9a5cc3a32d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7500292607881332116
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +191,7 @@ GameObject:
   - component: {fileID: 8009159142635900316}
   - component: {fileID: 7015869932935187712}
   - component: {fileID: 161512065971036371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Termo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,13 +205,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7500292607881332116}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.2919987, y: 0.64400053, z: 0.64400053, w: 0.2919987}
   m_LocalPosition: {x: 0.15, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3874946423747533425}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.972, y: 0, z: 131.22}
 --- !u!33 &7015869932935187712
 MeshFilter:
   m_ObjectHideFlags: 0
