@@ -9,11 +9,11 @@ public class BombitaPolvorita : EnemyDummy
     
     public void Explode()
     {
-        
+        Debug.Log("Exploto");
     }
     
     public void WaitToBomb()
     {
-        
+        Debug.Log("Espero");
     }
 }
