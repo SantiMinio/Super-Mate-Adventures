@@ -59,8 +59,8 @@ Shader "Slowarea"
 /*ASEBEGIN
 Version=18900
 1984;-70;1015;579;1487.766;-196.4566;1.304828;True;False
-Node;AmplifyShaderEditor.RangedFloatNode;19;-743.8068,567.8572;Inherit;True;Property;_Float1;Float 1;1;0;Create;True;0;0;0;False;0;False;0;3.46;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;34;-942.7125,520.0542;Inherit;False;Property;_Exp;Exp;2;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;19;-743.8068,567.8572;Inherit;True;Property;_Float1;Float 1;1;0;Create;True;0;0;0;False;0;False;0;1.7;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;34;-942.7125,520.0542;Inherit;False;Property;_Exp;Exp;2;0;Create;True;0;0;0;False;0;False;0;3.3;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.PowerNode;33;-545.5971,518.7491;Inherit;False;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.DepthFade;18;-366.4925,440.8744;Inherit;False;True;False;True;2;1;FLOAT3;0,0,0;False;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.OneMinusNode;21;-162.8888,347.5971;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
@@ -84,4 +84,4 @@ WireConnection;0;0;28;0
 WireConnection;0;2;28;0
 WireConnection;0;9;25;0
 ASEEND*/
-//CHKSM=02C49FF87DF9AA71D34D9A9318F9B6B5E83075D7
+//CHKSM=0AAC1BDDCBFAE9C99F57B80FBE94AB087EF2FE23
