@@ -30,10 +30,13 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     [SerializeField] private float knockbackIntensity;
 
+    private CDModule takeDamageTimer = new CDModule();
+    
 
     [SerializeField] AudioClip takeDamageSound = null;
     [SerializeField] AudioClip deadSound = null;
 
+    public bool GetDamaged { get; private set; }
     public float GetMeleeDistance => meleeDistance;
     public MovementHandler GetMovementHandler => _movementHandler;
     public Animator GetAnimator => _animator;
@@ -89,6 +92,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _animator.SetBool("moving", _movementHandler.moving);
         _fsm.OnUpdate();
+        takeDamageTimer.UpdateCD();
     }
 
     private void FixedUpdate()
@@ -141,6 +145,13 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         hittedFeedback.Play();
         
         _animator.Play("Take Damage");
+        GetDamaged = true;
+        takeDamageTimer.AddCD("getDamageCD", ResetGetDamageCD, 1);
+    }
+
+    void ResetGetDamageCD()
+    {
+        GetDamaged = false;
     }
     
     
