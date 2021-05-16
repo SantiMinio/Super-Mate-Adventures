@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fc4eee6046fd4ebe635fa16c1c034, type: 3}
   m_Name: ChargeLife
   m_EditorClassIdentifier: 
-  img: {fileID: -6380500859594931475, guid: c3246688e3faf384fa296a0a5c1d7477, type: 3}
-  title: Calentador
+  img: {fileID: -8437723712518076585, guid: f034dd8260fc90040b618072d4d72708, type: 3}
+  title: Cebada
   desc: Te recupera vida
   model: {fileID: 790932714965142891, guid: b325a4eaf5bbc8e4cbfe072c34a64b45, type: 3}

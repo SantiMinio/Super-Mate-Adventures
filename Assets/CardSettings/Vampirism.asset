@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fc4eee6046fd4ebe635fa16c1c034, type: 3}
   m_Name: Vampirism
   m_EditorClassIdentifier: 
-  img: {fileID: -390643852296499974, guid: c3246688e3faf384fa296a0a5c1d7477, type: 3}
+  img: {fileID: -6285575345639762873, guid: 36b05c1674ecd5d47bf4b70fc33d92d5, type: 3}
   title: Robar calor
   desc: "Golpeas en area y les rob\xE1s un poco de vida."
   model: {fileID: 1995446077073859269, guid: 0030e81246018d141af8a0b76430c3e1, type: 3}
