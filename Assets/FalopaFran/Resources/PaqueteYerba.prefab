@@ -45,7 +45,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.7
+  m_Radius: 3.26
   m_Height: 15.8
   m_Direction: 1
   m_Center: {x: 0, y: 6.2, z: 0}
@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 2826895551964918811}
   m_LocalRotation: {x: -0, y: 0.2553253, z: -0, w: 0.9668552}
   m_LocalPosition: {x: 0, y: 0, z: 0.000014305115}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86556, y: 1, z: 0.64913}
   m_Children: []
   m_Father: {fileID: 1265395044992747863}
   m_RootOrder: 1
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4977715240994299430}
   - component: {fileID: 2771063376214094837}
   m_Layer: 6
-  m_Name: Yerba
+  m_Name: Termo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9c9c14feee37cd4c92b869756c9a17e, type: 2}
+  - {fileID: 2100000, guid: b7998cf5e6efcc64f8b0307403936c22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
