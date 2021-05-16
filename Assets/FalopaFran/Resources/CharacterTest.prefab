@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e20a4a9ed6a6249b37851cb97cd75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseAttackCD: 1
   manaSystem:
     maxMana: 100
   takeDamageFeedback: {fileID: 6077478470730501246}

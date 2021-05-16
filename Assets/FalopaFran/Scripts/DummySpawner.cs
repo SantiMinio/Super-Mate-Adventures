@@ -32,11 +32,11 @@ public class DummySpawner : MonoBehaviour
     public bool active { get; private set; }
 
 
-    public bool AreEnemiesSpawnedAlive()
-    {
-        //Debug.Log("el spawn " + gameObject.name + "  " + _currentSpawnedEnemies.Any(x => x != null));
-        return _currentSpawnedEnemies.Any(x => x != null);
-    }
+    // public bool AreEnemiesSpawnedAlive()
+    // {
+    //     //Debug.Log("el spawn " + gameObject.name + "  " + _currentSpawnedEnemies.Any(x => x != null));
+    //     return _currentSpawnedEnemies.Any(x => x != null);
+    // }
 
     public int GetLiveEnemies()
     {
@@ -67,6 +67,7 @@ public class DummySpawner : MonoBehaviour
 
     private void DisableSpawner()
     {
+        _count = 0;
         active = false;
     }
     
@@ -107,11 +108,11 @@ public class DummySpawner : MonoBehaviour
         if(!active) return;
 
 
-        _currentSpawnedEnemies = _currentSpawnedEnemies.Where(x => x != null).ToList();
+        //_currentSpawnedEnemies = _currentSpawnedEnemies.Where(x => x != null).ToList();
         
         
-        if (Vector3.Distance(Main.instance.GetMainCharacter.GetPosition(), transform.position) >
-            distanceToActivate) return;
+        // if (Vector3.Distance(Main.instance.GetMainCharacter.GetPosition(), transform.position) >
+        //     distanceToActivate) return;
 
         _count += Time.deltaTime;
         
