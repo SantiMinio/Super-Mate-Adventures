@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fc4eee6046fd4ebe635fa16c1c034, type: 3}
   m_Name: ChargeLife
   m_EditorClassIdentifier: 
-  img: {fileID: -8437723712518076585, guid: f034dd8260fc90040b618072d4d72708, type: 3}
-  title: Cebada
-  desc: Te recupera vida
+  img: {fileID: -3357638650375114839, guid: 69f9a6e9696db4240a5ed847d338c900, type: 3}
+  title: Enyerbado
+  desc: Recarga la yerba y te cura.
   model: {fileID: 790932714965142891, guid: b325a4eaf5bbc8e4cbfe072c34a64b45, type: 3}
