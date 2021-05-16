@@ -253,6 +253,7 @@ public class MovementHandler
             currentWaypoint = path[0];
         }else if (!pathSuccessful)
         {
+            Rescate();
             cantReachToDesiredPosition = true;
             prevPosToGoThatCantGo = currentPosToGo;
             currentLandingSpot = currentPosToGo;
@@ -285,6 +286,22 @@ public class MovementHandler
     {
         velocity = dir * speed;
         myRb.velocity = velocity;
+    }
+
+    public void Rescate()
+    {
+        foreach (var node in Main.instance.GetPlayableGrid.NodesFromWorldPointbyDistance(myRb.position))
+        {
+            if (!node.isDisabled)
+            {
+                Debug.Log("ME RESCATO");
+                Vector3 dir = (node.worldPosition - myRb.position).normalized;
+                
+                myRb.AddForce(300 * dir, ForceMode.Force);
+                break;
+            }
+        }
+        
     }
     private bool NodeReached()
     {

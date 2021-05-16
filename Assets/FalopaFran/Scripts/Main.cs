@@ -11,6 +11,8 @@ public class Main : MonoBehaviour
     
     [SerializeField] private CharacterHead _characterHead;
 
+    [SerializeField] private PlayableGrid _playableGrid;
+    
     private EventManager _eventManager = new EventManager();
 
     public EventManager EventManager => _eventManager;
@@ -21,4 +23,5 @@ public class Main : MonoBehaviour
     }
 
     public CharacterHead GetMainCharacter => _characterHead;
+    public PlayableGrid GetPlayableGrid => _playableGrid;
 }

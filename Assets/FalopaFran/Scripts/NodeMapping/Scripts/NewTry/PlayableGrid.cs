@@ -175,6 +175,7 @@ public class PlayableGrid : MonoBehaviour
         }
     }
     public Node NodeFromWorldPointbyDistance(Vector3 worldPos) { return gData.allNodes.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)).First(); }
+    public IEnumerable<Node> NodesFromWorldPointbyDistance(Vector3 worldPos) { return gData.allNodes.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)); }
     
     public List<Node> GetNeighbours(Node node) { return registroVecinos[node.worldPosition]; }
 
