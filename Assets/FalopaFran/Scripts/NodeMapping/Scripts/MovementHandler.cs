@@ -155,10 +155,12 @@ public class MovementHandler
         _pathfinding.GetNodesCloseToPos(pos,currentLandingSpot, 200f,50);
 
 
+    private Vector3 prevPos;
     private float _count;
     public void CountDownToForceMove()
     {
-        if (!forceMove)
+
+        if (!forceMove || prevPos == myRb.position)
         {
             _count += Time.deltaTime;
 
@@ -171,6 +173,7 @@ public class MovementHandler
         {
             forceMove = false;
             _count = 0;
+            prevPos = myRb.position;
         }
     }
     
@@ -288,6 +291,8 @@ public class MovementHandler
         myRb.velocity = velocity;
     }
 
+
+    
     public void Rescate()
     {
         foreach (var node in Main.instance.GetPlayableGrid.NodesFromWorldPointbyDistance(myRb.position))
