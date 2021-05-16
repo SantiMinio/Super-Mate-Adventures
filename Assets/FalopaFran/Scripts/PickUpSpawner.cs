@@ -19,6 +19,7 @@ public class PickUpSpawner : MonoBehaviour
     {
         foreach (var item in itemsSpawned)
         {
+            if (item == null) continue;
             Debug.Log("rompo");
             Destroy(item.gameObject);
         }

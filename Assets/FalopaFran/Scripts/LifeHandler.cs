@@ -53,7 +53,7 @@ public class LifeHandler : MonoBehaviour
         RefreshLifePercent?.Invoke(_currentLife / maxLife);
     }
 
-    public bool CheckEnoughLife(float life) => _currentLife - life < 0 ? false : true;
+    public bool CheckEnoughLife(float life) => _currentLife - life <= 0 ? false : true;
 
     public bool IsFullLife() => _currentLife == maxLife ? true : false;
 }
