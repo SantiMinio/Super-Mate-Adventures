@@ -8,6 +8,7 @@ public class Termo : MonoBehaviour
     [SerializeField] private LayerMask targets;
     public Animator anim;
     [SerializeField] private WaveManager _waveManager;
+    [SerializeField] AudioClip sound = null;
 
     private Collider myCol;
     
@@ -20,6 +21,7 @@ public class Termo : MonoBehaviour
     {
         Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave,StartWave);
         Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned,FinishWave);
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
     }
 
     void StartWave()
@@ -38,7 +40,8 @@ public class Termo : MonoBehaviour
     private void OnMouseDown()
     {
         if (_waveManager.SpawnersActive()) return;
-      
+
+        AudioManager.instance.PlaySound(sound.name);
         Main.instance.EventManager.TriggerEvent(GameEvent.TermoClicked);
         
         var sphereCheck = Physics.CheckSphere(transform.position, 15f, targets);

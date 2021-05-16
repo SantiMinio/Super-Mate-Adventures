@@ -29,6 +29,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     [SerializeField] private float knockbackIntensity;
 
+
+    [SerializeField] AudioClip takeDamageSound = null;
+    [SerializeField] AudioClip deadSound = null;
+
     public float GetMeleeDistance => meleeDistance;
     public MovementHandler GetMovementHandler => _movementHandler;
     public Animator GetAnimator => _animator;
@@ -56,6 +60,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     public void Dead()
     {
+        AudioManager.instance.PlaySound(deadSound.name);
         deadbody.SetActive(true);
         deadbody.transform.parent = null;
         deadbody.transform.position = transform.position;
@@ -70,8 +75,9 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _animEvent.Add_Callback("doDamage", DoAttack);
 
-        
-        
+        AudioManager.instance.GetSoundPool(takeDamageSound.name, AudioManager.SoundDimesion.ThreeD, takeDamageSound);
+        AudioManager.instance.GetSoundPool(deadSound.name, AudioManager.SoundDimesion.ThreeD, deadSound);
+
         //meleeDistance = 6.5f;
         //attackDamage = 1f;
     }
@@ -121,6 +127,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     [SerializeField]private Vector3 _lastDirAttack;
     public void Hit(IAttacker atttacker)
     {
+        AudioManager.instance.PlaySound(takeDamageSound.name);
         Debug.Log("Recibo daño");
 
         _lifeHandler.TakeDamage(atttacker.GetDamage());

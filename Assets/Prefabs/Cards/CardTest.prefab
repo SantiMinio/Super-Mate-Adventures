@@ -592,8 +592,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  initSound: {fileID: 0}
-  pickSound: {fileID: 0}
+  initSound: {fileID: 8300000, guid: 1fd53e9d662697e42a7406a56482d4c9, type: 3}
+  pickSound: {fileID: 8300000, guid: 9eef212bcf28ab246a2e50688bafcd35, type: 3}
   useSound: {fileID: 0}
   errorSound: {fileID: 0}
   settings: {fileID: 0}

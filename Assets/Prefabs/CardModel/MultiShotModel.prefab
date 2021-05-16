@@ -738,3 +738,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5518083206891708442, guid: e841c6ecfa5510245904e2fbf15a9de9, type: 3}
   manaRequirement:
     requiredMana: 3
+  sound: {fileID: 8300000, guid: 5598d5f745fd12c4d91ced7c159fe253, type: 3}

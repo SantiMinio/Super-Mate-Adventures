@@ -147,6 +147,7 @@ MonoBehaviour:
     m_Bits: 512
   anim: {fileID: 1793623539}
   _waveManager: {fileID: 0}
+  sound: {fileID: 8300000, guid: ac5ea0095d7bff54191a0a57478c4b36, type: 3}
 --- !u!136 &3874946423747533431
 CapsuleCollider:
   m_ObjectHideFlags: 0

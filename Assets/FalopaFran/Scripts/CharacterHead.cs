@@ -18,7 +18,7 @@ namespace Frano
         [SerializeField] private ParticleSystem takeDamageFeedback;
         
         [SerializeField] private float attackDamage;
-
+        [SerializeField] AudioClip deadSound = null;
         
         
         float initDamage;
@@ -42,12 +42,13 @@ namespace Frano
             manaSystem.Initialize();
             
             Main.instance.EventManager.SubscribeToEvent(GameEvent.UseCard, CardUsed);
-            
+            AudioManager.instance.GetSoundPool(deadSound.name, AudioManager.SoundDimesion.ThreeD, deadSound);
         }
 
         private void Dead()
         {
             //_animator.Play("Dead");
+            AudioManager.instance.PlaySound(deadSound.name);
             Main.instance.EventManager.TriggerEvent(GameEvent.MateDead);
         }
 
@@ -77,6 +78,7 @@ namespace Frano
         public void BaseAttack()
         {
             _animator.Play("Attack");
+
         }
 
         public Vector3 GetPosition() => transform.position;

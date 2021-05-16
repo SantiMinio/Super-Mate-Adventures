@@ -241,6 +241,7 @@ MonoBehaviour:
     maxMana: 100
   takeDamageFeedback: {fileID: 6077478470730501246}
   attackDamage: 1
+  deadSound: {fileID: 8300000, guid: bcf2895afd9f82d47a6e85e2e1c46efa, type: 3}
 --- !u!114 &5545934869353496969
 MonoBehaviour:
   m_ObjectHideFlags: 0

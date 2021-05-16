@@ -2423,46 +2423,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.10847917
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.35170373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.07700001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.171
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.18669987
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1.1222
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.19818103
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875784569774313430, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.21899414
-      objectReference: {fileID: 0}
-    - target: {fileID: 5227034241907187839, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9115223867310706232, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
 --- !u!4 &844457064 stripped

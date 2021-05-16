@@ -12,9 +12,11 @@ public class MultiShotCard : CardModel
 
     [SerializeField] Bullet bulletPrefab = null;
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
+    [SerializeField] AudioClip sound = null;
 
     private void Awake()
     {
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
         feedback.SetActive(false);
         myRequirements.Add(manaRequirement);
     }
@@ -35,6 +37,7 @@ public class MultiShotCard : CardModel
     protected override void OnUseCard()
     {
         feedback.SetActive(false);
+        AudioManager.instance.PlaySound(sound.name);
 
         StartCoroutine(ShotBullets());
     }
