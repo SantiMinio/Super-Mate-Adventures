@@ -36,8 +36,13 @@ public class Bullet : MonoBehaviour, IAttacker
             hiteable.Hit(this);
             deathpart.Play();
             deathpart.transform.parent = null;
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
+    }
+
+    void DestroyBullet()
+    {
+        
     }
 
     private void Update()
