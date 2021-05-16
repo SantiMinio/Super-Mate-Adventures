@@ -16,6 +16,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     [SerializeField] GameObject deadbody;
 
     [SerializeField] private float turnSpeed, moveSpeed;
+
+    [SerializeField] private LayerMask personalSpaceMask;
     
     private Animator _animator;
     private AnimEvent _animEvent;
@@ -84,6 +86,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
         //meleeDistance = 6.5f;
         //attackDamage = 1f;
+
+        StartCoroutine(CheckNearDudes());
     }
 
     
@@ -99,6 +103,37 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     {
         _fsm.OnFixedUpdate();
         _movementHandler.OnFixedUpdate();
+        
+        
+    }
+
+    IEnumerator CheckNearDudes()
+    {
+        while (true)
+        {
+
+            var nearDudes = Physics.OverlapSphere(_movementHandler.myRb.position, 1, personalSpaceMask);
+            
+            if(nearDudes.Length <= 0) yield return new WaitForSeconds(1.5f);
+            
+            Vector3 sum = Vector3.zero;
+            int count = 0;
+            foreach (var col in nearDudes)
+            {
+                Vector3 dir = (col.transform.position - _movementHandler.myRb.position).normalized;
+                count++;
+                sum += dir;
+            }
+            
+            Vector3 average = sum / count;
+
+            Vector3 dirToGo = (_movementHandler.myRb.position - average).normalized; 
+            
+            _movementHandler.myRb.AddForce(250 * dirToGo, ForceMode.Force);
+            
+            yield return new WaitForSeconds(1.5f);
+        }
+        
     }
 
     public void TryToDoAttack()
