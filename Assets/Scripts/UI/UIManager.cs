@@ -109,6 +109,11 @@ public class UIManager : MonoBehaviour
         scoreScreen.Open("Puntaje");
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void RestartFunction()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

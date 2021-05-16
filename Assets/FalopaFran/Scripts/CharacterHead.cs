@@ -51,7 +51,7 @@ namespace Frano
 
         private void Dead()
         {
-            //_animator.Play("Dead");
+            _animator.Play("Dead");
             AudioManager.instance.PlaySound(deadSound.name);
             Main.instance.EventManager.TriggerEvent(GameEvent.MateDead);
         }

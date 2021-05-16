@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Buttons : MonoBehaviour
@@ -10,8 +11,11 @@ public class Buttons : MonoBehaviour
     [SerializeField] GameObject mainScene = null;
     [SerializeField] GameObject levelSelector = null;
     [SerializeField] GameObject settingsScreen = null;
-
+    [SerializeField] Image tutoImg = null;
+    [SerializeField] Sprite[] tuto = new Sprite[0];
+     
     [SerializeField] AudioClip exitSound = null;
+    int currentIndex = -1;
 
     private void Awake()
     {
@@ -20,6 +24,25 @@ public class Buttons : MonoBehaviour
             names[i].SetActive(false);
         }
     }
+
+    public void DisplayTuto(int dir)
+    {
+        tutoImg.gameObject.SetActive(true);
+        currentIndex += dir;
+        if (currentIndex < 0)
+        {
+            tutoImg.gameObject.SetActive(false);
+            return;
+        }
+        else if(currentIndex >= tuto.Length)
+        {
+            SceneManager.LoadScene(1);
+            return;
+        }
+
+        tutoImg.sprite = tuto[currentIndex];
+    }
+
     public void Play()
     {
         SceneManager.LoadScene(1);
