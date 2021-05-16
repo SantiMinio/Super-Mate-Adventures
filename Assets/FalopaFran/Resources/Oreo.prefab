@@ -5976,6 +5976,7 @@ MonoBehaviour:
     forceMove: 0
     myRb: {fileID: 0}
   _fieldOfView: {fileID: 2292428578565266429}
+  _attackFieldOfView: {fileID: 2292428578565266429}
   giveScore: 50
   deadbody: {fileID: 476541310942164609}
   turnSpeed: 20
