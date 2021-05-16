@@ -1211,6 +1211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1019584769, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
+      propertyPath: _playableGrid
+      value: 
+      objectReference: {fileID: 863908849}
     - target: {fileID: 1962285291765636487, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.05
@@ -2677,6 +2681,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &863908849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
+  m_PrefabInstance: {fileID: 1828016718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10aaee4fcb87c5458580a26649a06ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &932008240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1976005747586550868, guid: 83cb094c89f9d3348bfc20f72fe41722, type: 3}
