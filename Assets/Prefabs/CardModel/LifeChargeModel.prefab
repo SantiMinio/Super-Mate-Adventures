@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7868920287236197326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896900726017078574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284945f33141a6e4389d8a855ea2fb70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punto: {fileID: 0}
 --- !u!1 &4166094847909563652
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,7 +40,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 393.2863, y: 788.90686, z: -111.84035}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2929265438633545780}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46,3 +60,96 @@ MonoBehaviour:
   manaRequirement:
     requiredMana: 2
   healAmmount: 2
+  pt: {fileID: 1154701495660976399}
+--- !u!1001 &3244437239803953597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6692900233193380815}
+    m_Modifications:
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950653382597670035, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: m_Name
+      value: Refuell
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395755810176391346, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395755810176391346, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: lengthInSec
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395755810176391346, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395755810176391346, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 12.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395755810176391346, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 0.45
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+--- !u!1 &3896900726017078574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950653382597670035, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+  m_PrefabInstance: {fileID: 3244437239803953597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2929265438633545780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 405421957551788425, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+  m_PrefabInstance: {fileID: 3244437239803953597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1154701495660976399 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4395755810176391346, guid: 6ed85ffd23249ab49b0a90498de6884f, type: 3}
+  m_PrefabInstance: {fileID: 3244437239803953597}
+  m_PrefabAsset: {fileID: 0}
