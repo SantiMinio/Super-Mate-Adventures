@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour, IAttacker
     [SerializeField] float skillShotSpeed = 15;
     float timer = 0;
     [SerializeField] float timeToDestroy = 5;
-
+    [SerializeField] ParticleSystem deathpart;
     public float GetDamage()
     {
         return bulletDamage;
@@ -34,6 +34,8 @@ public class Bullet : MonoBehaviour, IAttacker
         if(hiteable != null && other.transform != owner)
         {
             hiteable.Hit(this);
+            deathpart.Play();
+            deathpart.transform.parent = null;
             Destroy(this.gameObject);
         }
     }

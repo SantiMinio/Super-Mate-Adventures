@@ -66,6 +66,7 @@ MonoBehaviour:
   rb: {fileID: 203482747134667885}
   skillShotSpeed: 25
   timeToDestroy: 5
+  deathpart: {fileID: 891868201320601027}
 --- !u!54 &203482747134667885
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9845,9 +9846,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion
       objectReference: {fileID: 0}
+    - target: {fileID: 1249536775449055881, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497988612481271830, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4497988612481271830, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
       propertyPath: ShapeModule.type
@@ -9946,5 +9963,10 @@ PrefabInstance:
 --- !u!4 &3476462865518664534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8678928895280296027, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+  m_PrefabInstance: {fileID: 5210488118810880781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &891868201320601027 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
   m_PrefabInstance: {fileID: 5210488118810880781}
   m_PrefabAsset: {fileID: 0}
