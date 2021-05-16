@@ -136,6 +136,7 @@ MonoBehaviour:
     distance: 7
     root: {fileID: 107162308455474942}
     typeName: CharacterHead
+  chupada: {fileID: 6004150627436708008}
 --- !u!114 &3405092572860342174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,8 +161,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion
       objectReference: {fileID: 0}
+    - target: {fileID: 4497988612481271830, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
@@ -554,5 +567,10 @@ GameObject:
 --- !u!4 &8002169515543629373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8678928895280296027, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
+  m_PrefabInstance: {fileID: 1692461884885581414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6004150627436708008 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4913376827087781582, guid: 6be334c4571be6f4b8e94addba9a70f5, type: 3}
   m_PrefabInstance: {fileID: 1692461884885581414}
   m_PrefabAsset: {fileID: 0}

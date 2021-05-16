@@ -10,6 +10,7 @@ public class VampirismCard : CardModel, IAttacker
     [SerializeField] float healPerEnemy = 1.5f;
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
     [SerializeField] DistanceRequirement distanceRequirement = new DistanceRequirement();
+    [SerializeField] ParticleSystem chupada;
     bool onFeedback;
 
     private void Awake()
@@ -42,7 +43,8 @@ public class VampirismCard : CardModel, IAttacker
         feedback.SetActive(false);
 
         var overlap = Physics.OverlapSphere(transform.position, range);
-
+        chupada.Play();
+        chupada.transform.parent = null;
         foreach (var item in overlap)
         {
             IHiteable hiteable = item.GetComponent<IHiteable>();
