@@ -1329,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296414654246437443, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
       propertyPath: viewRadius
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7296414654246437443, guid: 55da5e3cae5c6104bafd7c6f43dd1103, type: 3}
       propertyPath: showFieldOfView
