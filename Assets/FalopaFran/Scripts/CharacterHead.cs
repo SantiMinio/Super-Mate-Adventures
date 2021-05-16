@@ -14,6 +14,10 @@ namespace Frano
         private LifeHandler _lifeHandler;
 
 
+        private bool baseAttackOnCD = false;
+        [SerializeField] private float baseAttackCD;
+        private CDModule baseAttackCDTimer = new CDModule();
+
         public ManaSystem manaSystem = new ManaSystem();
         [SerializeField] private ParticleSystem takeDamageFeedback;
         
@@ -73,12 +77,23 @@ namespace Frano
         private void Update()
         {
             _animator.SetBool("Moving", _characterController.Moving);
+            
+            baseAttackCDTimer.UpdateCD();
         }
 
         public void BaseAttack()
         {
+            if (baseAttackOnCD) return;
+
+            baseAttackOnCD = true;
+            baseAttackCDTimer.AddCD("baseAttack_CD", ResetBaseAttackCD, baseAttackCD);
             _animator.Play("Attack");
 
+        }
+
+        void ResetBaseAttackCD()
+        {
+            baseAttackOnCD = false;
         }
 
         public Vector3 GetPosition() => transform.position;
