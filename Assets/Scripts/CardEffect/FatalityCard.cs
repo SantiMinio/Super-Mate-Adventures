@@ -7,10 +7,12 @@ public class FatalityCard : CardModel, IAttacker
     float damage = 10000000;
     [SerializeField] CardOnHandRequirement cardOnHandRequirement = new CardOnHandRequirement();
     //[SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
+    [SerializeField] AudioClip sound = null;
 
     private void Awake()
     {
         myRequirements.Add(cardOnHandRequirement);
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
     }
 
     public override Requirement GetRequire() => cardOnHandRequirement;
@@ -27,7 +29,7 @@ public class FatalityCard : CardModel, IAttacker
     protected override void OnUseCard()
     {
         var overlap = Physics.OverlapSphere(Main.instance.GetMainCharacter.transform.position, 30);
-
+        AudioManager.instance.PlaySound(sound.name);
         foreach (var item in overlap)
         {
             IHiteable hiteable = item.GetComponent<EnemyDummy>();

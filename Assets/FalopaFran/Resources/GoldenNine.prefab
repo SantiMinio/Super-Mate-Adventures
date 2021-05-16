@@ -95,6 +95,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1010299458384912430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911614255249308020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fc45513cb5ddc4fb953f10e560c779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 6
+  viewAngle: 90
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibletargets: []
+  meshResolution: 1
+  viewMeshFilter: {fileID: 816809197194267124}
+  edgeResolveInteration: 4
+  edgeDistanceTreshhold: 0.5
+  showFieldOfView: 0
 --- !u!114 &5189100139696447582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,6 +1049,7 @@ MonoBehaviour:
     forceMove: 0
     myRb: {fileID: 0}
   _fieldOfView: {fileID: 2292428578565266429}
+  _attackFieldOfView: {fileID: 1010299458384912430}
   giveScore: 50
   deadbody: {fileID: 1031469684378057794}
   turnSpeed: 20

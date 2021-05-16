@@ -56,6 +56,7 @@ MonoBehaviour:
   speedRequirement:
     speedToIncrease: 6
   speedFeedback: {fileID: 398148302381351210}
+  sound: {fileID: 8300000, guid: bd7876f33aa3c6d49bcfab8c139d0877, type: 3}
 --- !u!1 &2606351698887959761
 GameObject:
   m_ObjectHideFlags: 0

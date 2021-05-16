@@ -51,6 +51,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5518083206891708442, guid: e841c6ecfa5510245904e2fbf15a9de9, type: 3}
   manaRequirement:
     requiredMana: 1
+  sound: {fileID: 8300000, guid: c2dfc2a78073b364aad2a85f80559ee5, type: 3}
 --- !u!1 &3384430314295032191
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,3 +47,4 @@ MonoBehaviour:
     timeToCombo: 3
     cardUsedRequire: {fileID: 11400000, guid: 5078218752edd0640a7be8869eb994a6, type: 2}
   normalManaAmmount: 1
+  sound: {fileID: 8300000, guid: 3f4c203757726d643a69f78ebf6b7245, type: 3}

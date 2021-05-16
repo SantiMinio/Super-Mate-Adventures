@@ -6,7 +6,12 @@ public class ChargeBubbleCard : CardModel
 {
     [SerializeField] LastCardRequirement lastCardRequirement = new LastCardRequirement();
     [SerializeField] int normalManaAmmount = 1;
+    [SerializeField] AudioClip sound = null;
 
+    private void Awake()
+    {
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
+    }
 
     public override void RangeFeedback()
     {
@@ -33,6 +38,7 @@ public class ChargeBubbleCard : CardModel
         else
             Main.instance.GetMainCharacter.manaSystem.ModifyMana(normalManaAmmount);
 
+        AudioManager.instance.PlaySound(sound.name);
         Destroy(this.gameObject);
     }
 }

@@ -10,9 +10,11 @@ public class BasicSkillshotCard : CardModel
 
     [SerializeField] Bullet bulletPrefab = null;
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
+    [SerializeField] AudioClip sound = null;
 
     private void Awake()
     {
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
         feedback.SetActive(false);
         myRequirements.Add(manaRequirement);
     }
@@ -31,6 +33,7 @@ public class BasicSkillshotCard : CardModel
 
     protected override void OnUseCard()
     {
+        AudioManager.instance.PlaySound(sound.name);
         feedback.SetActive(false);
 
         var newBullet = Instantiate<Bullet>(bulletPrefab);

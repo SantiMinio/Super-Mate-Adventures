@@ -9,10 +9,12 @@ public class SlowEnemiesCard : CardModel
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
     [SerializeField] float speedDown = 12;
     [SerializeField] float buffTime = 5;
+    [SerializeField] AudioClip sound = null;
     List<EnemyDummy> dummies = new List<EnemyDummy>();
 
     private void Awake()
     {
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
         feedback.SetActive(false);
         myRequirements.Add(manaRequirement);
     }
@@ -33,6 +35,7 @@ public class SlowEnemiesCard : CardModel
 
     protected override void OnUseCard()
     {
+        AudioManager.instance.PlaySound(sound.name);
         feedback.SetActive(false);
         var overlap = Physics.OverlapSphere(transform.position, range);
 

@@ -137,6 +137,7 @@ MonoBehaviour:
     root: {fileID: 107162308455474942}
     typeName: CharacterHead
   chupada: {fileID: 6004150627436708008}
+  sound: {fileID: 8300000, guid: 23c47eb8fe2255046b7ad81256696a75, type: 3}
 --- !u!114 &3405092572860342174
 MonoBehaviour:
   m_ObjectHideFlags: 0

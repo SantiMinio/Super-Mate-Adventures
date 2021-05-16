@@ -11,6 +11,7 @@ public class VampirismCard : CardModel, IAttacker
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
     [SerializeField] DistanceRequirement distanceRequirement = new DistanceRequirement();
     [SerializeField] ParticleSystem chupada;
+    [SerializeField] AudioClip sound = null;
     bool onFeedback;
 
     private void Awake()
@@ -18,6 +19,7 @@ public class VampirismCard : CardModel, IAttacker
         feedback.SetActive(false);
         myRequirements.Add(manaRequirement);
         myRequirements.Add(distanceRequirement);
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
     }
     public override Requirement GetRequire() => manaRequirement;
 
@@ -39,6 +41,7 @@ public class VampirismCard : CardModel, IAttacker
 
     protected override void OnUseCard()
     {
+        AudioManager.instance.PlaySound(sound.name);
         onFeedback = false;
         feedback.SetActive(false);
 

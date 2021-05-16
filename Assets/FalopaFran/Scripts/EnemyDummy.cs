@@ -11,6 +11,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     private Rigidbody _rb;
     [SerializeField] private MovementHandler _movementHandler = new MovementHandler();
     [SerializeField] private FieldOfView _fieldOfView;
+    [SerializeField] private FieldOfView _attackFieldOfView;
     [SerializeField] int giveScore = 50;
     [SerializeField] GameObject deadbody;
 
@@ -114,7 +115,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
 
     private void DoAttack()
     {
-        List<Transform> targets = _fieldOfView.GetVisibleTargets;
+        List<Transform> targets = _attackFieldOfView.GetVisibleTargets;
 
         for (int i = 0; i < targets.Count; i++)
         {

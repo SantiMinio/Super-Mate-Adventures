@@ -10,6 +10,7 @@ public class IncreaseSpeed : CardModel
     [SerializeField] DistanceRequirement distanceRequirement = new DistanceRequirement();
     [SerializeField] SpeedRequirement speedRequirement = new SpeedRequirement();
     [SerializeField] ParticleSystem speedFeedback;
+    [SerializeField] AudioClip sound = null;
     bool onFeedback;
 
     private void Awake()
@@ -19,6 +20,7 @@ public class IncreaseSpeed : CardModel
         myRequirements.Add(manaRequirement);
         myRequirements.Add(distanceRequirement);
         myRequirements.Add(speedRequirement);
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
     }
 
     public override Requirement GetRequire() => manaRequirement;
@@ -41,6 +43,7 @@ public class IncreaseSpeed : CardModel
 
     protected override void OnUseCard()
     {
+        AudioManager.instance.PlaySound(sound.name);
         onFeedback = false;
         feedback.SetActive(false);
         speedFeedback.transform.position = Main.instance.GetMainCharacter.transform.position;
