@@ -7,7 +7,7 @@ public class ChargeTemperatureCard : CardModel
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
     //[SerializeField] LastCardRequirement lastCardRequirement = new LastCardRequirement();
     [SerializeField] int healAmmount = 15;
-
+    [SerializeField] ParticleSystem pt;
     private void Awake()
     {
         myRequirements.Add(manaRequirement);
@@ -26,6 +26,7 @@ public class ChargeTemperatureCard : CardModel
 
     protected override bool OnCanUse()
     {
+        
         if (Main.instance.GetMainCharacter.GetComponent<LifeHandler>().IsFullLife())
         {
             UIManager.instance.DisplayDialog("Tenés la vida llena!!");
@@ -36,6 +37,8 @@ public class ChargeTemperatureCard : CardModel
 
     protected override void OnUseCard()
     {
+        pt.Play();
+        pt.transform.parent = null;
         Main.instance.GetMainCharacter.GetComponent<LifeHandler>().Heal(healAmmount);
 
         Destroy(this.gameObject);
