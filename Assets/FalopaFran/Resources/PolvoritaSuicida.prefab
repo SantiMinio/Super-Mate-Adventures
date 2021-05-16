@@ -15768,7 +15768,7 @@ MonoBehaviour:
   _count: 0
   delayToAttack: 0.5
   meleeDistance: 5
-  knockbackIntensity: 800
+  knockbackIntensity: 200
   takeDamageSound: {fileID: 8300000, guid: 5bea980ca80763a469de2147d6b6bd02, type: 3}
   deadSound: {fileID: 8300000, guid: 48ea0507b2b724b4fb12652b6fdcc08c, type: 3}
   _lastDirAttack: {x: 0, y: 0, z: 0}
