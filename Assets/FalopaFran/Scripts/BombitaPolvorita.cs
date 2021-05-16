@@ -11,6 +11,8 @@ public class BombitaPolvorita : EnemyDummy
     [SerializeField] private float explotionRadius;
     [SerializeField] private LayerMask affectedLayers;
 
+    [SerializeField] private ParticleSystem boomFeedback;
+
     private bool ticking;
     public bool CanExplode { get; private set; }
     public void Explode()
@@ -24,8 +26,11 @@ public class BombitaPolvorita : EnemyDummy
             hit.Hit(this);
         }
 
+        boomFeedback.gameObject.transform.parent = null;
+        boomFeedback.Play();
         Dead();
         
+        GetDeadBody.GetComponent<RagdollHandler>().PushTo(Vector3.up);
     }
     
     public void WaitToBomb()

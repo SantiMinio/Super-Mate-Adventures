@@ -5981,6 +5981,9 @@ MonoBehaviour:
   deadbody: {fileID: 476541310942164609}
   turnSpeed: 20
   moveSpeed: 10
+  personalSpaceMask:
+    serializedVersion: 2
+    m_Bits: 128
   attackDamage: 1
   _count: 0
   delayToAttack: 2
