@@ -1,54 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Frano;
 using UnityEngine;
 
-public class PaqueteYerba : MonoBehaviour, IHiteable
+public class PaqueteYerba : MonoBehaviour
 {
-    [SerializeField] private float healPerHit;
-    [SerializeField] private int hitsPerWave;
+    [SerializeField] private LayerMask targets;
+    public Animator anim;
+    [SerializeField] private WaveManager _waveManager;
+    [SerializeField] AudioClip sound = null;
 
-    [SerializeField] private ParticleSystem feedbackOnHit;
-
-    private int _hitCount;
+    private Collider myCol;
     
-    private bool active;
-    void Start()
+    private void Awake()
     {
-        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, YerbaOn);
-        Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned, YerbaOff);
+        myCol = GetComponent<Collider>();
+        _waveManager = FindObjectOfType<WaveManager>();
     }
 
+    private void Start()
+    {
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave,StartWave);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned,FinishWave);
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
+    }
 
-    void YerbaOn()
+    void StartWave()
     {
-        active = true;
+        myCol.enabled = false;
+        anim.SetBool("On", false);
     }
     
-    void YerbaOff()
+    void FinishWave()
     {
-        active = false;
-        ResetHitCount();
+        Debug.Log("sucede");
+        anim.SetBool("On", true);
+        myCol.enabled = true;
     }
     
-    void ResetHitCount()
+    private void OnMouseDown()
     {
-        _hitCount = 0;
-    }
-    public void Hit(IAttacker attacker)
-    {
-        if (!active) return;
+        if (_waveManager.SpawnersActive()) return;
+
+        AudioManager.instance.PlaySound(sound.name);
+        Main.instance.EventManager.TriggerEvent(GameEvent.PaqueteYerbaClicked);
         
-        if(_hitCount >= hitsPerWave) return;
-        
-        if (attacker is CharacterHead)
+        var sphereCheck = Physics.CheckSphere(transform.position, 15f, targets);
+
+        if (sphereCheck)
         {
-            feedbackOnHit.Play();
-            var character = attacker.GetTransform().GetComponent<CharacterHead>();
-            character.GetLifeHandler.Heal(healPerHit);
-
-            _hitCount++;
+            //Main.instance.GetMainCharacter.manaSystem.FillFullMana();
+            Main.instance.GetMainCharacter.GetLifeHandler.ResetLife();
         }
-        
     }
 }

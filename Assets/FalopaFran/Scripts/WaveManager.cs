@@ -20,6 +20,7 @@ public class WaveManager : MonoBehaviour
     {
         Main.instance.EventManager.SubscribeToEvent(GameEvent.SpawnCookie, OnSpawn);
         Main.instance.EventManager.SubscribeToEvent(GameEvent.TermoClicked, StartNewWave);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.PaqueteYerbaClicked, StartNewWave);
         Main.instance.EventManager.SubscribeToEvent(GameEvent.EnemyDead, IsWaveKilled);
         
         Main.instance.EventManager.SubscribeToEvent(GameEvent.MateDead, MateDead);

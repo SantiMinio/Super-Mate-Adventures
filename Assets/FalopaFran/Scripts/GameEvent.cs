@@ -7,6 +7,7 @@
     TermoClicked,
     MateDead,
     KilledAllEnemiesSpawned,
-    EnemyDead
+    EnemyDead,
+    PaqueteYerbaClicked
 }
 

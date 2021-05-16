@@ -49,7 +49,7 @@ public class Termo : MonoBehaviour
         if (sphereCheck)
         {
             Main.instance.GetMainCharacter.manaSystem.FillFullMana();
-            Main.instance.GetMainCharacter.GetLifeHandler.ResetLife();
+            //Main.instance.GetMainCharacter.GetLifeHandler.ResetLife();
         }
     }
 }
