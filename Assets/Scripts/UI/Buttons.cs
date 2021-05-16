@@ -23,17 +23,14 @@ public class Buttons : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(1);
-        GetComponent<AudioSource>().Play();
     }
     public void Options()
     {
         settingsScreen.SetActive(true);
         mainScene.SetActive(false);
-        GetComponent<AudioSource>().Play();
     }
     public void Credits()
     {
-        GetComponent<AudioSource>().Play();
         if (names[0].activeSelf)
         {
             for (int i = 0; i < names.Length; i++)
@@ -51,10 +48,6 @@ public class Buttons : MonoBehaviour
     }
     public void ExitGame()
     {
-        var aS = GetComponent<AudioSource>();
-        aS.Stop();
-        aS.clip = exitSound;
-        aS.Play();
         StartCoroutine(ExitDelay());
     }
 
