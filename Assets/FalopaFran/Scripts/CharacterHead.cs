@@ -98,6 +98,11 @@ namespace Frano
 
         public Vector3 GetPosition() => transform.position;
         public float GetDamage() => attackDamage;
+        public Transform GetTransform()
+        {
+            return transform;
+        }
+
         public LifeHandler GetLifeHandler => _lifeHandler; 
         public void AddDamage(float dmg) => attackDamage += dmg;
         public bool IsDamageBuffed() => attackDamage == initDamage ? false : true;

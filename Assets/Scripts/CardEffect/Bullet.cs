@@ -16,6 +16,11 @@ public class Bullet : MonoBehaviour, IAttacker
         return bulletDamage;
     }
 
+    public Transform GetTransform()
+    {
+        return transform;
+    }
+
     public Vector3 GetPosition()
     {
         return transform.position;

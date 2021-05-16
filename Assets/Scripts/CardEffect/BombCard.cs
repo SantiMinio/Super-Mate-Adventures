@@ -68,4 +68,9 @@ public class BombCard : CardModel, IAttacker
     {
         return damage;
     }
+
+    public Transform GetTransform()
+    {
+        return transform;
+    }
 }

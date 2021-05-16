@@ -174,6 +174,10 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     public Vector3 GetPosition() {return transform.position; }
 
     public float GetDamage(){return attackDamage;}
+    public Transform GetTransform()
+    {
+        return transform;
+    }
 
     private void OnDrawGizmos()
     {

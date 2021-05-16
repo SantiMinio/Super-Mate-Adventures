@@ -84,4 +84,9 @@ public class VampirismCard : CardModel, IAttacker
     {
         return damage;
     }
+
+    public Transform GetTransform()
+    {
+        return transform;
+    }
 }

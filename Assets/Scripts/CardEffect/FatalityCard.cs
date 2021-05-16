@@ -53,4 +53,9 @@ public class FatalityCard : CardModel, IAttacker
     {
         return damage;
     }
+
+    public Transform GetTransform()
+    {
+        return transform;
+    }
 }

@@ -6,4 +6,6 @@ public interface IAttacker
 {
     Vector3 GetPosition();
     float GetDamage();
+
+    Transform GetTransform();
 }
