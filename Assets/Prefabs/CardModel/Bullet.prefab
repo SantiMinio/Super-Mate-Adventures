@@ -64,8 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 203482747134667885}
-  skillShotSpeed: 25
-  timeToDestroy: 5
+  skillShotSpeed: 36.8
+  timeToDestroy: 3
   deathpart: {fileID: 891868201320601027}
 --- !u!54 &203482747134667885
 Rigidbody:
@@ -368,7 +368,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.39
-      minScalar: 0.2
+      minScalar: 0.74
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1563,12 +1563,12 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 5552143477708121277, guid: 2ad0085dcd48c684193e724ea87a6cfa, type: 3}
-    - sprite: {fileID: -4668789016104115112, guid: 2ad0085dcd48c684193e724ea87a6cfa, type: 3}
+    - sprite: {fileID: 7188595267726060247, guid: daf7bcc6ee9580f408fbe35e3b4680f9, type: 3}
+    - sprite: {fileID: 3199309482616447022, guid: daf7bcc6ee9580f408fbe35e3b4680f9, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -1784,7 +1784,7 @@ ParticleSystem:
     orbitalY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 6.15
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6330,17 +6330,17 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.871084, g: 1, b: 0.7490566, a: 1}
-        key1: {r: 0.29882398, g: 0.33962262, b: 0, a: 0.9735294}
-        key2: {r: 0, g: 0, b: 0, a: 0.53333336}
+        key0: {r: 1, g: 0.9978701, b: 0.86226416, a: 1}
+        key1: {r: 1, g: 0.96058995, b: 0.4705882, a: 0.9735294}
+        key2: {r: 1, g: 0.4880237, b: 0, a: 0.53333336}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime1: 29876
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
@@ -6355,7 +6355,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
+        m_NumColorKeys: 3
         m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
@@ -6780,7 +6780,7 @@ ParticleSystem:
     orbitalZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 5.89
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6992,7 +6992,7 @@ ParticleSystem:
     radial:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 16.2
+      scalar: 8.11
       minScalar: 0
       maxCurve:
         serializedVersion: 2

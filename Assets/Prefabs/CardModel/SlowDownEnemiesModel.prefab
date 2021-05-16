@@ -50,7 +50,7 @@ MonoBehaviour:
     requiredMana: 2
   speedDown: 12
   buffTime: 5
-  sound: {fileID: 8300000, guid: f9fdc677895f30f4f91d00dcaa906708, type: 3}
+  sound: {fileID: 8300000, guid: 4327d21eb39f97446ae74defc20a0ada, type: 3}
 --- !u!1 &8588740043303278042
 GameObject:
   m_ObjectHideFlags: 0

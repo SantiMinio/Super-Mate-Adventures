@@ -10,9 +10,11 @@ public class BombCard : CardModel, IAttacker
     [SerializeField] float damage = 10;
     [SerializeField] ManaRequirement manaRequirement = new ManaRequirement();
     [SerializeField] ParticleSystem bombParticle = null;
+    [SerializeField] AudioClip sound = null;
 
     private void Awake()
     {
+        AudioManager.instance.GetSoundPool(sound.name, AudioManager.SoundDimesion.ThreeD, sound);
         feedback.SetActive(false);
         myRequirements.Add(manaRequirement);
     }
@@ -33,6 +35,7 @@ public class BombCard : CardModel, IAttacker
 
     protected override void OnUseCard()
     {
+        AudioManager.instance.PlaySound(sound.name);
         feedback.SetActive(false);
         var overlap = Physics.OverlapSphere(transform.position, range);
         bombParticle.transform.position = transform.position;
