@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fc4eee6046fd4ebe635fa16c1c034, type: 3}
   m_Name: SampleSkillShot
   m_EditorClassIdentifier: 
-  img: {fileID: 8665814558323131650, guid: c3246688e3faf384fa296a0a5c1d7477, type: 3}
-  title: "Carlitos Bal\xE1"
-  desc: Tira una balita
+  img: {fileID: -1451552096639940736, guid: d36d90628c8a5e846b910128d989e41a, type: 3}
+  title: "Bal\xE1"
+  desc: Tira una palito de yerba
   model: {fileID: 938489003864213967, guid: 09eb20c9960c7f6428f724ab9ad6aa00, type: 3}
