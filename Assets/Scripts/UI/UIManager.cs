@@ -22,8 +22,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] Sprite[] faceSprites = new Sprite[0];
     [SerializeField] float percentToFirstFace = 0.6f;
     [SerializeField] float percentToSecondFace = 0.3f;
+    [SerializeField] UIDialog cardsToDiscardWarning = null;
 
-    Image[] bubbles = new Image[0];
+    [SerializeField] Image[] bubbles = new Image[0];
 
     [Header("Score")]
     [SerializeField] UIDialog scoreScreen = null;
@@ -110,5 +111,18 @@ public class UIManager : MonoBehaviour
     public void RestartFunction()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void DiscardCardsDisclaimer(int discardAmmount)
+    {
+        if (discardAmmount != 0)
+            cardsToDiscardWarning.Open("Podés descartar " + discardAmmount + " cartas antes de que empiece la nueva ola.");
+        else
+            cardsToDiscardWarning.Open("Ya no podés descartar más cartas.");
+    }
+
+    public void CloseDiscardCardsDisclaimer()
+    {
+            cardsToDiscardWarning.Close();
     }
 }

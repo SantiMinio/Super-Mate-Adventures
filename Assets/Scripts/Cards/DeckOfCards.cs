@@ -15,6 +15,9 @@ public class DeckOfCards : MonoBehaviour
     public RectTransform firstPos = null;
     public RectTransform lastPos = null;
     [SerializeField] RectTransform posToSpawn = null;
+    [SerializeField] int maxCardToDiscard = 3;
+    int currentDiscardCards = 0;
+    bool betweenWaves = true;
 
     Vector3[] positions = new Vector3[0];
 
@@ -25,6 +28,20 @@ public class DeckOfCards : MonoBehaviour
     {
         timeToUsedLastCard += Time.deltaTime;
     }
+
+    void StartWave()
+    {
+        betweenWaves = false;
+        currentDiscardCards = 0;
+        UIManager.instance.CloseDiscardCardsDisclaimer();
+    }
+
+    void EndWave()
+    {
+        betweenWaves = true;
+        UIManager.instance.DiscardCardsDisclaimer(maxCardToDiscard - currentDiscardCards);
+    }
+
 
     private void Start()
     {
@@ -44,6 +61,10 @@ public class DeckOfCards : MonoBehaviour
         {
             SelectRandomCard();
         }
+
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave, StartWave);
+        Main.instance.EventManager.SubscribeToEvent(GameEvent.KilledAllEnemiesSpawned, EndWave);
+        EndWave();
     }
 
     void SpawnCards()
@@ -88,17 +109,22 @@ public class DeckOfCards : MonoBehaviour
         Main.instance.EventManager.TriggerEvent(GameEvent.UseCard);
     }
 
-    public void DiscardCard(Card card, CardSettings settings)
+    public bool DiscardCard(Card card, CardSettings settings)
     {
+        if (currentDiscardCards >= maxCardToDiscard) return false;
+
+        currentDiscardCards += 1;
         MoveCards(currentCards.IndexOf(card));
         currentCards.Remove(card);
         SelectRandomCard();
+        UIManager.instance.DiscardCardsDisclaimer(maxCardToDiscard - currentDiscardCards);
         card.GoToPos(posToSpawn.position, () =>
         {
             card.gameObject.SetActive(false);
         });
         currentDeck.Add(card);
         deck.Add(settings);
+        return true;
     }
 
     public static DeckOfCards privateInstance;
@@ -125,7 +151,6 @@ public class DeckOfCards : MonoBehaviour
         for (int i = 0; i < currentCards.Count; i++)
         {
             if (currentCards[i].settings == settings) _ammount -= 1; 
-
         }
 
         if (_ammount <= 0) return true;

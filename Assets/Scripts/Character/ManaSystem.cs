@@ -6,13 +6,12 @@ using System;
 [Serializable]
 public class ManaSystem
 {
-    [SerializeField] int maxMana = 100;
+    int maxMana = 6;
     int currentMana;
 
     public void Initialize()
     {
         currentMana = maxMana;
-        UIManager.instance.CreateManaBar(maxMana);
     }
 
     public void FillFullMana()

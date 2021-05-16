@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 
-public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerClickHandler
 {
     Canvas canvas;
     RectTransform rectTransform;
@@ -145,18 +145,6 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
     {
         Vector2 position = Camera.main.ScreenToViewportPoint(eventData.position) * 100;
 
-        if (rectTransform.position.y < currentDeck.recycleBin.position.y + currentDeck.recycleBin.rect.height / 2
-            && rectTransform.position.y > currentDeck.recycleBin.position.y - currentDeck.recycleBin.rect.height / 2
-            && rectTransform.position.x > currentDeck.recycleBin.position.x - currentDeck.recycleBin.rect.width / 2
-            && rectTransform.position.x < currentDeck.recycleBin.position.x + currentDeck.recycleBin.rect.width / 2)
-        {
-            currentModel.ResetCard();
-            currentModel.Discard();
-            currentDeck.DiscardCard(this, settings);
-
-            return;
-        }
-
         if (!CheckPosition() || !currentModel.CanUse())
         {
             currentModel.ResetCard();
@@ -214,6 +202,18 @@ public class Card : MonoBehaviour, IDragHandler,IBeginDragHandler, IEndDragHandl
             return false;
 
         return true;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            if(currentDeck.DiscardCard(this, settings))
+            {
+                currentModel.ResetCard();
+                currentModel.Discard();
+            }
+        }
     }
 
     #endregion
