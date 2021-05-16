@@ -98,7 +98,7 @@ public class UIManager : MonoBehaviour
 
     public void FinalScreen(int waves, int enemies, int combo, int score, bool isHighscore)
     {
-        Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().InputsOn();
+        Main.instance.GetMainCharacter.GetComponent<Frano.CharController>().InputsOff();
         wavesCompleted.text = waves.ToString();
         enemiesKilled.text = enemies.ToString();
         finalCombo.text = combo.ToString();
