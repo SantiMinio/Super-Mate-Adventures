@@ -46,4 +46,4 @@ MonoBehaviour:
   cardOnHandRequirement:
     cardRequireAmmount: 3
     cardRequire: {fileID: 11400000, guid: 54834c15719b37b41a5df94d5f606852, type: 2}
-  sound: {fileID: 8300000, guid: af7ff82df07c9234db9892c4d24414cc, type: 3}
+  sound: {fileID: 8300000, guid: 1aef0420dea93e6409b0111357dbcf33, type: 3}

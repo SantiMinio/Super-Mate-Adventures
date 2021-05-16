@@ -51,6 +51,7 @@ MonoBehaviour:
   manaRequirement:
     requiredMana: 2
   bombParticle: {fileID: 7284883621276856271}
+  sound: {fileID: 8300000, guid: 352db3353ec68a24b9708b5182dbffe5, type: 3}
 --- !u!1 &5851942959349351399
 GameObject:
   m_ObjectHideFlags: 0
