@@ -30,13 +30,7 @@ public class DummySpawner : MonoBehaviour
 
     public List<EnemyDummy> GetEnemiesSpawned() => _currentSpawnedEnemies;
     public bool active { get; private set; }
-
-
-    // public bool AreEnemiesSpawnedAlive()
-    // {
-    //     //Debug.Log("el spawn " + gameObject.name + "  " + _currentSpawnedEnemies.Any(x => x != null));
-    //     return _currentSpawnedEnemies.Any(x => x != null);
-    // }
+    
 
     public int GetLiveEnemies()
     {
