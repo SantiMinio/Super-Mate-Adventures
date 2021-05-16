@@ -889,6 +889,13 @@ MonoBehaviour:
   waveNumber: {fileID: 5370085054220489787}
   scoreTxt: {fileID: 3534397715669521023}
   ui_Dialog: {fileID: 2151415787974025514}
+  perfilFace: {fileID: 1845247408963201933}
+  faceSprites:
+  - {fileID: 21300000, guid: 2dc6c305a4ad826468c6b5074b5b9de0, type: 3}
+  - {fileID: 21300000, guid: 1892ef1c03ba62a46b2466f1b8110f2f, type: 3}
+  - {fileID: 21300000, guid: db4e7c34015acb14885fc53ca70804b0, type: 3}
+  percentToFirstFace: 0.6
+  percentToSecondFace: 0.3
   scoreScreen: {fileID: 44430132878573142}
   wavesCompleted: {fileID: 1241024779233157219}
   enemiesKilled: {fileID: 589300906660807729}

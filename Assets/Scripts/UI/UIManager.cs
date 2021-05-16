@@ -18,6 +18,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI waveNumber = null;
     [SerializeField] TextMeshProUGUI scoreTxt = null;
     [SerializeField] UIDialog ui_Dialog = null;
+    [SerializeField] Image perfilFace = null;
+    [SerializeField] Sprite[] faceSprites = new Sprite[0];
+    [SerializeField] float percentToFirstFace = 0.6f;
+    [SerializeField] float percentToSecondFace = 0.3f;
 
     Image[] bubbles = new Image[0];
 
@@ -76,6 +80,13 @@ public class UIManager : MonoBehaviour
     public void ChangeLifeBar(float percent)
     {
         lifeBar.fillAmount = percent;
+
+        if (percent < percentToSecondFace)
+            perfilFace.sprite = faceSprites[2];
+        else if (percent < percentToFirstFace)
+            perfilFace.sprite = faceSprites[1];
+        else
+            perfilFace.sprite = faceSprites[0];
     }
 
     public void DisplayDialog(string txt)
