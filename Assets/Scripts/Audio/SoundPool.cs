@@ -15,12 +15,13 @@ public class SoundPool : SingleObjectPool<AudioSource>
    private AudioMixerGroup _audioMixer;
     AudioManager.SoundDimesion dimension;
 
-   public void Configure(AudioClip audioClip, AudioManager.SoundDimesion _dimension, bool loop = false) 
+   public void Configure(AudioClip audioClip, AudioManager.SoundDimesion _dimension, AudioMixerGroup mixer,bool loop = false) 
    {
       _audioClip = audioClip;
       _loop = loop;
         extendible = false;
         dimension = _dimension;
+        _audioMixer = mixer;
    }
    protected override void AddObject(int prewarm = 3)
    {

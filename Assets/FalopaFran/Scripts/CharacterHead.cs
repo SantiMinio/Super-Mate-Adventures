@@ -35,12 +35,12 @@ namespace Frano
             _fieldOfView = GetComponentInChildren<FieldOfView>();
             
             _lifeHandler = GetComponent<LifeHandler>();
-            _lifeHandler.RefreshLifePercent += UIManager.instance.ChangeLifeBar;
             initDamage = attackDamage;
         }
 
         private void Start()
         {
+            _lifeHandler.RefreshLifePercent += UIManager.instance.ChangeLifeBar;
             _lifeHandler.OnDead += Dead;
             _animEvent.Add_Callback("Attack", HitCloseEnemiesWithBaseAttack);
             manaSystem.Initialize();

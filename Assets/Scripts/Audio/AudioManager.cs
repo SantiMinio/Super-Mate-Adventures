@@ -169,7 +169,7 @@ public class AudioManager : MonoBehaviour
     {
         var soundPool = new GameObject($"{soundPoolName} soundPool").AddComponent<SoundPool>();
         soundPool.transform.SetParent(transform);
-        soundPool.Configure(audioClip, dimension,loop);
+        soundPool.Configure(audioClip, dimension,_fx,loop);
         soundPool.Initialize(prewarmAmount);
         _soundRegistry.Add(soundPoolName, soundPool);
         return soundPool;

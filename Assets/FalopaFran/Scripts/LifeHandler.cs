@@ -14,7 +14,7 @@ public class LifeHandler : MonoBehaviour
 
     public bool Invulnerability { get; private set; }
     
-    private void Awake()
+    private void Start()
     {
         ResetLife();
     }

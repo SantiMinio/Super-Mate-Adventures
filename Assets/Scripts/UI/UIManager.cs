@@ -80,6 +80,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeLifeBar(float percent)
     {
+        Debug.Log("a ver de donde llamo");
         lifeBar.fillAmount = percent;
 
         if (percent < percentToSecondFace)
