@@ -45,6 +45,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
     public FieldOfView GetFoV => _fieldOfView;
 
     public Action<EnemyDummy> ReturnToSpawn;
+    public GameObject GetDeadBody => deadbody;
     void Awake()
     {
         _lifeHandler = GetComponent<LifeHandler>();
@@ -112,7 +113,7 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         while (true)
         {
 
-            var nearDudes = Physics.OverlapSphere(_movementHandler.myRb.position, 1, personalSpaceMask);
+            var nearDudes = Physics.OverlapSphere(_movementHandler.myRb.position, 2, personalSpaceMask);
             
             if(nearDudes.Length <= 0) yield return new WaitForSeconds(1.5f);
             
