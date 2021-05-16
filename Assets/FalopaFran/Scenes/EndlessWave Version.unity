@@ -3094,6 +3094,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4224864290818321960, guid: 2e98f89db8ba8db4bab7b86afd5bb0e2, type: 3}
+      propertyPath: prefabName
+      value: PolvoritaSuicida
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224864290818321960, guid: 2e98f89db8ba8db4bab7b86afd5bb0e2, type: 3}
       propertyPath: distanceToActivate
       value: 100
       objectReference: {fileID: 0}
@@ -3908,6 +3912,10 @@ PrefabInstance:
     - target: {fileID: 4224864290818321958, guid: 2e98f89db8ba8db4bab7b86afd5bb0e2, type: 3}
       propertyPath: m_Name
       value: Spawner piroxilina
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224864290818321960, guid: 2e98f89db8ba8db4bab7b86afd5bb0e2, type: 3}
+      propertyPath: prefabName
+      value: PolvoritaSuicida
       objectReference: {fileID: 0}
     - target: {fileID: 4224864290818321960, guid: 2e98f89db8ba8db4bab7b86afd5bb0e2, type: 3}
       propertyPath: distanceToActivate

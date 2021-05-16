@@ -13,8 +13,26 @@ MonoBehaviour:
   m_Name: Chase_Bombita
   m_EditorClassIdentifier: 
   onFixed: []
-  onUpdate: []
-  onEnter: []
+  onUpdate:
+  - {fileID: 11400000, guid: 64b0afb4ed1aaca4fa8a4d714c44a51c, type: 2}
+  onEnter:
+  - {fileID: 11400000, guid: 2c491d4da0c1d94478a9ac916d88548b, type: 2}
   onExit: []
-  idCount: 0
-  transitions: []
+  idCount: 4
+  transitions:
+  - id: 0
+    condition: {fileID: 11400000, guid: 6d098692622fd0c45a3f5646c9d2d285, type: 2}
+    targetState: {fileID: 11400000, guid: 5dd332701f7944744a3df06ad902f317, type: 2}
+    disable: 0
+  - id: 1
+    condition: {fileID: 11400000, guid: 9fe2f87a6f9bee244a2b32ecbc0ef805, type: 2}
+    targetState: {fileID: 11400000, guid: 9c7bccaa8f6cdab41b010c6bf54d82ed, type: 2}
+    disable: 0
+  - id: 2
+    condition: {fileID: 11400000, guid: 1c091a9ffbd3eb94caa6074f964adf9c, type: 2}
+    targetState: {fileID: 11400000, guid: 9c7bccaa8f6cdab41b010c6bf54d82ed, type: 2}
+    disable: 0
+  - id: 3
+    condition: {fileID: 11400000, guid: 75a89faae8a5f2c49b924e63e1069b19, type: 2}
+    targetState: {fileID: 11400000, guid: 9c7bccaa8f6cdab41b010c6bf54d82ed, type: 2}
+    disable: 0

@@ -5005,7 +5005,7 @@ Animator:
   m_GameObject: {fileID: 911614255249308020}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b1d2a78d509345843a740416a1ab0fd5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 803568dee8cef414180babb34f0fa98d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5975,7 +5975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e027400609f74f4faf2e1bc6273ad74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultState: {fileID: 11400000, guid: 176c3aac82fd3a24cb0556912938fd91, type: 2}
+  defaultState: {fileID: 11400000, guid: 9c7bccaa8f6cdab41b010c6bf54d82ed, type: 2}
   currentState: {fileID: 11400000, guid: 9c7bccaa8f6cdab41b010c6bf54d82ed, type: 2}
 --- !u!114 &3482172762056614234
 MonoBehaviour:
@@ -5992,8 +5992,8 @@ MonoBehaviour:
   hittedFeedback: {fileID: 5963928888847913638}
   _movementHandler:
     target: {fileID: 0}
-    minDistToChangeNode: 0
-    minDistToReachPos: 0
+    minDistToChangeNode: 4
+    minDistToReachPos: 4
     path: []
     currentWaypoint: {x: 0, y: 0, z: 0}
     targetIndex: 0
@@ -6022,14 +6022,18 @@ MonoBehaviour:
   giveScore: 50
   deadbody: {fileID: 476541310942164609}
   turnSpeed: 5
-  moveSpeed: 3
+  moveSpeed: 5
   attackDamage: 2
   _count: 0
   delayToAttack: 0.5
-  meleeDistance: 1
+  meleeDistance: 5
   knockbackIntensity: 800
   _lastDirAttack: {x: 0, y: 0, z: 0}
-  timeToExplode: 2
+  timeToExplode: 3
+  explotionRadius: 5
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 640
 --- !u!1 &5963928888847913633
 GameObject:
   m_ObjectHideFlags: 0

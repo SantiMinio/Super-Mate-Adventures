@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bddebd104a2f40649972dfdca979848c, type: 3}
-  m_Name: WaitToExplode_Bombita
+  m_Name: Explode_Bombita
   m_EditorClassIdentifier: 
   onFixed: []
-  onUpdate:
-  - {fileID: 11400000, guid: b823cc9b0bcc76c4ea7666e1ce77264a, type: 2}
+  onUpdate: []
   onEnter:
-  - {fileID: 11400000, guid: da9ebe1c331cbd54faf74dd9cc75fb89, type: 2}
+  - {fileID: 11400000, guid: 3cfd222bc404c5641ad82d6101610dbb, type: 2}
   onExit: []
-  idCount: 2
-  transitions:
-  - id: 1
-    condition: {fileID: 11400000, guid: 7f28798912e9f5e409188dc506351daf, type: 2}
-    targetState: {fileID: 11400000, guid: 5abf1d0a1f80ec244a12828986c4e4b1, type: 2}
-    disable: 0
+  idCount: 0
+  transitions: []
