@@ -21,12 +21,69 @@ public class PlayableGrid : MonoBehaviour
     private float refreshGridCounter = 0;
     
     
+    public TerrainType[] walkableRegions;
+    LayerMask walkableMask;
+    private int obstacleProximityPenalty = 13;
+    Dictionary<int,int> walkableRegionsDictionary = new Dictionary<int, int>();
+    int penaltyMin = int.MaxValue;
+    int penaltyMax = int.MinValue;
     
     private void Awake()
     {
+        foreach (TerrainType region in walkableRegions) {
+            walkableMask.value |= region.terrainMask.value;
+            walkableRegionsDictionary.Add((int)Mathf.Log(region.terrainMask.value,2),region.terrainPenalty);
+        }
+
+        FilterDisabledInMatrix();
+        
         RegisterVecinos();
         FilterDisableVecinos();
-       // StartCoroutine(RefreshGrid());
+        SetWeights();
+
+        BlurPenaltyMap(4);
+        // StartCoroutine(RefreshGrid());
+    }
+
+    private void FilterDisabledInMatrix()
+    {
+        for (int i = 0; i < gData.matrixNode.Width; i++)
+        {
+            for (int j = 0; j < gData.matrixNode.Height; j++)
+            {
+                gData.matrixNode[i,j].isDisabled = CheckDisableNode(gData.matrixNode[i, j]);
+            }
+        }
+    }
+
+    private void SetWeights()
+    {
+        for (int i = 0; i < gData.matrixNode.Width; i++)
+        {
+            for (int j = 0; j < gData.matrixNode.Height; j++)
+            {
+                if(gData.matrixNode[i,j].worldPosition == Vector3.zero) continue;
+            
+                int movementPenalty = 0;
+            
+                Ray ray = new Ray(gData.matrixNode[i,j].worldPosition, Vector3.down);
+                RaycastHit hit;
+                if (Physics.Raycast(ray,out hit, 100, walkableMask)) {
+                    Debug.Log("tiro rayo");
+                    walkableRegionsDictionary.TryGetValue(hit.collider.gameObject.layer, out movementPenalty);
+                }
+
+                if (gData.matrixNode[i, j].isDisabled)
+                {
+                    movementPenalty += obstacleProximityPenalty;
+                }
+                
+                
+                gData.matrixNode[i,j].movementPenalty = movementPenalty;
+                Debug.Log(gData.matrixNode[i,j].movementPenalty + "a ver que onbda?");
+            }
+        }
+        
     }
 
     private IEnumerator RefreshGrid()
@@ -102,15 +159,29 @@ public class PlayableGrid : MonoBehaviour
 
     public void ClearVecinos()
     {
-        // for (int i = 0; i < gData.allNodes.Count; i++)
-        // {
-        //     gData.allNodes[i].neighbours.Clear();
-        // }
-        
         registroVecinos.Clear();
     }
-    
-    
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Debug.Log(gData.matrixNode != null);
+            Debug.Log(gData.matrixNode.Count(x => x != null) + " de nodos simples");
+            Debug.Log(gData.matrixNode_doubles.Count(x => x != null) + " de nodos dobles");
+
+            int caca = 0;
+            foreach (var v in gData.matrixNode)
+            {   
+                Debug.Log(v.worldPosition);
+            }
+            
+            
+        }
+            
+    }
+
     public void FilterDisableVecinos()
     {
         List<Node> currentVecinos = new List<Node>();
@@ -138,6 +209,59 @@ public class PlayableGrid : MonoBehaviour
             }
         }
 
+    }
+    
+    void BlurPenaltyMap(int blurSize) {
+        Debug.Log("Hago el blur");
+        
+        int kernelSize = blurSize * 2 + 1;
+        int kernelExtents = (kernelSize - 1) / 2;
+    
+        int[,] penaltiesHorizontalPass = new int[gData.matrixNode.Width,gData.matrixNode.Height];
+        int[,] penaltiesVerticalPass = new int[gData.matrixNode.Width,gData.matrixNode.Height];
+    
+        for (int y = 0; y < gData.matrixNode.Height; y++) {
+            for (int x = -kernelExtents; x <= kernelExtents; x++) {
+                int sampleX = Mathf.Clamp (x, 0, kernelExtents);
+                penaltiesHorizontalPass [0, y] += gData.matrixNode [sampleX, y].movementPenalty;
+            }
+    
+            for (int x = 1; x < gData.matrixNode.Width; x++) {
+                int removeIndex = Mathf.Clamp(x - kernelExtents - 1, 0, gData.matrixNode.Width);
+                int addIndex = Mathf.Clamp(x + kernelExtents, 0, gData.matrixNode.Width-1);
+    
+                penaltiesHorizontalPass [x, y] = penaltiesHorizontalPass [x - 1, y] - gData.matrixNode [removeIndex, y].movementPenalty + gData.matrixNode [addIndex, y].movementPenalty;
+            }
+        }
+			 
+        for (int x = 0; x < gData.matrixNode.Width; x++) {
+            for (int y = -kernelExtents; y <= kernelExtents; y++) {
+                int sampleY = Mathf.Clamp (y, 0, kernelExtents);
+                penaltiesVerticalPass [x, 0] += penaltiesHorizontalPass [x, sampleY];
+            }
+    
+            int blurredPenalty = Mathf.RoundToInt((float)penaltiesVerticalPass [x, 0] / (kernelSize * kernelSize));
+            gData.matrixNode [x, 0].movementPenalty = blurredPenalty;
+    
+            for (int y = 1; y < gData.matrixNode.Height; y++) {
+                int removeIndex = Mathf.Clamp(y - kernelExtents - 1, 0, gData.matrixNode.Height);
+                int addIndex = Mathf.Clamp(y + kernelExtents, 0, gData.matrixNode.Height-1);
+    
+                penaltiesVerticalPass [x, y] = penaltiesVerticalPass [x, y-1] - penaltiesHorizontalPass [x,removeIndex] + penaltiesHorizontalPass [x, addIndex];
+                blurredPenalty = Mathf.RoundToInt((float)penaltiesVerticalPass [x, y] / (kernelSize * kernelSize));
+                gData.matrixNode [x, y].movementPenalty = blurredPenalty;
+    
+                Debug.Log(blurredPenalty);
+                
+                if (blurredPenalty > penaltyMax) {
+                    penaltyMax = blurredPenalty;
+                }
+                if (blurredPenalty < penaltyMin) {
+                    penaltyMin = blurredPenalty;
+                }
+            }
+        }
+    
     }
 
     public void UpdateLocationRegistry()
@@ -176,31 +300,86 @@ public class PlayableGrid : MonoBehaviour
     }
     public Node NodeFromWorldPointbyDistance(Vector3 worldPos) { return gData.allNodes.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)).First(); }
     public IEnumerable<Node> NodesFromWorldPointbyDistance(Vector3 worldPos) { return gData.allNodes.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)); }
+
+    //aca lo uso para limpiar la matrix de nodos petes
+    
+    public Matrix<Node> GetMatrixNode_Clean(Matrix<Node> mtx)
+    {
+        var mtxClean = mtx.Where(x => x.worldPosition != Vector3.zero);
+        
+        Matrix<Node> auxMtx = new Matrix<Node>(mtx.Width, mtx.Height);
+        
+        for (int i = 0; i < mtx.Width; i++)
+        {
+            for (int j = 0; j < mtx.Height; j++)
+            {
+                
+                
+                
+            }
+        }
+
+        return auxMtx;
+    }
     
     public List<Node> GetNeighbours(Node node) { return registroVecinos[node.worldPosition]; }
 
+
+    public bool showNodes;
+    public bool showWeight;
     private void OnDrawGizmos()
     {
+        if (gData == null) return;
+
+        if (showWeight)
+        {
+            if (gData.matrixNode.Count() > 0)
+            {
+                foreach (var mtxNode in gData.matrixNode)
+                {
+                    if(mtxNode.worldPosition == Vector3.zero) continue;
+            
+                    Gizmos.color = Color.Lerp (Color.white, Color.black, Mathf.InverseLerp (penaltyMin, penaltyMax, mtxNode.movementPenalty));
+                    Gizmos.color = (!mtxNode.isDisabled)?Gizmos.color:Color.red;
+                    Gizmos.DrawCube(mtxNode.worldPosition, Vector3.one * (1.5f));
+                }    
+                
+                foreach (var mtxNode in gData.matrixNode_doubles)
+                {
+                    if(mtxNode.worldPosition == Vector3.zero) continue;
+                    
+                    Gizmos.color = Color.Lerp (Color.white, Color.black, Mathf.InverseLerp (penaltyMin, penaltyMax, mtxNode.movementPenalty));
+                    Gizmos.color = (!mtxNode.isDisabled)?Gizmos.color:Color.red;
+                    Gizmos.DrawCube(mtxNode.worldPosition, Vector3.one * (1.5f));
+                } 
+            }
+        }
+
         if(gData.allNodes != null && gData.allNodes.Count > 0 && registroVecinos.Count > 0)
         {
-            
-            
-            foreach (var item in gData.allNodes)
+            if (showNodes)
             {
-                Gizmos.color = Color.blue;
-                Gizmos.DrawSphere(item.worldPosition, gData.nodeRadious);
+                foreach (var item in gData.allNodes)
+                {
+                    Gizmos.color = Color.blue;
+                    Gizmos.DrawSphere(item.worldPosition, gData.nodeRadious);
                 
-                if(item.isDisabled) continue;
+                    if(item.isDisabled) continue;
                 
-                if(registroVecinos.ContainsKey(item.worldPosition))
-                    foreach (var v in registroVecinos[item.worldPosition])
-                    {
-                        if (v.isDisabled) continue;
+                    if(registroVecinos.ContainsKey(item.worldPosition))
+                        foreach (var v in registroVecinos[item.worldPosition])
+                        {
+                            if (v.isDisabled) continue;
 
-                        Gizmos.color = Color.yellow;
-                        Gizmos.DrawLine(item.worldPosition, v.worldPosition);
-                    }
+                            Gizmos.color = Color.yellow;
+                            Gizmos.DrawLine(item.worldPosition, v.worldPosition);
+                        }
+
+                
+                }
             }
+            
+            
             
             foreach (var loc in locationRegistry)
             {
@@ -209,6 +388,12 @@ public class PlayableGrid : MonoBehaviour
             }
             
         }
+    }
+    
+    [System.Serializable]
+    public class TerrainType {
+        public LayerMask terrainMask;
+        public int terrainPenalty;
     }
 
     #region Deprecated- for simple grid

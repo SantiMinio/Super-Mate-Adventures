@@ -12,7 +12,10 @@ namespace Frano.NodeMapping
         SerializedProperty gridData;
         SerializedProperty obstacleMask;
         SerializedProperty marker;
+        SerializedProperty showNodes;
         SerializedProperty locationRegistry;
+        SerializedProperty walkableRegions;
+        SerializedProperty showWeight;
         private SerializedProperty markerRadius;
         private PlayableGrid playableGrid;
 
@@ -26,10 +29,13 @@ namespace Frano.NodeMapping
         {
             playableGrid = (PlayableGrid) target;
             gridData = serializedObject.FindProperty("gData");
+            walkableRegions = serializedObject.FindProperty("walkableRegions");
             obstacleMask = serializedObject.FindProperty("obstacle");
             marker = serializedObject.FindProperty("marker");
             markerRadius = serializedObject.FindProperty("markerRadius");
             locationRegistry = serializedObject.FindProperty("locationRegistry");
+            showNodes = serializedObject.FindProperty("showNodes");
+            showWeight = serializedObject.FindProperty("showWeight");
         }
 
         public void OnSceneGUI()
@@ -87,6 +93,9 @@ namespace Frano.NodeMapping
             EditorGUILayout.BeginVertical();
             EditorGUILayout.PropertyField(gridData, new GUIContent("gridData"));
             EditorGUILayout.PropertyField(obstacleMask, new GUIContent("obstacleMask"));
+            EditorGUILayout.PropertyField(walkableRegions, new GUIContent("walkableRegions"));
+            EditorGUILayout.PropertyField(showNodes, new GUIContent("showNodes"));
+            EditorGUILayout.PropertyField(showWeight, new GUIContent("showWeight"));
             
 
             

@@ -107,6 +107,8 @@ namespace Frano.NodeMapping
                             {
                                 nodeMap.gridData = RayScan.RaycastScan(rg.GetBaseGrid(), nodeMap.gridData, nodeMap.floorMask);
                                 EditorUtility.SetDirty(nodeMap.gridData);
+                                
+                                Debug.Log(nodeMap.gridData.matrixNode);
                             }
                         }
 

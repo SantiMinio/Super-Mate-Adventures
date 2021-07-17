@@ -9,12 +9,21 @@ public class Node : IHeapItem<Node>
     public bool isDisabled = false;
 
     int heapIndex;
+    public int movementPenalty;
 
     public int gCost;
     public int hCost;
     public Node parent;
     public int gridX, gridY;
 
+    public Node(Vector3 _worldPos, int gridPosX, int gridPosY, int penalty)
+    {
+        worldPosition = _worldPos;
+        gridX = gridPosX;
+        gridY = gridPosY;
+        movementPenalty = penalty;
+    }
+    
     public Node(Vector3 _worldPos, int gridPosX, int gridPosY)
     {
         worldPosition = _worldPos;
@@ -56,4 +65,6 @@ public class Node : IHeapItem<Node>
             return gCost + hCost;
         }
     }
+    
+    
 }
