@@ -70,6 +70,7 @@ public class Pathfinding : MonoBehaviour
         {
             waypoints = RetracePath(startNode, targetNode);
         }
+        
         requestManager.FinishedProcessingPath(waypoints, pathSuccess);
 
     }
@@ -79,13 +80,21 @@ public class Pathfinding : MonoBehaviour
         List<Node> path = new List<Node>();
         Node currentNode = endNode;
 
+        float costTotal = 0;
         while (currentNode != startNode)
         {
             path.Add(currentNode);
+            costTotal += currentNode.movementPenalty;
             currentNode = currentNode.parent;
+            
         }
-        Vector3[] waypoints = SimplifyPath(path);
+        
+        Debug.Log("el coste es " + costTotal);
+        Vector3[] waypoints = SimplifyPath(path);//path.Select(x => x.worldPosition).ToArray(); //;
         Array.Reverse(waypoints);
+        
+        
+        
         return waypoints;
 
     }

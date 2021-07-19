@@ -60,6 +60,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         _movementHandler.Init(FindObjectOfType<Pathfinding>(), this, _rb);
         _movementHandler.SetSpeeds(turnSpeed, moveSpeed);
 
+        _movementHandler.target = Main.instance.GetMainCharacter.transform;
+        
         _animator = GetComponentInChildren<Animator>();
         _animEvent = GetComponentInChildren<AnimEvent>();
 
@@ -88,6 +90,8 @@ public class EnemyDummy : MonoBehaviour, IHiteable, IAttacker
         //meleeDistance = 6.5f;
         //attackDamage = 1f;
 
+        _movementHandler.StartUpdatePath();
+        
         StartCoroutine(CheckNearDudes());
     }
 

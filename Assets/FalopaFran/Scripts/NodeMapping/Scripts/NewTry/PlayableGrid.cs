@@ -23,7 +23,8 @@ public class PlayableGrid : MonoBehaviour
     
     public TerrainType[] walkableRegions;
     LayerMask walkableMask;
-    private int obstacleProximityPenalty = 13;
+    [SerializeField] private int obstacleProximityPenalty = 33;
+    [SerializeField] private int blurPenalty;
     Dictionary<int,int> walkableRegionsDictionary = new Dictionary<int, int>();
     int penaltyMin = int.MaxValue;
     int penaltyMax = int.MinValue;
@@ -35,14 +36,18 @@ public class PlayableGrid : MonoBehaviour
             walkableRegionsDictionary.Add((int)Mathf.Log(region.terrainMask.value,2),region.terrainPenalty);
         }
 
+       
         FilterDisabledInMatrix();
         
         RegisterVecinos();
         FilterDisableVecinos();
         SetWeights();
 
-        BlurPenaltyMap(4);
+        BlurPenaltyMap(blurPenalty);
+        
         // StartCoroutine(RefreshGrid());
+        
+        
     }
 
     private void FilterDisabledInMatrix()
@@ -69,7 +74,6 @@ public class PlayableGrid : MonoBehaviour
                 Ray ray = new Ray(gData.matrixNode[i,j].worldPosition, Vector3.down);
                 RaycastHit hit;
                 if (Physics.Raycast(ray,out hit, 100, walkableMask)) {
-                    Debug.Log("tiro rayo");
                     walkableRegionsDictionary.TryGetValue(hit.collider.gameObject.layer, out movementPenalty);
                 }
 
@@ -80,10 +84,9 @@ public class PlayableGrid : MonoBehaviour
                 
                 
                 gData.matrixNode[i,j].movementPenalty = movementPenalty;
-                Debug.Log(gData.matrixNode[i,j].movementPenalty + "a ver que onbda?");
+                //Debug.Log(gData.matrixNode[i,j].movementPenalty + "a ver que onbda?");
             }
         }
-        
     }
 
     private IEnumerator RefreshGrid()
@@ -133,10 +136,10 @@ public class PlayableGrid : MonoBehaviour
     public void RegisterVecinos()
     {
         registroVecinos.Clear();
-        foreach (var node in gData.allNodes)
+        foreach (var node in gData.matrixNode)
         {
             List<Node> vecinos = new List<Node>();
-            foreach (var n in gData.allNodes)
+            foreach (var n in gData.matrixNode)
             {
                 if (node.worldPosition == n.worldPosition)
                     continue;
@@ -162,57 +165,34 @@ public class PlayableGrid : MonoBehaviour
         registroVecinos.Clear();
     }
 
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Debug.Log(gData.matrixNode != null);
-            Debug.Log(gData.matrixNode.Count(x => x != null) + " de nodos simples");
-            Debug.Log(gData.matrixNode_doubles.Count(x => x != null) + " de nodos dobles");
-
-            int caca = 0;
-            foreach (var v in gData.matrixNode)
-            {   
-                Debug.Log(v.worldPosition);
-            }
-            
-            
-        }
-            
-    }
-
     public void FilterDisableVecinos()
     {
         List<Node> currentVecinos = new List<Node>();
-        for (int i = 0; i < gData.allNodes.Count; i++)
+        foreach (var node in gData.matrixNode)
         {
-            Node cur = gData.allNodes[i];
-            currentVecinos = registroVecinos[cur.worldPosition];
-            if (cur.isDisabled)
+            currentVecinos = registroVecinos[node.worldPosition];
+            if (node.isDisabled)
             {
-                registroVecinos[cur.worldPosition].Clear();
+                registroVecinos[node.worldPosition].Clear();
             }
             else
             {
                 //Check si vecinos estan en linea de vision con un rayo
                 for (int j = currentVecinos.Count - 1; j >= 0; j--)
                 {
-                    Vector3 dir = (currentVecinos[j].worldPosition - cur.worldPosition).normalized;
-                    Ray r = new Ray(cur.worldPosition, dir);
+                    Vector3 dir = (currentVecinos[j].worldPosition - node.worldPosition).normalized;
+                    Ray r = new Ray(node.worldPosition, dir);
 
                     if (Physics.Raycast(r, gData.nodeRadious * 2.5f))
                     {
                         currentVecinos.Remove(currentVecinos[j]);
                     }
-                }     
+                }
             }
         }
-
     }
     
     void BlurPenaltyMap(int blurSize) {
-        Debug.Log("Hago el blur");
         
         int kernelSize = blurSize * 2 + 1;
         int kernelExtents = (kernelSize - 1) / 2;
@@ -250,9 +230,7 @@ public class PlayableGrid : MonoBehaviour
                 penaltiesVerticalPass [x, y] = penaltiesVerticalPass [x, y-1] - penaltiesHorizontalPass [x,removeIndex] + penaltiesHorizontalPass [x, addIndex];
                 blurredPenalty = Mathf.RoundToInt((float)penaltiesVerticalPass [x, y] / (kernelSize * kernelSize));
                 gData.matrixNode [x, y].movementPenalty = blurredPenalty;
-    
-                Debug.Log(blurredPenalty);
-                
+
                 if (blurredPenalty > penaltyMax) {
                     penaltyMax = blurredPenalty;
                 }
@@ -298,32 +276,10 @@ public class PlayableGrid : MonoBehaviour
             if (gData.allNodes[i].worldPosition == nodePos) gData.allNodes.Remove(gData.allNodes[i]);
         }
     }
-    public Node NodeFromWorldPointbyDistance(Vector3 worldPos) { return gData.allNodes.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)).First(); }
-    public IEnumerable<Node> NodesFromWorldPointbyDistance(Vector3 worldPos) { return gData.allNodes.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)); }
+    public Node NodeFromWorldPointbyDistance(Vector3 worldPos) { return gData.matrixNode.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)).First(); }
+    public IEnumerable<Node> NodesFromWorldPointbyDistance(Vector3 worldPos) { return gData.matrixNode.OrderBy(n => Vector3.Distance(worldPos, n.worldPosition)); }
 
-    //aca lo uso para limpiar la matrix de nodos petes
-    
-    public Matrix<Node> GetMatrixNode_Clean(Matrix<Node> mtx)
-    {
-        var mtxClean = mtx.Where(x => x.worldPosition != Vector3.zero);
-        
-        Matrix<Node> auxMtx = new Matrix<Node>(mtx.Width, mtx.Height);
-        
-        for (int i = 0; i < mtx.Width; i++)
-        {
-            for (int j = 0; j < mtx.Height; j++)
-            {
-                
-                
-                
-            }
-        }
-
-        return auxMtx;
-    }
-    
     public List<Node> GetNeighbours(Node node) { return registroVecinos[node.worldPosition]; }
-
 
     public bool showNodes;
     public bool showWeight;
@@ -331,42 +287,34 @@ public class PlayableGrid : MonoBehaviour
     {
         if (gData == null) return;
 
-        if (showWeight)
+        if (gData.matrixNode.Count() > 0 && registroVecinos.Count > 0)
         {
-            if (gData.matrixNode.Count() > 0)
+
+            if (showWeight)
             {
+
                 foreach (var mtxNode in gData.matrixNode)
                 {
-                    if(mtxNode.worldPosition == Vector3.zero) continue;
-            
-                    Gizmos.color = Color.Lerp (Color.white, Color.black, Mathf.InverseLerp (penaltyMin, penaltyMax, mtxNode.movementPenalty));
-                    Gizmos.color = (!mtxNode.isDisabled)?Gizmos.color:Color.red;
-                    Gizmos.DrawCube(mtxNode.worldPosition, Vector3.one * (1.5f));
-                }    
-                
-                foreach (var mtxNode in gData.matrixNode_doubles)
-                {
-                    if(mtxNode.worldPosition == Vector3.zero) continue;
-                    
-                    Gizmos.color = Color.Lerp (Color.white, Color.black, Mathf.InverseLerp (penaltyMin, penaltyMax, mtxNode.movementPenalty));
-                    Gizmos.color = (!mtxNode.isDisabled)?Gizmos.color:Color.red;
-                    Gizmos.DrawCube(mtxNode.worldPosition, Vector3.one * (1.5f));
-                } 
-            }
-        }
+                    if (mtxNode.worldPosition == Vector3.zero) continue;
 
-        if(gData.allNodes != null && gData.allNodes.Count > 0 && registroVecinos.Count > 0)
-        {
+                    Gizmos.color = Color.Lerp(Color.white, Color.black,
+                        Mathf.InverseLerp(penaltyMin, penaltyMax, mtxNode.movementPenalty));
+                    Gizmos.color = (!mtxNode.isDisabled) ? Gizmos.color : Color.red;
+                    Gizmos.DrawCube(mtxNode.worldPosition, Vector3.one * (1.5f));
+                }
+            }
+
+
             if (showNodes)
             {
-                foreach (var item in gData.allNodes)
+                foreach (var item in gData.matrixNode)
                 {
                     Gizmos.color = Color.blue;
                     Gizmos.DrawSphere(item.worldPosition, gData.nodeRadious);
-                
-                    if(item.isDisabled) continue;
-                
-                    if(registroVecinos.ContainsKey(item.worldPosition))
+
+                    if (item.isDisabled) continue;
+
+                    if (registroVecinos.ContainsKey(item.worldPosition))
                         foreach (var v in registroVecinos[item.worldPosition])
                         {
                             if (v.isDisabled) continue;
@@ -374,19 +322,15 @@ public class PlayableGrid : MonoBehaviour
                             Gizmos.color = Color.yellow;
                             Gizmos.DrawLine(item.worldPosition, v.worldPosition);
                         }
-
-                
                 }
             }
-            
-            
-            
-            foreach (var loc in locationRegistry)
-            {
-                Gizmos.color = Color.red;
-                Gizmos.DrawSphere(loc.dir, 20f);
-            }
-            
+
+        }
+
+        foreach (var loc in locationRegistry)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(loc.dir, 20f);
         }
     }
     

@@ -16,6 +16,8 @@ namespace Frano.NodeMapping
         SerializedProperty locationRegistry;
         SerializedProperty walkableRegions;
         SerializedProperty showWeight;
+        SerializedProperty blurPenalty;
+        SerializedProperty obstacleProximityPenalty;
         private SerializedProperty markerRadius;
         private PlayableGrid playableGrid;
 
@@ -36,6 +38,8 @@ namespace Frano.NodeMapping
             locationRegistry = serializedObject.FindProperty("locationRegistry");
             showNodes = serializedObject.FindProperty("showNodes");
             showWeight = serializedObject.FindProperty("showWeight");
+            blurPenalty = serializedObject.FindProperty("blurPenalty");
+            obstacleProximityPenalty = serializedObject.FindProperty("obstacleProximityPenalty");
         }
 
         public void OnSceneGUI()
@@ -96,8 +100,8 @@ namespace Frano.NodeMapping
             EditorGUILayout.PropertyField(walkableRegions, new GUIContent("walkableRegions"));
             EditorGUILayout.PropertyField(showNodes, new GUIContent("showNodes"));
             EditorGUILayout.PropertyField(showWeight, new GUIContent("showWeight"));
-            
-
+            EditorGUILayout.PropertyField(blurPenalty, new GUIContent("blurPenalty"));
+            EditorGUILayout.PropertyField(obstacleProximityPenalty, new GUIContent("obstacleProximityPenalty"));
             
             
             EditorGUILayout.Separator();

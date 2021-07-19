@@ -2877,6 +2877,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3812299752547045883, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.7000103
+      objectReference: {fileID: 0}
     - target: {fileID: 5227034241907187839, guid: 3c9ea10d6b076a84aabdc769cbddbf63, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -5624,16 +5628,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
+      propertyPath: showWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
+      propertyPath: blurPenalty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: walkableRegions.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: walkableRegions.Array.data[0].terrainPenalty
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: walkableRegions.Array.data[1].terrainPenalty
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: walkableRegions.Array.data[0].terrainMask.m_Bits
@@ -5641,12 +5653,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9154200674055068981, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: walkableRegions.Array.data[1].terrainMask.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 9154200675162078520, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: gridData
       value: 
-      objectReference: {fileID: 11400000, guid: 0b61bc2a65a868742a3ee4b77c170172, type: 2}
+      objectReference: {fileID: 11400000, guid: c1256627f5bdd9b4c9a4e079a69c4a2a, type: 2}
     - target: {fileID: 9154200675162078521, guid: 945648187539e3f4b88740e2d8738cfa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8

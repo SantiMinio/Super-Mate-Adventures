@@ -13,6 +13,12 @@ public class MovementHandler
     public Transform target;
     float turnSpeed;
     float speed;
+
+    private Path auxPath;
+    [SerializeField] float turnDistance;
+    const float minPathUpdateTime = .2f;
+    const float pathUpdateMoveThreshold = .5f;
+    
     [SerializeField] float minDistToChangeNode;
     [SerializeField] private float minDistToReachPos;
     float initSpeed;
@@ -67,6 +73,37 @@ public class MovementHandler
 
     #endregion
 
+    public void StartUpdatePath()
+    {
+        myMono.StartCoroutine(UpdatePath());
+    }
+
+    IEnumerator UpdatePath() {
+
+        if (Time.timeSinceLevelLoad < .3f) {
+            yield return new WaitForSeconds (.3f);
+        }
+
+        while (target == null)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+            
+        PathRequestManager.RequestPath (myRb.position, target.position, OnPathFound);
+
+        float sqrMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
+        Vector3 targetPosOld = target.position;
+
+        while (true) {
+            yield return new WaitForSeconds (minPathUpdateTime);
+            if ((target.position - targetPosOld).sqrMagnitude > sqrMoveThreshold) {
+                PathRequestManager.RequestPath (myRb.position, target.position, OnPathFound);
+                targetPosOld = target.position;
+            }
+        }
+    }
+    
+    
     #region Settings
 
     public enum  MovementType
@@ -74,6 +111,8 @@ public class MovementHandler
         WithForwardRotation,
         NoRotation
     }
+
+    private MonoBehaviour myMono;
     public void Init(Pathfinding pathfinding, EnemyDummy myDummy, Rigidbody rb)
     {
         _pathfinding = pathfinding;
@@ -82,6 +121,7 @@ public class MovementHandler
         //turnSpeed = 20f;//state.turnSpeed;
         //speed = 10f; //state.speed;
         myTransform = myDummy.transform;
+        myMono = myDummy;
         //_parabolicShooter = new ParabolicShooter(myTransform);
         
         //ResetAuxiliarPos();
@@ -90,6 +130,8 @@ public class MovementHandler
 
         systemActive = true;
         initSpeed = speed;
+
+        
     }
 
     #endregion
@@ -136,8 +178,8 @@ public class MovementHandler
     {
         if(moving)
         {
-            if(currentType == MovementType.WithForwardRotation)
-                FollowPath();
+             if(currentType == MovementType.WithForwardRotation)
+                 FollowPath();
             else
                 FolloWPathWithoutRotation();
         }
@@ -243,6 +285,60 @@ public class MovementHandler
     //     jumping = false;
     //     OnReachDestination -= OnFinishJump;
     // }
+
+    // void OnPathFound(Vector3[] waypoints, bool pathSuccesful)
+    // {
+    //     if (pathSuccesful)
+    //     {
+    //         auxPath = new Path(waypoints, myRb.position, turnDistance, stoppingDst);
+    //         
+    //         myMono.StopCoroutine(FollowPathCorutine());
+    //         myMono.StartCoroutine(FollowPathCorutine());
+    //     }
+    // }
+    
+    public float stoppingDst = 5;
+    IEnumerator FollowPathCorutine() {
+
+        bool followingPath = true;
+        int pathIndex = 0;
+        myTransform.LookAt (auxPath.lookPoints [0]);
+
+        float speedPercent = 1;
+
+        while (followingPath) {
+            Vector2 pos2D = new Vector2 (myRb.position.x, myRb.position.z);
+            while (auxPath.turnBoundaries [pathIndex].HasCrossedLine (pos2D)) {
+                if (pathIndex == auxPath.finishLineIndex) {
+                    followingPath = false;
+                    break;
+                } else {
+                    pathIndex++;
+                }
+            }
+
+            if (followingPath) {
+
+                if (pathIndex >= auxPath.slowDownIndex && stoppingDst > 0) {
+                    speedPercent = Mathf.Clamp01 (auxPath.turnBoundaries [auxPath.finishLineIndex].DistanceFromPoint (pos2D) / stoppingDst);
+                    if (speedPercent < 0.01f) {
+                        followingPath = false;
+                    }
+                }
+
+                Quaternion targetRotation = Quaternion.LookRotation (auxPath.lookPoints [pathIndex] - myTransform.position);
+                myRb.rotation = Quaternion.Lerp (myRb.rotation, targetRotation, Time.deltaTime * turnSpeed);
+                MoveTowardsNextNode(myTransform.forward, speedPercent);
+                //transform.Translate (Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
+            }
+
+            yield return null;
+
+        }
+    }
+    
+    
+    
     void OnPathFound(Vector3[] newPath, bool pathSuccessful)
     {
         if(moving) return; 
@@ -291,7 +387,11 @@ public class MovementHandler
         myRb.velocity = velocity;
     }
 
-
+    private void MoveTowardsNextNode(Vector3 dir, float speedPercent)
+    {
+        velocity = dir * speed * speedPercent;
+        myRb.velocity = velocity;
+    }
     
     public void Rescate()
     {
@@ -349,20 +449,25 @@ public class MovementHandler
     
     public void OnDrawGizmos()
     {
-        if (path != null)
+        if (auxPath != null) {
+                auxPath.DrawWithGizmos ();
+        }
+
+
+        if (auxPath != null)
         {
-            for (int i = targetIndex; i < path.Length; i++)
+            for (int i = targetIndex; i < auxPath.lookPoints.Length; i++)
             {
                 Gizmos.color = Color.black;
-                Gizmos.DrawCube(path[i], Vector3.one);
+                Gizmos.DrawCube(auxPath.lookPoints[i], Vector3.one);
 
                 if (i == targetIndex)
                 {
-                    Gizmos.DrawLine(myTransform.position, path[i]);
+                    Gizmos.DrawLine(myTransform.position, auxPath.lookPoints[i]);
                 }
                 else
                 {
-                    Gizmos.DrawLine(path[i - 1], path[i]);
+                    Gizmos.DrawLine(auxPath.lookPoints[i - 1], auxPath.lookPoints[i]);
                 }
             }
         }

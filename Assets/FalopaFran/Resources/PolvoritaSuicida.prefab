@@ -15729,6 +15729,7 @@ MonoBehaviour:
   hittedFeedback: {fileID: 5963928888847913638}
   _movementHandler:
     target: {fileID: 0}
+    turnDistance: 3
     minDistToChangeNode: 4
     minDistToReachPos: 4
     path: []
@@ -15755,6 +15756,7 @@ MonoBehaviour:
     currentLandingSpot: {x: 0, y: 0, z: 0}
     forceMove: 0
     myRb: {fileID: 0}
+    stoppingDst: 10
   _fieldOfView: {fileID: 2292428578565266429}
   _attackFieldOfView: {fileID: 2292428578565266429}
   giveScore: 50

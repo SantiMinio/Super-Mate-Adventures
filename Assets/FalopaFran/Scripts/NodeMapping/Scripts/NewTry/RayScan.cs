@@ -57,19 +57,24 @@ namespace Frano.NodeMapping
                 }
             }
 
-            Matrix<Node> aux = new Matrix<Node>(data.gridSizeX, data.gridSizeY);
-            
-            for (int i = 0; i < data.gridSizeX; i++)
+            if (doubles.Count > 0)
             {
-                for (int j = 0; j < data.gridSizeY; j++)
+                Matrix<Node> aux = new Matrix<Node>(data.gridSizeX, data.gridSizeY);
+            
+                for (int i = 0; i < data.gridSizeX; i++)
                 {
-                    Node doubleHitNode = doubles.Dequeue();
-                    aux[i, j] = doubleHitNode;
+                    for (int j = 0; j < data.gridSizeY; j++)
+                    {
+                    
+                    
+                        Node doubleHitNode = doubles.Dequeue();
+                        aux[i, j] = doubleHitNode;
+                    }
                 }
+
+                data.matrixNode_doubles = aux;    
             }
 
-            data.matrixNode_doubles = aux;
-            
             return data;
         }
     }

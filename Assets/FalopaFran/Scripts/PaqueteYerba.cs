@@ -18,6 +18,7 @@ public class PaqueteYerba : MonoBehaviour
         _waveManager = FindObjectOfType<WaveManager>();
     }
 
+    private Node a;
     private void Start()
     {
         Main.instance.EventManager.SubscribeToEvent(GameEvent.StartNewWave,StartWave);
