@@ -9,5 +9,3 @@ namespace Frano
         public abstract void Execute(StateManager states);
     }
 }
-
-
